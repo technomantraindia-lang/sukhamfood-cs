@@ -25,9 +25,9 @@
           <img class="brand-logo" src="assets/logo.png" alt="Sukham Foods &amp; Spices" />
         </a>
 
-        <button class="menu-button" type="button" aria-label="Open menu">&#9776;</button>
+        <button class="menu-button" type="button" aria-label="Open menu" aria-controls="primary-menu" aria-expanded="false">&#9776;</button>
 
-        <div class="nav-links">
+        <div class="nav-links" id="primary-menu">
           <a class="active" href="#home">Home</a>
           <a href="#about">About Us</a>
           <a href="#products">Products</a>
@@ -923,5 +923,26 @@
         <p class="footer-strip-copy"><span class="footer-strip-icon footer-strip-icon-star" aria-hidden="true"><iconify-icon icon="fa6-solid:star"></iconify-icon></span> &copy; 2026 SUKHAM Foods &amp; Spices. All Rights Reserved.</p>
       </div>
     </footer>
+    <script>
+      const menuButton = document.querySelector(".menu-button");
+      const mainNav = document.querySelector(".main-nav");
+      const navLinks = document.querySelectorAll(".nav-links a");
+
+      if (menuButton && mainNav) {
+        menuButton.addEventListener("click", () => {
+          const isOpen = mainNav.classList.toggle("menu-open");
+          menuButton.setAttribute("aria-expanded", String(isOpen));
+          menuButton.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+        });
+
+        navLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            mainNav.classList.remove("menu-open");
+            menuButton.setAttribute("aria-expanded", "false");
+            menuButton.setAttribute("aria-label", "Open menu");
+          });
+        });
+      }
+    </script>
   </body>
 </html>
