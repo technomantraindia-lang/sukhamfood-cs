@@ -1,0 +1,1368 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Us | Sukham Foods &amp; Spices</title>
+    <meta name="description" content="Contact Sukham Foods &amp; Spices for bulk spice orders, export enquiries, and private label manufacturing from Deesa, Gujarat." />
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" defer></script>
+    <style>
+      :root {
+        --green: #1b4d2e;
+        --green-dark: #143d24;
+        --green-light: #2d6b45;
+        --maroon: #921c1c;
+        --maroon-dark: #6e1414;
+        --maroon-light: #a82828;
+        --cream: #faf8f4;
+        --cream-warm: #f5f2ec;
+        --ink: #1a2e22;
+        --muted: #5a6358;
+        --highlight: #9fd4b0;
+        --icon-location: #f0c8c8;
+        --icon-phone: #b8dcc8;
+        --icon-email: #d0e8da;
+        --icon-whatsapp: #2d6b45;
+        --icon-whatsapp-dark: #1b4d2e;
+        --icon-clock: #2d6b45;
+        --nav-height: 96px;
+      }
+
+      *, *::before, *::after { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: #f8efe5;
+        font-family: "Trebuchet MS", Arial, sans-serif;
+        overflow-x: hidden;
+      }
+
+      a { color: inherit; text-decoration: none; }
+
+      img { max-width: 100%; height: auto; display: block; }
+
+      main { background: #f8efe5; }
+
+      /* ── Header ── */
+      .site-header {
+        position: relative;
+        z-index: 10;
+        background: var(--cream);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.24);
+      }
+
+      .top-strip {
+        min-height: 46px;
+        padding: 0 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        color: #fff8ea;
+        background: linear-gradient(90deg, var(--maroon-dark), var(--maroon) 52%, var(--maroon-dark));
+        border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+        font-size: 14px;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .top-group { display: flex; align-items: center; gap: 18px; flex: 0 1 auto; min-width: 0; }
+      .top-item { color: #fff2df; }
+      .top-item iconify-icon { margin-right: 6px; font-size: 1.05em; vertical-align: -0.15em; }
+      .top-item-loc iconify-icon { color: var(--icon-location); }
+      .top-item-phone iconify-icon { color: var(--icon-phone); }
+      .top-item-email iconify-icon { color: var(--icon-email); }
+      .divider { width: 1px; height: 22px; background: rgba(255, 246, 225, 0.38); }
+      .trust { flex: 1 1 58%; min-width: 0; padding-left: 20px; color: #fff1d5; text-align: right; }
+
+      .main-nav {
+        position: relative;
+        min-height: var(--nav-height);
+        padding: 12px 64px;
+        display: flex;
+        align-items: center;
+        gap: 34px;
+        background: linear-gradient(180deg, var(--cream), var(--cream-warm));
+      }
+
+      .brand { display: flex; align-items: center; flex: 0 0 auto; margin-left: 32px; }
+      .brand-logo {
+        width: clamp(210px, 15vw, 280px);
+        max-height: clamp(68px, 6.5vw, 84px);
+        object-fit: contain;
+        object-position: left center;
+        filter: drop-shadow(0 2px 2px rgba(64, 20, 8, 0.12));
+      }
+
+      .menu-button {
+        display: none;
+        width: 44px;
+        height: 44px;
+        border: 1px solid rgba(112, 47, 18, 0.25);
+        border-radius: 6px;
+        color: var(--maroon);
+        background: var(--cream);
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        flex: 1 1 auto;
+        min-width: 0;
+        color: #2c3e30;
+        font-size: 16px;
+        font-weight: 800;
+      }
+
+      .nav-links a { position: relative; padding: 38px 0 33px; }
+
+      .nav-product-menu {
+        position: relative;
+        display: flex;
+        align-items: center;
+        align-self: stretch;
+        padding: 38px 0 33px;
+      }
+
+      .product-menu-toggle {
+        min-height: 44px;
+        padding: 0;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border: 0;
+        color: inherit;
+        background: transparent;
+        font: inherit;
+        font-weight: 800;
+        cursor: pointer;
+      }
+
+      .product-menu-toggle iconify-icon { width: 12px; height: 12px; transition: transform 180ms ease; }
+      .nav-product-menu.open .product-menu-toggle iconify-icon { transform: rotate(180deg); }
+
+      .product-menu-panel {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        z-index: 30;
+        width: 250px;
+        padding: 14px 10px 10px;
+        display: grid;
+        gap: 4px;
+        transform: translateX(-50%) translateY(8px);
+        border: 1px solid rgba(112, 47, 18, 0.16);
+        border-radius: 12px;
+        background: rgba(250, 248, 244, 0.98);
+        box-shadow: 0 18px 34px rgba(30, 15, 8, 0.18);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 160ms ease, transform 160ms ease, visibility 160ms ease;
+      }
+
+      .product-menu-panel::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 14px;
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        .nav-product-menu:hover .product-menu-panel,
+        .nav-product-menu:focus-within .product-menu-panel {
+          opacity: 1;
+          visibility: visible;
+          pointer-events: auto;
+          transform: translateX(-50%) translateY(0);
+        }
+      }
+
+      .nav-product-menu.open .product-menu-panel {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateX(-50%) translateY(0);
+      }
+
+      .product-menu-panel a {
+        padding: 10px 12px;
+        border-radius: 8px;
+        color: #2c3e30;
+        font-size: 14px;
+        line-height: 1.2;
+      }
+
+      .product-menu-panel a:hover,
+      .product-menu-panel a:focus-visible {
+        color: var(--maroon);
+        background: rgba(45, 107, 69, 0.1);
+      }
+
+      .nav-links .active::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 24px;
+        height: 5px;
+        border-radius: 999px;
+        background: var(--green);
+        box-shadow: 0 2px 6px rgba(27, 77, 46, 0.35);
+      }
+
+      .nav-actions { display: flex; gap: 14px; flex: 0 0 auto; }
+
+      .btn {
+        min-height: 55px;
+        padding: 0 24px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        border-radius: 8px;
+        color: #fffaf0;
+        font-size: 16px;
+        font-weight: 900;
+        box-shadow: 0 3px 8px rgba(44, 11, 5, 0.2);
+      }
+
+      .btn-call {
+        background: linear-gradient(180deg, var(--maroon), var(--maroon-dark));
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .btn-whatsapp {
+        background: linear-gradient(180deg, var(--icon-whatsapp), var(--icon-whatsapp-dark));
+        border: 1px solid rgba(255, 255, 255, 0.28);
+      }
+
+      /* ── Contact Hero ── */
+      .contact-hero {
+        position: relative;
+        z-index: 2;
+        min-height: 280px;
+        padding: 72px 64px 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+        color: #fff8ef;
+        background:
+          linear-gradient(135deg, rgba(20, 61, 36, 0.92) 0%, rgba(110, 20, 20, 0.88) 100%),
+          url("../assets/spice-hero.png") center / cover no-repeat;
+      }
+
+      .contact-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        opacity: 0.12;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cpath fill='none' stroke='%23fff' stroke-width='1' d='M0 200h400M200 0v400M50 50l300 300M350 50L50 350'/%3E%3C/svg%3E");
+        background-size: 80px 80px;
+        pointer-events: none;
+      }
+
+      .contact-hero-inner {
+        position: relative;
+        z-index: 2;
+        width: min(760px, 100%);
+      }
+
+      .contact-hero-kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 16px;
+        padding: 6px 16px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.12);
+        color: var(--highlight);
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .contact-hero h1 {
+        margin: 0 0 16px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(34px, 5vw, 52px);
+        line-height: 1.12;
+        text-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+      }
+
+      .contact-hero-lead {
+        margin: 0 auto 28px;
+        max-width: 58ch;
+        color: rgba(255, 248, 239, 0.92);
+        font-size: clamp(15px, 2vw, 18px);
+        line-height: 1.65;
+      }
+
+      .contact-hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .contact-hero-actions .btn { min-height: 50px; font-size: 15px; }
+
+      /* ── Trust Cards (inside contact-section, same cream background) ── */
+      .contact-trust-grid {
+        position: relative;
+        z-index: 3;
+        width: min(1100px, 100%);
+        margin: 32px auto 40px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+      }
+
+      .contact-trust-card {
+        padding: 24px 22px;
+        border-radius: 16px;
+        border: 1px solid rgba(146, 28, 28, 0.1);
+        background: #fff;
+        box-shadow: 0 16px 40px rgba(79, 23, 24, 0.1);
+        text-align: center;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .contact-trust-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 22px 48px rgba(79, 23, 24, 0.14);
+      }
+
+      .contact-trust-icon {
+        width: 52px;
+        height: 52px;
+        margin: 0 auto 14px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 22px;
+        background: linear-gradient(180deg, var(--green-light), var(--green));
+        box-shadow: 0 8px 18px rgba(27, 77, 46, 0.28);
+      }
+
+      .contact-trust-card:nth-child(2) .contact-trust-icon {
+        background: linear-gradient(180deg, var(--maroon-light), var(--maroon));
+        box-shadow: 0 8px 18px rgba(146, 28, 28, 0.28);
+      }
+
+      .contact-trust-card h3 {
+        margin: 0 0 8px;
+        color: var(--maroon-dark);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 20px;
+      }
+
+      .contact-trust-card p {
+        margin: 0;
+        color: #5e4035;
+        font-size: 14px;
+        line-height: 1.55;
+      }
+
+      /* ── Contact Section ── */
+      .contact-section {
+        position: relative;
+        z-index: 1;
+        margin-top: 0;
+        padding: 0 64px 88px;
+        background: #f8efe5;
+        border-top: none;
+        overflow: visible;
+      }
+
+      .contact-wrap {
+        position: relative;
+        z-index: 1;
+        width: min(1140px, 100%);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: minmax(300px, 0.42fr) minmax(0, 0.58fr);
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 28px 64px rgba(79, 23, 24, 0.12);
+      }
+
+      .contact-info-card {
+        position: relative;
+        padding: 44px 36px 40px;
+        color: #fff8ef;
+        background:
+          radial-gradient(circle at 0% 0%, rgba(159, 212, 176, 0.12), transparent 40%),
+          linear-gradient(165deg, var(--maroon) 0%, var(--maroon-dark) 52%, #521010 100%);
+        overflow: hidden;
+      }
+
+      .contact-card-leaf {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        fill: none;
+        stroke: rgba(159, 212, 176, 0.18);
+        stroke-width: 1.5;
+        pointer-events: none;
+      }
+
+      .contact-card-leaf-tl { top: 12px; left: 8px; }
+      .contact-card-leaf-br { right: 8px; bottom: 12px; transform: rotate(180deg); }
+
+      .contact-brand { position: relative; z-index: 1; margin-bottom: 36px; }
+
+      .contact-logo {
+        width: min(270px, 100%);
+        padding: 10px 14px;
+        border-radius: 12px;
+        background: #fff8ec;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+      }
+
+      .contact-info-block { position: relative; z-index: 1; margin-bottom: 28px; }
+
+      .contact-info-block h3 {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 16px;
+        color: #3d7a52;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .contact-info-icon iconify-icon { font-size: 16px; color: var(--highlight); }
+
+      .contact-info-row,
+      .contact-quick-list li { display: flex; align-items: flex-start; gap: 14px; }
+
+      .contact-info-badge {
+        width: 44px;
+        height: 44px;
+        flex: 0 0 auto;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 50%;
+        color: #fff;
+        background: linear-gradient(180deg, var(--green-light), var(--green));
+        box-shadow: 0 4px 12px rgba(27, 77, 46, 0.35);
+      }
+
+      .contact-info-badge-email {
+        background: linear-gradient(180deg, var(--maroon-light), var(--maroon));
+        box-shadow: 0 4px 12px rgba(146, 28, 28, 0.35);
+      }
+
+      .contact-info-badge-clock {
+        background: linear-gradient(180deg, #3d8f58, var(--green-dark));
+      }
+
+      .contact-info-badge iconify-icon { font-size: 20px; color: #fff; }
+
+      .contact-info-block p,
+      .contact-quick-list p { margin: 0; color: rgba(255, 248, 239, 0.9); font-size: 15px; line-height: 1.55; }
+      .contact-info-block p strong,
+      .contact-quick-list p strong { color: #4a8f62; }
+
+      .contact-info-divider {
+        height: 1px;
+        margin: 0 0 28px;
+        background: linear-gradient(90deg, transparent, rgba(159, 212, 176, 0.45), transparent);
+      }
+
+      .contact-quick-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 18px; }
+
+      .contact-quick-list a {
+        color: #fff8ef;
+        font-size: 15px;
+        font-weight: 700;
+        transition: color 0.2s ease;
+      }
+
+      .contact-quick-list a:hover { color: #4a8f62; }
+
+      .contact-wa-link {
+        display: inline-block;
+        margin-left: 10px;
+        padding: 2px 8px;
+        border-radius: 999px;
+        background: rgba(37, 211, 102, 0.15);
+        color: var(--highlight) !important;
+        font-size: 12px !important;
+        font-weight: 800 !important;
+      }
+
+      .contact-form-panel { padding: 44px 40px 40px; background: #fff; }
+
+      .contact-form-kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 12px;
+        color: var(--green-light);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(18px, 1.6vw, 22px);
+        font-style: italic;
+        font-weight: 700;
+      }
+
+      .contact-form-kicker iconify-icon { color: var(--green-light); font-size: 18px; }
+
+      .contact-form-panel h2 {
+        margin: 0 0 12px;
+        color: #6e1414;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(30px, 2.8vw, 40px);
+        line-height: 1.12;
+      }
+
+      .contact-form-divider {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 14px;
+        color: var(--green-light);
+        font-size: 14px;
+      }
+
+      .contact-form-divider::before,
+      .contact-form-divider::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(45, 107, 69, 0.55), transparent);
+      }
+
+      .contact-form-intro {
+        margin: 0 0 24px;
+        color: #5e4035;
+        font-size: 15px;
+        line-height: 1.62;
+      }
+
+      .contact-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+      .contact-field { position: relative; display: block; }
+      .contact-field-full { grid-column: 1 / -1; }
+
+      .contact-field-icon {
+        position: absolute;
+        top: 50%;
+        left: 14px;
+        transform: translateY(-50%);
+        color: var(--green-light);
+        pointer-events: none;
+      }
+
+      .contact-field-full .contact-field-icon { top: 18px; transform: none; }
+      .contact-field-icon iconify-icon { font-size: 18px; }
+
+      .contact-field input,
+      .contact-field select,
+      .contact-field textarea {
+        width: 100%;
+        border: 1px solid rgba(27, 77, 46, 0.2);
+        border-radius: 10px;
+        padding: 14px 14px 14px 42px;
+        color: #3b241e;
+        background: #fff;
+        font: inherit;
+        font-size: 14px;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .contact-field textarea { min-height: 110px; resize: vertical; }
+
+      .contact-field select {
+        appearance: none;
+        cursor: pointer;
+        background-image: linear-gradient(45deg, transparent 50%, #a07240 50%), linear-gradient(135deg, #a07240 50%, transparent 50%);
+        background-position: calc(100% - 18px) 19px, calc(100% - 12px) 19px;
+        background-size: 6px 6px, 6px 6px;
+        background-repeat: no-repeat;
+      }
+
+      .contact-field input:focus,
+      .contact-field select:focus,
+      .contact-field textarea:focus {
+        outline: none;
+        border-color: rgba(140, 23, 27, 0.35);
+        box-shadow: 0 0 0 3px rgba(45, 107, 69, 0.12);
+      }
+
+      .contact-field.error input,
+      .contact-field.error select,
+      .contact-field.error textarea {
+        border-color: rgba(146, 28, 28, 0.55);
+        box-shadow: 0 0 0 3px rgba(146, 28, 28, 0.1);
+      }
+
+      .contact-submit {
+        grid-column: 1 / -1;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-height: 52px;
+        margin-top: 4px;
+        border: 0;
+        border-radius: 999px;
+        color: #fff8ef;
+        background: linear-gradient(90deg, var(--green-light) 0%, var(--green) 48%, var(--maroon) 100%);
+        font: inherit;
+        font-size: 14px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        cursor: pointer;
+        box-shadow: 0 12px 28px rgba(140, 23, 27, 0.22);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .contact-submit:hover { transform: translateY(-2px); box-shadow: 0 16px 32px rgba(140, 23, 27, 0.28); }
+      .contact-submit:disabled { opacity: 0.65; cursor: not-allowed; transform: none; }
+
+      .contact-safe-note {
+        grid-column: 1 / -1;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        color: #7a5a4e;
+        font-size: 13px;
+      }
+
+      .contact-safe-note iconify-icon { color: var(--green-light); }
+
+      .form-success {
+        grid-column: 1 / -1;
+        display: none;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 16px;
+        border-radius: 12px;
+        background: rgba(45, 107, 69, 0.1);
+        border: 1px solid rgba(45, 107, 69, 0.25);
+        color: var(--green-dark);
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .form-success.is-visible { display: flex; }
+
+      /* ── Map ── */
+      .contact-map-section {
+        padding: 0 64px 80px;
+        background: linear-gradient(180deg, #dce8df 0%, var(--cream) 100%);
+      }
+
+      .contact-map-wrap {
+        width: min(1140px, 100%);
+        margin: 0 auto;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 20px 50px rgba(79, 23, 24, 0.12);
+        border: 1px solid rgba(146, 28, 28, 0.12);
+      }
+
+      .contact-map-head {
+        padding: 22px 28px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        background: linear-gradient(90deg, var(--maroon-dark), var(--maroon));
+        color: #fff8ef;
+      }
+
+      .contact-map-head h2 {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 22px;
+      }
+
+      .contact-map-head a {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 16px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.14);
+        font-size: 13px;
+        font-weight: 800;
+        transition: background 0.2s ease;
+      }
+
+      .contact-map-head a:hover { background: rgba(255, 255, 255, 0.22); }
+
+      .contact-map-frame {
+        display: block;
+        width: 100%;
+        height: 360px;
+        border: 0;
+        background: #e8e4dc;
+      }
+
+      /* ── Footer ── */
+      .site-footer {
+        position: relative;
+        z-index: 5;
+        display: block;
+        width: 100%;
+      }
+
+      .footer-main {
+        background: linear-gradient(180deg, #f5f0e8 0%, var(--cream-warm) 100%);
+        border-top: 3px solid var(--maroon);
+        box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.06);
+      }
+
+      .footer-inner { padding: 48px 64px 44px; }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.35fr 0.85fr 0.9fr 1fr;
+        gap: clamp(28px, 4vw, 48px);
+        align-items: start;
+      }
+
+      .footer-brand-link {
+        display: flex;
+        margin-bottom: 16px;
+        transition: transform 0.25s ease;
+      }
+
+      .footer-brand-link:hover { transform: translateY(-2px); }
+
+      .footer-logo {
+        width: min(260px, 100%);
+        padding: 10px 14px;
+        border-radius: 12px;
+        background: #fff8ec;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.22);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .footer-brand-link:hover .footer-logo {
+        transform: scale(1.03);
+        box-shadow: 0 16px 30px rgba(76, 31, 13, 0.24);
+      }
+
+      .footer-brand-desc {
+        margin: 0 0 20px;
+        max-width: 36ch;
+        color: #704324;
+        font-size: 15px;
+        line-height: 1.65;
+      }
+
+      .footer-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+      .footer-actions .btn { min-height: 48px; padding: 0 18px; font-size: 14px; }
+
+      .footer-col h3 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 16px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid var(--maroon);
+        color: #921c1c;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      .footer-heading-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        color: #fff8ef;
+        font-size: 13px;
+      }
+
+      .footer-heading-icon-nav { background: linear-gradient(180deg, var(--maroon), var(--maroon-dark)); }
+      .footer-heading-icon-products { background: linear-gradient(180deg, var(--green-light), var(--green)); }
+      .footer-heading-icon-contact { background: linear-gradient(180deg, var(--maroon-light), var(--maroon-dark)); }
+
+      .footer-links,
+      .footer-contact-list { margin: 0; padding: 0; list-style: none; }
+
+      .footer-links li + li,
+      .footer-contact-list li + li { margin-top: 10px; }
+
+      .footer-links a {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 12px;
+        border-radius: 8px;
+        color: #2c3e30;
+        font-size: 15px;
+        font-weight: 800;
+        transition: color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+      }
+
+      .footer-links a:hover {
+        color: var(--maroon);
+        background: rgba(146, 28, 28, 0.1);
+        transform: translateX(6px);
+      }
+
+      .footer-link-icon { color: var(--green); font-size: 12px; }
+      .footer-link-icon-spice { color: var(--maroon); font-size: 8px; }
+
+      .footer-contact-name {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 12px;
+        color: #921c1c;
+        font-size: 16px;
+        font-weight: 900;
+      }
+
+      .footer-item-icon {
+        width: 32px;
+        height: 32px;
+        flex: 0 0 auto;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 14px;
+      }
+
+      .footer-icon-user { background: linear-gradient(180deg, #921c1c, #6e1414); }
+      .footer-icon-phone { background: linear-gradient(180deg, var(--green-light), var(--green)); }
+      .footer-icon-email { background: linear-gradient(180deg, var(--maroon-light), var(--maroon)); }
+      .footer-icon-location { background: linear-gradient(180deg, var(--green-light), var(--green)); }
+
+      .footer-contact-list li { display: flex; align-items: flex-start; gap: 12px; padding: 4px 0; }
+      .footer-contact-list a { color: #2c3e30; font-weight: 800; }
+      .footer-contact-list a:hover { color: var(--maroon); }
+
+      .footer-contact-note {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 16px 0 0;
+        color: #704324;
+        font-size: 14px;
+      }
+
+      .footer-contact-note strong { color: var(--maroon); }
+      .footer-note-icon iconify-icon { color: var(--icon-clock); }
+
+      .footer-strip {
+        min-height: 46px;
+        padding: 12px 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff8ea;
+        background: linear-gradient(90deg, var(--maroon-dark), var(--maroon) 52%, var(--maroon-dark));
+        border-top: 1px solid rgba(255, 255, 255, 0.14);
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .footer-strip-copy {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0;
+        color: #fff1d5;
+      }
+
+      .footer-strip-icon-star { color: var(--highlight); }
+
+      /* ── Responsive ── */
+      @media (max-width: 980px) {
+        .top-strip, .main-nav, .contact-hero, .contact-section, .contact-map-section {
+          padding-left: 28px;
+          padding-right: 28px;
+        }
+
+        .footer-inner { padding: 40px 28px 36px; }
+        .footer-strip { padding: 14px 28px; }
+        .footer-grid { grid-template-columns: 1fr 1fr; }
+        .contact-trust-grid { grid-template-columns: 1fr; }
+        .contact-wrap { grid-template-columns: 1fr; }
+        .contact-form { grid-template-columns: 1fr; }
+        .contact-field-full { grid-column: auto; }
+
+        .top-strip { flex-direction: column; align-items: flex-start; gap: 6px; white-space: normal; min-height: auto; padding-top: 10px; padding-bottom: 10px; }
+        .trust { text-align: left; padding-left: 0; }
+        .divider { display: none; }
+
+        .main-nav { min-height: 80px; padding-top: 10px; padding-bottom: 10px; justify-content: space-between; flex-wrap: wrap; }
+        .brand { margin-left: 18px; }
+        .menu-button { display: inline-flex; align-items: center; justify-content: center; }
+        .nav-links, .nav-actions { display: none; }
+
+        .main-nav.menu-open .nav-links {
+          position: absolute;
+          top: calc(100% - 1px);
+          left: 16px;
+          right: 16px;
+          z-index: 20;
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+          gap: 0;
+          padding: 10px;
+          border: 1px solid rgba(112, 47, 18, 0.18);
+          border-radius: 0 0 12px 12px;
+          background: rgba(250, 248, 244, 0.98);
+          box-shadow: 0 18px 34px rgba(30, 15, 8, 0.22);
+        }
+
+        .main-nav.menu-open .nav-links a { padding: 13px 14px; border-radius: 8px; }
+        .main-nav.menu-open .nav-product-menu { display: block; padding: 0; }
+
+        .main-nav.menu-open .product-menu-toggle {
+          width: 100%;
+          justify-content: space-between;
+          padding: 13px 14px;
+          border-radius: 8px;
+        }
+
+        .main-nav.menu-open .product-menu-panel {
+          position: static;
+          width: 100%;
+          margin-top: 4px;
+          padding: 6px;
+          display: none;
+          transform: none;
+          opacity: 1;
+          visibility: visible;
+          pointer-events: auto;
+          box-shadow: none;
+        }
+
+        .main-nav.menu-open .nav-product-menu.open .product-menu-panel { display: grid; }
+        .main-nav.menu-open .product-menu-panel::before { display: none; }
+        .main-nav.menu-open .nav-links .active::after { display: none; }
+
+        .main-nav.menu-open .nav-actions {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          order: 4;
+          gap: 10px;
+          padding: 0 10px 12px;
+        }
+
+        .main-nav.menu-open .nav-actions .btn { width: 100%; min-height: 48px; }
+      }
+
+      @media (max-width: 640px) {
+        .top-strip { display: none; }
+        .brand { margin-left: 0; }
+        .brand-logo { width: clamp(175px, 52vw, 235px); max-height: 64px; }
+        .footer-grid { grid-template-columns: 1fr; }
+        .contact-hero { min-height: 260px; padding-top: 56px; padding-bottom: 28px; }
+        .contact-trust-grid { margin-top: 24px; margin-bottom: 28px; }
+        .contact-info-card, .contact-form-panel { padding: 28px 22px; }
+        .contact-map-frame { height: 260px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="top-strip">
+        <div class="top-group">
+          <span class="top-item top-item-loc"><iconify-icon icon="mdi:map-marker" aria-hidden="true"></iconify-icon> Deesa, Banaskantha, Gujarat - 385535, India</span>
+          <span class="divider"></span>
+          <span class="top-item top-item-phone"><iconify-icon icon="fa6-solid:phone" aria-hidden="true"></iconify-icon> +91 89557 54845</span>
+          <span class="divider"></span>
+          <span class="top-item top-item-email"><iconify-icon icon="fa6-solid:envelope" aria-hidden="true"></iconify-icon> info@sukhamfoods.com</span>
+        </div>
+        <div class="trust">&#9733; &#9733; &#9733; &#9733; Trusted Manufacturer, Supplier &amp; Exporter of Premium Indian Spices</div>
+      </div>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a class="brand" href="../index.html#home" aria-label="Sukham Foods and Spices home">
+          <img class="brand-logo" src="../assets/logo.png" alt="Sukham Foods &amp; Spices" />
+        </a>
+
+        <button class="menu-button" type="button" aria-label="Open menu" aria-controls="primary-menu" aria-expanded="false">&#9776;</button>
+
+        <div class="nav-links" id="primary-menu">
+          <a href="../index.html#home">Home</a>
+          <a href="../index.html#about">About Us</a>
+          <div class="nav-product-menu">
+            <button class="product-menu-toggle" type="button" aria-expanded="false" aria-controls="header-products-menu">Products <iconify-icon icon="fa6-solid:chevron-down" aria-hidden="true"></iconify-icon></button>
+            <div class="product-menu-panel" id="header-products-menu">
+              <a href="../prodcut/Turmeric Powder.html">Turmeric Powder</a>
+              <a href="../prodcut/Red Chilli Powder.html">Red Chilli Powder</a>
+              <a href="../prodcut/Coriander Powder.html">Coriander Powder</a>
+              <a href="../prodcut/Cumin Powder.html">Cumin Powder</a>
+              <a href="../prodcut/Black Pepper Powder.html">Black Pepper Powder</a>
+              <a href="../prodcut/Garam Masala.html">Garam Masala</a>
+              <a href="../prodcut/Kitchen King Masala.html">Kitchen King Masala</a>
+              <a href="../prodcut/Pav Bhaji Masala.html">Pav Bhaji Masala</a>
+              <a href="../prodcut/Chaat Masala.html">Chaat Masala</a>
+              <a href="../prodcut/Sabzi Masala.html">Sabzi Masala</a>
+            </div>
+          </div>
+          <a class="active" href="contact.html">Contact Us</a>
+        </div>
+
+        <div class="nav-actions">
+          <a class="btn btn-call" href="tel:+918955754845"><iconify-icon icon="fa6-solid:phone" aria-hidden="true"></iconify-icon> Call Now</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/918955754845"><iconify-icon icon="fa6-brands:whatsapp" aria-hidden="true"></iconify-icon> WhatsApp</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="contact-hero" aria-label="Contact us">
+        <div class="contact-hero-inner">
+          <p class="contact-hero-kicker">
+            <iconify-icon icon="fa6-solid:headset" aria-hidden="true"></iconify-icon>
+            Contact Sukham Foods
+          </p>
+          <h1>Let's Talk Spices &amp; Business</h1>
+          <p class="contact-hero-lead">Reach out for bulk orders, export enquiries, private label manufacturing, product samples, or custom masala blends — our team is ready to help.</p>
+          <div class="contact-hero-actions">
+            <a class="btn btn-call" href="tel:+918955754845"><iconify-icon icon="fa6-solid:phone" aria-hidden="true"></iconify-icon> Call Now</a>
+            <a class="btn btn-whatsapp" href="https://wa.me/918955754845?text=Hello%20Sukham%20Foods%2C%20I%20would%20like%20to%20inquire%20about%20your%20spices."><iconify-icon icon="fa6-brands:whatsapp" aria-hidden="true"></iconify-icon> WhatsApp Us</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="inquiry" aria-label="Contact and inquiry">
+        <div class="contact-trust-grid" aria-label="Why contact us">
+          <article class="contact-trust-card">
+            <span class="contact-trust-icon" aria-hidden="true"><iconify-icon icon="fa6-regular:clock"></iconify-icon></span>
+            <h3>24 Hour Response</h3>
+            <p>We reply to all business enquiries within one working day.</p>
+          </article>
+          <article class="contact-trust-card">
+            <span class="contact-trust-icon" aria-hidden="true"><iconify-icon icon="fa6-solid:globe"></iconify-icon></span>
+            <h3>Export &amp; Bulk Orders</h3>
+            <p>Trusted supplier for domestic distributors and international buyers.</p>
+          </article>
+          <article class="contact-trust-card">
+            <span class="contact-trust-icon" aria-hidden="true"><iconify-icon icon="fa6-solid:flask"></iconify-icon></span>
+            <h3>Custom Blends</h3>
+            <p>Private label packaging and tailored masala formulations available.</p>
+          </article>
+        </div>
+
+        <div class="contact-wrap">
+          <aside class="contact-info-card">
+            <svg class="contact-card-leaf contact-card-leaf-tl" viewBox="0 0 120 120" aria-hidden="true"><path d="M18 92C34 58 58 34 92 18M14 72C38 54 54 38 72 14" /></svg>
+            <svg class="contact-card-leaf contact-card-leaf-br" viewBox="0 0 120 120" aria-hidden="true"><path d="M102 92C86 58 62 34 28 18M106 72C82 54 66 38 48 14" /></svg>
+
+            <div class="contact-brand">
+              <img class="contact-logo" src="../assets/logo.png" alt="Sukham Foods &amp; Spices" />
+            </div>
+
+            <div class="contact-info-block">
+              <h3><span class="contact-info-icon" aria-hidden="true"><iconify-icon icon="mdi:map-marker"></iconify-icon></span> Our Location</h3>
+              <div class="contact-info-row">
+                <span class="contact-info-badge" aria-hidden="true"><iconify-icon icon="mdi:map-marker"></iconify-icon></span>
+                <p>Deesa, Banaskantha, Gujarat - 385535, India</p>
+              </div>
+            </div>
+
+            <div class="contact-info-divider" aria-hidden="true"></div>
+
+            <div class="contact-info-block">
+              <h3><span class="contact-info-icon" aria-hidden="true"><iconify-icon icon="fa6-solid:phone"></iconify-icon></span> Quick Contact</h3>
+              <ul class="contact-quick-list">
+                <li>
+                  <span class="contact-info-badge contact-info-badge-phone" aria-hidden="true"><iconify-icon icon="fa6-solid:phone"></iconify-icon></span>
+                  <div>
+                    <a href="tel:+918955754845">+91 89557 54845</a>
+                    <a class="contact-wa-link" href="https://wa.me/918955754845">WhatsApp</a>
+                  </div>
+                </li>
+                <li>
+                  <span class="contact-info-badge contact-info-badge-email" aria-hidden="true"><iconify-icon icon="fa6-solid:envelope"></iconify-icon></span>
+                  <a href="mailto:info@sukhamfoods.com">info@sukhamfoods.com</a>
+                </li>
+                <li>
+                  <span class="contact-info-badge contact-info-badge-clock" aria-hidden="true"><iconify-icon icon="fa6-regular:clock"></iconify-icon></span>
+                  <p>We will get back to you within <strong>24 hours</strong></p>
+                </li>
+              </ul>
+            </div>
+          </aside>
+
+          <div class="contact-form-panel">
+            <p class="contact-form-kicker">
+              <iconify-icon icon="fa6-solid:paper-plane" aria-hidden="true"></iconify-icon>
+              Get in Touch
+            </p>
+            <h2>Request a Quote</h2>
+            <div class="contact-form-divider" aria-hidden="true"><span>&#10047;</span></div>
+            <p class="contact-form-intro">Share your requirements and our team will provide the best solution tailored for you.</p>
+
+            <form class="contact-form" id="contact-form" novalidate>
+              <label class="contact-field">
+                <span class="contact-field-icon" aria-hidden="true"><iconify-icon icon="fa6-solid:user"></iconify-icon></span>
+                <input type="text" name="name" placeholder="Your Name *" required autocomplete="name" />
+              </label>
+              <label class="contact-field">
+                <span class="contact-field-icon" aria-hidden="true"><iconify-icon icon="fa6-solid:envelope"></iconify-icon></span>
+                <input type="email" name="email" placeholder="Email Address *" required autocomplete="email" />
+              </label>
+              <label class="contact-field">
+                <span class="contact-field-icon" aria-hidden="true"><iconify-icon icon="fa6-solid:phone"></iconify-icon></span>
+                <input type="tel" name="phone" placeholder="Phone Number *" required autocomplete="tel" />
+              </label>
+              <label class="contact-field">
+                <span class="contact-field-icon" aria-hidden="true"><iconify-icon icon="fa6-solid:box"></iconify-icon></span>
+                <select name="product" aria-label="Product interest">
+                  <option value="">Product Interest / Select Product</option>
+                  <option>Turmeric Powder</option>
+                  <option>Red Chilli Powder</option>
+                  <option>Coriander Powder</option>
+                  <option>Cumin Powder</option>
+                  <option>Black Pepper Powder</option>
+                  <option>Garam Masala</option>
+                  <option>Kitchen King Masala</option>
+                  <option>Pav Bhaji Masala</option>
+                  <option>Chaat Masala</option>
+                  <option>Sabzi Masala</option>
+                  <option>Private Label / Custom Blend</option>
+                  <option>Other Requirement</option>
+                </select>
+              </label>
+              <label class="contact-field contact-field-full">
+                <span class="contact-field-icon" aria-hidden="true"><iconify-icon icon="fa6-solid:message"></iconify-icon></span>
+                <textarea name="message" placeholder="Your Message *" rows="4" required></textarea>
+              </label>
+
+              <div class="form-success" id="form-success" role="status">
+                <iconify-icon icon="fa6-solid:circle-check" aria-hidden="true"></iconify-icon>
+                Thank you! Your inquiry has been sent. We will contact you soon.
+              </div>
+
+              <button class="contact-submit" type="submit">
+                Submit Inquiry
+                <iconify-icon icon="fa6-solid:paper-plane" aria-hidden="true"></iconify-icon>
+              </button>
+              <p class="contact-safe-note"><span aria-hidden="true"><iconify-icon icon="fa6-solid:shield-halved"></iconify-icon></span> Your information is safe with us.</p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-map-section" aria-label="Find us on map">
+        <div class="contact-map-wrap">
+          <div class="contact-map-head">
+            <h2><iconify-icon icon="mdi:map-marker" aria-hidden="true"></iconify-icon> Visit Our Facility</h2>
+            <a href="https://maps.google.com/?q=Deesa,Banaskantha,Gujarat,385535" target="_blank" rel="noopener noreferrer">
+              Open in Google Maps
+              <iconify-icon icon="fa6-solid:arrow-up-right-from-square" aria-hidden="true"></iconify-icon>
+            </a>
+          </div>
+          <iframe
+            class="contact-map-frame"
+            title="Sukham Foods location on map"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://maps.google.com/maps?q=Deesa%2C%20Banaskantha%2C%20Gujarat%20385535&t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+          ></iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div class="footer-inner">
+          <div class="footer-grid">
+            <div class="footer-brand">
+              <a class="footer-brand-link" href="../index.html#home" aria-label="Sukham Foods and Spices home">
+                <img class="footer-logo" src="../assets/logo.png" alt="Sukham Foods &amp; Spices" />
+              </a>
+              <p class="footer-brand-desc">Manufacturer, supplier and exporter of premium Indian spices and masalas from Deesa, Gujarat.</p>
+              <div class="footer-actions">
+                <a class="btn btn-call" href="tel:+918955754845"><iconify-icon icon="fa6-solid:phone" aria-hidden="true"></iconify-icon> Call Now</a>
+                <a class="btn btn-whatsapp" href="https://wa.me/918955754845"><iconify-icon icon="fa6-brands:whatsapp" aria-hidden="true"></iconify-icon> WhatsApp</a>
+              </div>
+            </div>
+
+            <nav class="footer-col" aria-label="Quick links">
+              <h3><span class="footer-heading-icon footer-heading-icon-nav" aria-hidden="true">&#9670;</span> Quick Links</h3>
+              <ul class="footer-links">
+                <li><a href="../index.html#home"><span class="footer-link-icon" aria-hidden="true">&#9656;</span> Home</a></li>
+                <li><a href="../index.html#about"><span class="footer-link-icon" aria-hidden="true">&#9656;</span> About Us</a></li>
+                <li><a href="../index.html#services"><span class="footer-link-icon" aria-hidden="true">&#9656;</span> Our Services</a></li>
+                <li><a href="../index.html#products"><span class="footer-link-icon" aria-hidden="true">&#9656;</span> Products</a></li>
+                <li><a href="contact.html"><span class="footer-link-icon" aria-hidden="true">&#9656;</span> Contact Us</a></li>
+              </ul>
+            </nav>
+
+            <nav class="footer-col" aria-label="Products">
+              <h3><span class="footer-heading-icon footer-heading-icon-products" aria-hidden="true">&#10047;</span> Products</h3>
+              <ul class="footer-links">
+                <li><a href="../prodcut/Turmeric Powder.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Turmeric Powder</a></li>
+                <li><a href="../prodcut/Red Chilli Powder.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Red Chilli Powder</a></li>
+                <li><a href="../prodcut/Coriander Powder.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Coriander Powder</a></li>
+                <li><a href="../prodcut/Cumin Powder.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Cumin Powder</a></li>
+                <li><a href="../prodcut/Black Pepper Powder.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Black Pepper Powder</a></li>
+                <li><a href="../prodcut/Garam Masala.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Garam Masala</a></li>
+                <li><a href="../prodcut/Kitchen King Masala.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Kitchen King Masala</a></li>
+                <li><a href="../prodcut/Pav Bhaji Masala.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Pav Bhaji Masala</a></li>
+                <li><a href="../prodcut/Chaat Masala.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Chaat Masala</a></li>
+                <li><a href="../prodcut/Sabzi Masala.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Sabzi Masala</a></li>
+              </ul>
+            </nav>
+
+            <div class="footer-col footer-contact">
+              <h3><span class="footer-heading-icon footer-heading-icon-contact" aria-hidden="true"><iconify-icon icon="fa6-solid:phone"></iconify-icon></span> Contact</h3>
+              <p class="footer-contact-name"><span class="footer-item-icon footer-icon-user" aria-hidden="true"><iconify-icon icon="fa6-solid:user"></iconify-icon></span> Kamlesh Choudhary</p>
+              <ul class="footer-contact-list">
+                <li>
+                  <span class="footer-item-icon footer-icon-phone" aria-hidden="true"><iconify-icon icon="fa6-solid:phone"></iconify-icon></span>
+                  <a href="tel:+918955754845">+91 89557 54845</a>
+                </li>
+                <li>
+                  <span class="footer-item-icon footer-icon-email" aria-hidden="true"><iconify-icon icon="fa6-solid:envelope"></iconify-icon></span>
+                  <a href="mailto:info@sukhamfoods.com">info@sukhamfoods.com</a>
+                </li>
+                <li>
+                  <span class="footer-item-icon footer-icon-location" aria-hidden="true"><iconify-icon icon="mdi:map-marker"></iconify-icon></span>
+                  <span>Deesa, Banaskantha, Gujarat - 385535, India</span>
+                </li>
+              </ul>
+              <p class="footer-contact-note"><span class="footer-note-icon" aria-hidden="true"><iconify-icon icon="fa6-regular:clock"></iconify-icon></span> We reply within <strong>24 hours</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-strip">
+        <p class="footer-strip-copy"><span class="footer-strip-icon footer-strip-icon-star" aria-hidden="true"><iconify-icon icon="fa6-solid:star"></iconify-icon></span> &copy; 2026 SUKHAM Foods &amp; Spices. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        const menuButton = document.querySelector(".menu-button");
+        const mainNav = document.querySelector(".main-nav");
+        const navLinks = document.querySelectorAll(".nav-links a");
+        const productMenuToggle = document.querySelector(".product-menu-toggle");
+        const productMenu = document.querySelector(".nav-product-menu");
+
+        if (menuButton && mainNav) {
+          menuButton.addEventListener("click", function () {
+            const isOpen = mainNav.classList.toggle("menu-open");
+            menuButton.setAttribute("aria-expanded", String(isOpen));
+            menuButton.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+          });
+
+          navLinks.forEach(function (link) {
+            link.addEventListener("click", function () {
+              mainNav.classList.remove("menu-open");
+              menuButton.setAttribute("aria-expanded", "false");
+              menuButton.setAttribute("aria-label", "Open menu");
+            });
+          });
+        }
+
+        if (productMenuToggle && productMenu) {
+          productMenuToggle.addEventListener("click", function (event) {
+            event.stopPropagation();
+            const isOpen = productMenu.classList.toggle("open");
+            productMenuToggle.setAttribute("aria-expanded", String(isOpen));
+          });
+
+          document.addEventListener("click", function (event) {
+            if (!productMenu.contains(event.target)) {
+              productMenu.classList.remove("open");
+              productMenuToggle.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+
+        const form = document.getElementById("contact-form");
+        const successBox = document.getElementById("form-success");
+
+        if (form) {
+          form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const fields = form.querySelectorAll("[required]");
+            let valid = true;
+
+            fields.forEach(function (field) {
+              const wrap = field.closest(".contact-field");
+              if (!field.value.trim()) {
+                valid = false;
+                if (wrap) wrap.classList.add("error");
+              } else if (wrap) {
+                wrap.classList.remove("error");
+              }
+            });
+
+            if (!valid) return;
+
+            const data = new FormData(form);
+            const name = data.get("name");
+            const email = data.get("email");
+            const phone = data.get("phone");
+            const product = data.get("product") || "General Inquiry";
+            const message = data.get("message");
+
+            const subject = encodeURIComponent("Sukham Foods Inquiry from " + name);
+            const body = encodeURIComponent(
+              "Name: " + name + "\n" +
+              "Email: " + email + "\n" +
+              "Phone: " + phone + "\n" +
+              "Product Interest: " + product + "\n\n" +
+              "Message:\n" + message
+            );
+
+            if (successBox) {
+              successBox.classList.add("is-visible");
+            }
+
+            form.reset();
+
+            window.setTimeout(function () {
+              window.location.href = "mailto:info@sukhamfoods.com?subject=" + subject + "&body=" + body;
+            }, 600);
+          });
+
+          form.querySelectorAll("input, textarea, select").forEach(function (input) {
+            input.addEventListener("input", function () {
+              const wrap = input.closest(".contact-field");
+              if (wrap && input.value.trim()) {
+                wrap.classList.remove("error");
+              }
+            });
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
