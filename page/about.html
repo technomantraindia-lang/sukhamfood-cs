@@ -1,0 +1,1076 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Us | Sukham Foods &amp; Spices</title>
+    <meta name="description" content="Learn about Sukham Foods &amp; Spices — a trusted manufacturer, supplier and exporter of premium Indian spices from Deesa, Gujarat." />
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" defer></script>
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      :root {
+        --green: #1b4d2e;
+        --green-dark: #143d24;
+        --green-light: #2d6b45;
+        --maroon: #921c1c;
+        --maroon-dark: #6e1414;
+        --maroon-light: #a82828;
+        --cream: #faf8f4;
+        --cream-warm: #f5f2ec;
+        --ink: #1a2e22;
+        --highlight: #9fd4b0;
+        --icon-location: #f0c8c8;
+        --icon-phone: #b8dcc8;
+        --icon-email: #d0e8da;
+        --icon-whatsapp: #2d6b45;
+        --icon-whatsapp-dark: #1b4d2e;
+        --icon-clock: #2d6b45;
+        --nav-height: 96px;
+      }
+
+      *, *::before, *::after { box-sizing: border-box; }
+      body { margin: 0; color: var(--ink); background: #ffffff; font-family: "Trebuchet MS", Arial, sans-serif; overflow-x: hidden; }
+      a { color: inherit; text-decoration: none; }
+      img { max-width: 100%; height: auto; display: block; }
+      main { background: #ffffff; }
+
+      /* Section rhythm — alternating backgrounds */
+
+      /* Header */
+      .site-header { position: relative; z-index: 10; background: var(--cream); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.24); }
+      .top-strip { min-height: 46px; padding: 0 64px; display: flex; align-items: center; justify-content: space-between; gap: 24px; color: #fff8ea; background: linear-gradient(90deg, var(--maroon-dark), var(--maroon) 52%, var(--maroon-dark)); border-bottom: 1px solid rgba(255, 255, 255, 0.14); font-size: 14px; font-weight: 700; white-space: nowrap; }
+      .top-group { display: flex; align-items: center; gap: 18px; flex: 0 1 auto; min-width: 0; }
+      .top-item { color: #fff2df; }
+      .top-item iconify-icon { margin-right: 6px; font-size: 1.05em; vertical-align: -0.15em; }
+      .top-item-loc iconify-icon { color: var(--icon-location); }
+      .top-item-phone iconify-icon { color: var(--icon-phone); }
+      .top-item-email iconify-icon { color: var(--icon-email); }
+      .divider { width: 1px; height: 22px; background: rgba(255, 246, 225, 0.38); }
+      .trust { flex: 1 1 58%; min-width: 0; padding-left: 20px; color: #fff1d5; text-align: right; }
+      .main-nav { position: relative; min-height: var(--nav-height); padding: 12px 64px; display: flex; align-items: center; gap: 34px; background: linear-gradient(180deg, var(--cream), var(--cream-warm)); }
+      .brand { display: flex; align-items: center; flex: 0 0 auto; margin-left: 32px; }
+      .brand-logo { width: clamp(210px, 15vw, 280px); max-height: clamp(68px, 6.5vw, 84px); object-fit: contain; object-position: left center; filter: drop-shadow(0 2px 2px rgba(64, 20, 8, 0.12)); }
+      .menu-button { display: none; width: 44px; height: 44px; border: 1px solid rgba(112, 47, 18, 0.25); border-radius: 6px; color: var(--maroon); background: var(--cream); font-size: 24px; cursor: pointer; }
+      .nav-links { display: flex; align-items: center; justify-content: center; gap: 24px; flex: 1 1 auto; min-width: 0; color: #2c3e30; font-size: 16px; font-weight: 800; }
+      .nav-links a { position: relative; padding: 38px 0 33px; }
+      .nav-product-menu { position: relative; display: flex; align-items: center; align-self: stretch; padding: 38px 0 33px; }
+      .product-menu-toggle { min-height: 44px; padding: 0; display: inline-flex; align-items: center; gap: 8px; border: 0; color: inherit; background: transparent; font: inherit; font-weight: 800; cursor: pointer; }
+      .product-menu-toggle iconify-icon { width: 12px; height: 12px; transition: transform 180ms ease; }
+      .nav-product-menu.open .product-menu-toggle iconify-icon { transform: rotate(180deg); }
+      .product-menu-panel { position: absolute; top: 100%; left: 50%; z-index: 30; width: 250px; padding: 14px 10px 10px; display: grid; gap: 4px; transform: translateX(-50%) translateY(8px); border: 1px solid rgba(112, 47, 18, 0.16); border-radius: 12px; background: rgba(250, 248, 244, 0.98); box-shadow: 0 18px 34px rgba(30, 15, 8, 0.18); opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 160ms ease, transform 160ms ease, visibility 160ms ease; }
+      .product-menu-panel::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 14px; }
+      @media (hover: hover) and (pointer: fine) {
+        .nav-product-menu:hover .product-menu-panel, .nav-product-menu:focus-within .product-menu-panel { opacity: 1; visibility: visible; pointer-events: auto; transform: translateX(-50%) translateY(0); }
+      }
+      .nav-product-menu.open .product-menu-panel { opacity: 1; visibility: visible; pointer-events: auto; transform: translateX(-50%) translateY(0); }
+      .product-menu-panel a { padding: 10px 12px; border-radius: 8px; color: #2c3e30; font-size: 14px; }
+      .product-menu-panel a:hover { color: var(--maroon); background: rgba(45, 107, 69, 0.1); }
+      .nav-links .active::after { content: ""; position: absolute; left: 0; right: 0; bottom: 24px; height: 5px; border-radius: 999px; background: var(--green); box-shadow: 0 2px 6px rgba(27, 77, 46, 0.35); }
+      .nav-actions { display: flex; gap: 14px; flex: 0 0 auto; }
+      .btn { min-height: 55px; padding: 0 24px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; border-radius: 8px; color: #fffaf0; font-size: 16px; font-weight: 900; box-shadow: 0 3px 8px rgba(44, 11, 5, 0.2); }
+      .btn-call { background: linear-gradient(180deg, var(--maroon), var(--maroon-dark)); border: 1px solid rgba(255, 255, 255, 0.2); }
+      .btn-whatsapp { background: linear-gradient(180deg, var(--icon-whatsapp), var(--icon-whatsapp-dark)); border: 1px solid rgba(255, 255, 255, 0.28); }
+
+      /* Hero */
+      .about-hero {
+        position: relative;
+        min-height: 300px;
+        padding: 72px 64px 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+        color: #fff8ef;
+        background: linear-gradient(135deg, rgba(20, 61, 36, 0.93) 0%, rgba(110, 20, 20, 0.9) 100%), url("../assets/spice-hero.png") center / cover no-repeat;
+      }
+      .about-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        opacity: 0.1;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cpath fill='none' stroke='%23fff' stroke-width='1' d='M0 200h400M200 0v400'/%3E%3C/svg%3E");
+        background-size: 80px 80px;
+        pointer-events: none;
+      }
+      .about-hero-inner {
+        position: relative;
+        z-index: 2;
+        width: min(780px, 100%);
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .about-hero-kicker { display: inline-flex; align-items: center; gap: 8px; margin: 0 0 14px; padding: 6px 16px; border-radius: 999px; background: rgba(255,255,255,0.12); color: var(--highlight); font-size: 13px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+      .about-hero h1 {
+        margin: 0 auto 14px;
+        max-width: 720px;
+        text-align: center;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(34px, 5vw, 50px);
+        line-height: 1.12;
+        text-shadow: 0 4px 18px rgba(0,0,0,0.25);
+      }
+      .about-hero-lead {
+        margin: 0 auto;
+        max-width: 58ch;
+        text-align: center;
+        color: rgba(255,248,239,0.92);
+        font-size: clamp(15px, 2vw, 18px);
+        line-height: 1.65;
+      }
+
+      /* Scroll reveal */
+      .reveal {
+        opacity: 0;
+        transform: translateY(32px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+      }
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .reveal-delay-1 { transition-delay: 0.1s; }
+      .reveal-delay-2 { transition-delay: 0.2s; }
+      .reveal-delay-3 { transition-delay: 0.3s; }
+      .reveal-delay-4 { transition-delay: 0.4s; }
+
+      /* Story */
+      .about-story {
+        position: relative;
+        padding: 56px 64px 80px;
+        background:
+          radial-gradient(circle at 0% 50%, rgba(146, 28, 28, 0.04), transparent 40%),
+          radial-gradient(circle at 100% 30%, rgba(45, 107, 69, 0.06), transparent 38%),
+          linear-gradient(180deg, #faf6f0 0%, #ffffff 100%);
+      }
+      .about-story::before { display: none; }
+      .about-story-wrap {
+        width: min(1140px, 100%);
+        margin: 0 auto;
+        padding: 40px;
+        display: grid;
+        grid-template-columns: minmax(280px, 0.92fr) minmax(0, 1.08fr);
+        gap: 52px;
+        align-items: center;
+        border-radius: 24px;
+        background: #ffffff;
+        border: 1px solid rgba(146, 28, 28, 0.1);
+        box-shadow:
+          0 32px 64px rgba(79, 23, 24, 0.08),
+          0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+      }
+      .about-story-visual { position: relative; }
+      .about-story-photo {
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        border: 1px solid rgba(146, 28, 28, 0.12);
+        box-shadow: 0 24px 48px rgba(79, 23, 24, 0.14);
+        background: #fff;
+      }
+      .about-story-photo-img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        object-position: center top;
+      }
+      .about-established {
+        position: absolute;
+        right: -12px;
+        bottom: -16px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 18px;
+        border-radius: 999px;
+        background: linear-gradient(180deg, var(--green-light), var(--green));
+        color: #fff8ef;
+        font-size: 14px;
+        font-weight: 800;
+        box-shadow: 0 12px 28px rgba(27, 77, 46, 0.35);
+      }
+      .about-established strong { font-size: 18px; }
+      .section-kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 10px;
+        padding: 5px 14px;
+        border-radius: 999px;
+        background: rgba(45, 107, 69, 0.08);
+        border: 1px solid rgba(45, 107, 69, 0.18);
+        color: var(--green-dark);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(14px, 1.4vw, 17px);
+        font-style: italic;
+        font-weight: 700;
+      }
+      .about-story-copy {
+        padding: 0;
+        border-radius: 0;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+      }
+      .about-story-copy h2 {
+        position: relative;
+        margin: 0 0 20px;
+        padding-left: 18px;
+        color: #6e1414;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(28px, 3vw, 40px);
+        line-height: 1.15;
+      }
+      .about-story-copy h2::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 4px;
+        bottom: 4px;
+        width: 4px;
+        border-radius: 999px;
+        background: linear-gradient(180deg, var(--maroon), var(--green));
+      }
+      .about-story-copy h2 span { display: block; color: var(--green); }
+      .about-story-copy p { margin: 0 0 16px; color: #5e4035; font-size: 16px; line-height: 1.7; }
+      .about-pills { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 28px; }
+      .about-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 14px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, rgba(248, 239, 229, 0.7), rgba(255, 255, 255, 0.95));
+        border: 1px solid rgba(45, 107, 69, 0.16);
+        color: var(--green-dark);
+        font-size: 13px;
+        font-weight: 800;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      }
+      .about-pill:hover {
+        transform: translateY(-2px);
+        border-color: rgba(146, 28, 28, 0.25);
+        box-shadow: 0 8px 20px rgba(79, 23, 24, 0.08);
+      }
+      .about-pill iconify-icon { color: var(--maroon); font-size: 16px; flex-shrink: 0; }
+
+      /* Stats */
+      .about-stats {
+        padding: 64px 64px 72px;
+        background:
+          linear-gradient(90deg, rgba(27, 77, 46, 0.06), transparent 22%, transparent 78%, rgba(146, 28, 28, 0.05)),
+          linear-gradient(180deg, #b8d4c4 0%, #d0e8da 40%, #e4f2ea 100%);
+        border-bottom: 1px solid rgba(27, 77, 46, 0.16);
+      }
+      .about-stats-head {
+        width: min(640px, 100%);
+        margin: 0 auto 36px;
+        text-align: center;
+      }
+      .about-stats-head h2 {
+        margin: 0;
+        color: #6e1414;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(24px, 2.6vw, 34px);
+        line-height: 1.15;
+      }
+      .about-stats-head h2::after {
+        content: "";
+        display: block;
+        width: 56px;
+        height: 3px;
+        margin: 12px auto 0;
+        border-radius: 999px;
+        background: linear-gradient(90deg, var(--maroon), var(--green));
+      }
+      .about-stats-grid {
+        width: min(1140px, 100%);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+      }
+      .about-stat {
+        padding: 28px 18px 24px;
+        border-radius: 18px;
+        text-align: center;
+        color: #fff8ef;
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        box-shadow: 0 14px 32px rgba(30, 15, 8, 0.14);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+      .about-stat-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        margin-bottom: 12px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.18);
+        font-size: 20px;
+      }
+      .about-stat:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(30, 15, 8, 0.18); }
+      .about-stat:nth-child(1) { background: linear-gradient(165deg, var(--maroon-light) 0%, var(--maroon-dark) 100%); }
+      .about-stat:nth-child(2) { background: linear-gradient(165deg, var(--green-light) 0%, var(--green-dark) 100%); }
+      .about-stat:nth-child(3) { background: linear-gradient(165deg, #8a5a20 0%, #5c3a12 100%); }
+      .about-stat:nth-child(4) { background: linear-gradient(165deg, #2d6b45 0%, #1b4d2e 100%); }
+      .about-stat strong { display: block; margin-bottom: 6px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(28px, 3vw, 36px); line-height: 1; }
+      .about-stat span { font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; opacity: 0.92; }
+
+      /* What We Stand For */
+      .about-stand-section.global-export-showcase {
+        margin-top: 0;
+        padding: 80px 64px 76px;
+        background:
+          radial-gradient(ellipse at 100% 0%, rgba(146, 28, 28, 0.14), transparent 50%),
+          radial-gradient(ellipse at 0% 100%, rgba(45, 107, 69, 0.12), transparent 46%),
+          linear-gradient(180deg, #fff5f2 0%, #fffcfa 45%, #ffffff 100%);
+        border-top: none;
+        border-bottom: 1px solid rgba(146, 28, 28, 0.1);
+      }
+      .about-stand-section.global-export-showcase::before {
+        display: block;
+        top: 48px;
+        opacity: 0.85;
+      }
+      .about-stand-section .export-values {
+        margin-top: 0;
+        padding-top: 12px;
+        width: min(1180px, 100%);
+        margin-bottom: 0;
+      }
+      .about-stand-section .export-value-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .about-stand-section .export-value-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 24px 48px rgba(27, 77, 46, 0.16);
+      }
+      .about-stand-section .export-value-card:nth-child(1) { border-top: 3px solid var(--maroon); }
+      .about-stand-section .export-value-card:nth-child(2) { border-top: 3px solid var(--green); }
+      .about-stand-section .export-value-card:nth-child(3) { border-top: 3px solid #8a5a20; }
+      .about-stand-head { width: min(760px, 100%); margin: 0 auto 40px; text-align: center; }
+      .about-stand-head h2 { margin: 0 auto 14px; max-width: 680px; color: #6e1414; font-family: Georgia, "Times New Roman", serif; font-size: clamp(30px, 2.8vw, 44px); line-height: 1.14; }
+      .about-stand-head p { max-width: 620px; margin: 0 auto; color: #5e4035; font-size: clamp(15px, 1.1vw, 17px); line-height: 1.65; }
+
+      /* Services */
+      main .about-page-services.services-section {
+        background:
+          radial-gradient(circle at 8% 20%, rgba(45, 107, 69, 0.1), transparent 38%),
+          radial-gradient(circle at 92% 80%, rgba(146, 28, 28, 0.07), transparent 36%),
+          linear-gradient(180deg, #eef6f1 0%, #ffffff 50%, #f5faf7 100%);
+        border-top: none;
+        border-bottom: none;
+      }
+      main .about-page-services .services-head-divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin: 10px 0 16px;
+        color: var(--green);
+        font-size: 18px;
+      }
+      main .about-page-services .services-head-divider::before,
+      main .about-page-services .services-head-divider::after {
+        content: "";
+        width: 48px;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(45, 107, 69, 0.5));
+      }
+      main .about-page-services .services-head-divider::after {
+        background: linear-gradient(90deg, rgba(45, 107, 69, 0.5), transparent);
+      }
+      main .about-page-services .services-panel {
+        border: 1px solid rgba(27, 77, 46, 0.18);
+        box-shadow:
+          0 32px 64px rgba(27, 77, 46, 0.12),
+          0 0 0 4px rgba(45, 107, 69, 0.04);
+      }
+      main .about-page-services .service-item {
+        transition: transform 0.25s ease, background 0.25s ease;
+      }
+      main .about-page-services .service-item:hover {
+        transform: translateY(-3px);
+        background: rgba(232, 242, 236, 0.35);
+      }
+
+      /* Why Choose Us */
+      main .about-page-why.why-section {
+        background:
+          radial-gradient(circle at 15% 85%, rgba(201, 169, 110, 0.15), transparent 42%),
+          radial-gradient(circle at 85% 15%, rgba(146, 28, 28, 0.06), transparent 40%),
+          linear-gradient(180deg, #fffdf8 0%, #fdf8ef 45%, #f8f0e0 100%);
+        border-top: 1px solid rgba(201, 169, 110, 0.35);
+        border-bottom: 1px solid rgba(201, 169, 110, 0.2);
+      }
+      main .about-page-why .why-card {
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      }
+      main .about-page-why .why-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(146, 28, 28, 0.35);
+        box-shadow: 0 18px 36px rgba(91, 23, 21, 0.1);
+      }
+      main .about-page-why .why-card:nth-child(odd) .why-card-icon-ring {
+        border-color: var(--maroon-light);
+        box-shadow: 0 0 0 4px #fdfaf3, 0 0 0 5px rgba(146, 28, 28, 0.25);
+      }
+
+      /* CTA — partner section (unique class avoids styles.css .about-cta conflict) */
+      .about-partner-cta {
+        padding: 80px 64px 96px;
+        background:
+          linear-gradient(135deg, var(--green-dark) 0%, #1a5535 35%, var(--maroon-dark) 100%);
+        position: relative;
+        overflow: hidden;
+      }
+      .about-partner-cta::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        opacity: 0.07;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cpath fill='none' stroke='%23fff' d='M0 40h80M40 0v80'/%3E%3C/svg%3E");
+        pointer-events: none;
+      }
+      .about-partner-cta::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: min(900px, 120vw);
+        height: min(900px, 120vw);
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 68%);
+        pointer-events: none;
+      }
+      .about-partner-cta-inner {
+        position: relative;
+        z-index: 1;
+        width: min(920px, 100%);
+        margin: 0 auto;
+      }
+      .about-partner-cta-box {
+        padding: 48px clamp(28px, 5vw, 56px);
+        border-radius: 24px;
+        text-align: center;
+        background: #ffffff;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        box-shadow:
+          0 32px 64px rgba(0, 0, 0, 0.28),
+          0 0 0 1px rgba(255, 255, 255, 0.12) inset;
+      }
+      .about-partner-cta-box::before {
+        content: "";
+        display: block;
+        width: 72px;
+        height: 4px;
+        margin: 0 auto 28px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, var(--maroon), var(--green));
+      }
+      .about-partner-cta-kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 12px;
+        padding: 6px 16px;
+        border-radius: 999px;
+        background: rgba(45, 107, 69, 0.1);
+        border: 1px solid rgba(45, 107, 69, 0.2);
+        color: var(--green-dark);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+      .about-partner-cta-kicker iconify-icon { color: var(--maroon); font-size: 14px; }
+      .about-partner-cta-box h2 {
+        margin: 0 0 14px;
+        color: #6e1414;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(26px, 3.2vw, 38px);
+        line-height: 1.15;
+      }
+      .about-partner-cta-box p {
+        margin: 0 auto 32px;
+        max-width: 54ch;
+        color: #5e4035;
+        font-size: clamp(15px, 1.1vw, 17px);
+        line-height: 1.65;
+      }
+      .about-partner-cta-actions {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+        max-width: 680px;
+        margin: 0 auto;
+      }
+      .about-partner-btn {
+        min-height: 52px;
+        padding: 0 20px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 900;
+        text-decoration: none;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .about-partner-btn:hover { transform: translateY(-2px); }
+      .about-partner-btn-maroon {
+        background: linear-gradient(180deg, var(--maroon-light), var(--maroon-dark));
+        box-shadow: 0 10px 24px rgba(146, 28, 28, 0.3);
+      }
+      .about-partner-btn-green {
+        background: linear-gradient(180deg, var(--green-light), var(--green-dark));
+        box-shadow: 0 10px 24px rgba(27, 77, 46, 0.3);
+      }
+      .about-partner-btn-whatsapp {
+        background: linear-gradient(180deg, var(--icon-whatsapp), var(--icon-whatsapp-dark));
+        box-shadow: 0 10px 24px rgba(27, 77, 46, 0.28);
+      }
+
+      /* Footer */
+      .site-footer { position: relative; z-index: 5; display: block; width: 100%; }
+      .footer-main { background: linear-gradient(180deg, #f5f0e8 0%, var(--cream-warm) 100%); border-top: 3px solid var(--maroon); box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.06); }
+      .footer-inner { padding: 48px 64px 44px; }
+      .footer-grid { display: grid; grid-template-columns: 1.35fr 0.85fr 0.9fr 1fr; gap: clamp(28px, 4vw, 48px); align-items: start; }
+      .footer-brand-link { display: flex; margin-bottom: 16px; transition: transform 0.25s ease; }
+      .footer-brand-link:hover { transform: translateY(-2px); }
+      .footer-logo { width: min(260px, 100%); padding: 10px 14px; border-radius: 12px; background: #fff8ec; box-shadow: 0 12px 24px rgba(0, 0, 0, 0.22); transition: transform 0.25s ease; }
+      .footer-brand-link:hover .footer-logo { transform: scale(1.03); }
+      .footer-brand-desc { margin: 0 0 20px; max-width: 36ch; color: #704324; font-size: 15px; line-height: 1.65; }
+      .footer-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+      .footer-actions .btn { min-height: 48px; padding: 0 18px; font-size: 14px; }
+      .footer-col h3 { display: flex; align-items: center; gap: 10px; margin: 0 0 16px; padding-bottom: 10px; border-bottom: 2px solid var(--maroon); color: #921c1c; font-family: Georgia, "Times New Roman", serif; font-size: 18px; font-weight: 700; }
+      .footer-heading-icon { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; color: #fff8ef; font-size: 13px; }
+      .footer-heading-icon-nav { background: linear-gradient(180deg, var(--maroon), var(--maroon-dark)); }
+      .footer-heading-icon-products { background: linear-gradient(180deg, var(--green-light), var(--green)); }
+      .footer-heading-icon-contact { background: linear-gradient(180deg, var(--maroon-light), var(--maroon-dark)); }
+      .footer-links, .footer-contact-list { margin: 0; padding: 0; list-style: none; }
+      .footer-links li + li, .footer-contact-list li + li { margin-top: 10px; }
+      .footer-links a { display: inline-flex; align-items: center; gap: 8px; padding: 7px 12px; border-radius: 8px; color: #2c3e30; font-size: 15px; font-weight: 800; transition: color 0.25s ease, background 0.25s ease, transform 0.25s ease; }
+      .footer-links a:hover { color: var(--maroon); background: rgba(146, 28, 28, 0.1); transform: translateX(6px); }
+      .footer-link-icon { color: var(--green); font-size: 12px; }
+      .footer-link-icon-spice { color: var(--maroon); font-size: 8px; }
+      .footer-contact-name { display: flex; align-items: center; gap: 10px; margin: 0 0 12px; color: #921c1c; font-size: 16px; font-weight: 900; }
+      .footer-item-icon { width: 32px; height: 32px; flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; color: #fff; font-size: 14px; }
+      .footer-icon-user { background: linear-gradient(180deg, #921c1c, #6e1414); }
+      .footer-icon-phone { background: linear-gradient(180deg, var(--green-light), var(--green)); }
+      .footer-icon-email { background: linear-gradient(180deg, var(--maroon-light), var(--maroon)); }
+      .footer-icon-location { background: linear-gradient(180deg, var(--green-light), var(--green)); }
+      .footer-contact-list li { display: flex; align-items: flex-start; gap: 12px; padding: 4px 0; }
+      .footer-contact-list a { color: #2c3e30; font-weight: 800; }
+      .footer-contact-note { display: flex; align-items: center; gap: 8px; margin: 16px 0 0; color: #704324; font-size: 14px; }
+      .footer-contact-note strong { color: var(--maroon); }
+      .footer-strip { min-height: 46px; padding: 12px 64px; display: flex; align-items: center; justify-content: center; color: #fff8ea; background: linear-gradient(90deg, var(--maroon-dark), var(--maroon) 52%, var(--maroon-dark)); border-top: 1px solid rgba(255, 255, 255, 0.14); font-size: 14px; font-weight: 700; }
+      .footer-strip-copy { display: inline-flex; align-items: center; gap: 8px; margin: 0; color: #fff1d5; }
+      .footer-strip-icon-star { color: var(--highlight); }
+
+      @media (max-width: 980px) {
+        .top-strip, .main-nav, .about-hero, .about-story, .about-stats, .about-partner-cta { padding-left: 28px; padding-right: 28px; }
+        .footer-inner { padding: 40px 28px 36px; }
+        .footer-strip { padding: 14px 28px; }
+        .footer-grid { grid-template-columns: 1fr 1fr; }
+        .about-story-wrap { grid-template-columns: 1fr; gap: 36px; padding: 28px; }
+        .about-pills { grid-template-columns: 1fr; }
+        .about-established { right: 8px; bottom: -12px; }
+        .about-stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .about-partner-cta-actions { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 480px; }
+        .about-partner-cta-actions .about-partner-btn:last-child { grid-column: 1 / -1; }
+        .top-strip { flex-direction: column; align-items: flex-start; gap: 6px; white-space: normal; min-height: auto; padding-top: 10px; padding-bottom: 10px; }
+        .trust { text-align: left; padding-left: 0; }
+        .divider { display: none; }
+        .main-nav { min-height: 80px; padding-top: 10px; padding-bottom: 10px; justify-content: space-between; flex-wrap: wrap; }
+        .brand { margin-left: 18px; }
+        .menu-button { display: inline-flex; align-items: center; justify-content: center; }
+        .nav-links, .nav-actions { display: none; }
+        .main-nav.menu-open .nav-links { position: absolute; top: calc(100% - 1px); left: 16px; right: 16px; z-index: 20; display: flex; flex-direction: column; align-items: stretch; gap: 0; padding: 10px; border: 1px solid rgba(112, 47, 18, 0.18); border-radius: 0 0 12px 12px; background: rgba(250, 248, 244, 0.98); box-shadow: 0 18px 34px rgba(30, 15, 8, 0.22); }
+        .main-nav.menu-open .nav-links a { padding: 13px 14px; border-radius: 8px; }
+        .main-nav.menu-open .nav-product-menu { display: block; padding: 0; }
+        .main-nav.menu-open .product-menu-toggle { width: 100%; justify-content: space-between; padding: 13px 14px; border-radius: 8px; }
+        .main-nav.menu-open .product-menu-panel { position: static; width: 100%; margin-top: 4px; padding: 6px; display: none; transform: none; opacity: 1; visibility: visible; pointer-events: auto; box-shadow: none; }
+        .main-nav.menu-open .nav-product-menu.open .product-menu-panel { display: grid; }
+        .main-nav.menu-open .product-menu-panel::before { display: none; }
+        .main-nav.menu-open .nav-links .active::after { display: none; }
+        .main-nav.menu-open .nav-actions { display: flex; flex-direction: column; width: 100%; order: 4; gap: 10px; padding: 0 10px 12px; }
+        .main-nav.menu-open .nav-actions .btn { width: 100%; min-height: 48px; }
+      }
+
+      @media (max-width: 640px) {
+        .top-strip { display: none; }
+        .brand { margin-left: 0; }
+        .brand-logo { width: clamp(175px, 52vw, 235px); max-height: 64px; }
+        .footer-grid { grid-template-columns: 1fr; }
+        .about-hero { min-height: 260px; padding-top: 56px; padding-bottom: 40px; }
+        .about-stats-grid { grid-template-columns: 1fr 1fr; }
+        .about-partner-cta { padding-top: 56px; padding-bottom: 64px; }
+        .about-partner-cta-box { padding: 32px 22px; }
+        .about-partner-cta-actions { grid-template-columns: 1fr; max-width: 320px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="top-strip">
+        <div class="top-group">
+          <span class="top-item top-item-loc"><iconify-icon icon="mdi:map-marker" aria-hidden="true"></iconify-icon> Deesa, Banaskantha, Gujarat - 385535, India</span>
+          <span class="divider"></span>
+          <span class="top-item top-item-phone"><iconify-icon icon="fa6-solid:phone" aria-hidden="true"></iconify-icon> +91 89557 54845</span>
+          <span class="divider"></span>
+          <span class="top-item top-item-email"><iconify-icon icon="fa6-solid:envelope" aria-hidden="true"></iconify-icon> info@sukhamfoods.com</span>
+        </div>
+        <div class="trust">&#9733; &#9733; &#9733; &#9733; Trusted Manufacturer, Supplier &amp; Exporter of Premium Indian Spices</div>
+      </div>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a class="brand" href="../index.html#home" aria-label="Sukham Foods and Spices home">
+          <img class="brand-logo" src="../assets/logo.png" alt="Sukham Foods &amp; Spices" />
+        </a>
+        <button class="menu-button" type="button" aria-label="Open menu" aria-controls="primary-menu" aria-expanded="false">&#9776;</button>
+        <div class="nav-links" id="primary-menu">
+          <a href="../index.html#home">Home</a>
+          <a class="active" href="about.html">About Us</a>
+          <div class="nav-product-menu">
+            <button class="product-menu-toggle" type="button" aria-expanded="false" aria-controls="header-products-menu">Products <iconify-icon icon="fa6-solid:chevron-down" aria-hidden="true"></iconify-icon></button>
+            <div class="product-menu-panel" id="header-products-menu">
+              <a href="../prodcut/Turmeric Powder.html">Turmeric Powder</a>
+              <a href="../prodcut/Red Chilli Powder.html">Red Chilli Powder</a>
+              <a href="../prodcut/Coriander Powder.html">Coriander Powder</a>
+              <a href="../prodcut/Cumin Powder.html">Cumin Powder</a>
+              <a href="../prodcut/Black Pepper Powder.html">Black Pepper Powder</a>
+              <a href="../prodcut/Garam Masala.html">Garam Masala</a>
+              <a href="../prodcut/Kitchen King Masala.html">Kitchen King Masala</a>
+              <a href="../prodcut/Pav Bhaji Masala.html">Pav Bhaji Masala</a>
+              <a href="../prodcut/Chaat Masala.html">Chaat Masala</a>
+              <a href="../prodcut/Sabzi Masala.html">Sabzi Masala</a>
+            </div>
+          </div>
+          <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="nav-actions">
+          <a class="btn btn-call" href="tel:+918955754845"><iconify-icon icon="fa6-solid:phone" aria-hidden="true"></iconify-icon> Call Now</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/918955754845"><iconify-icon icon="fa6-brands:whatsapp" aria-hidden="true"></iconify-icon> WhatsApp</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="about-hero" aria-label="About Sukham Foods">
+        <div class="about-hero-inner">
+          <p class="about-hero-kicker"><iconify-icon icon="fa6-solid:leaf" aria-hidden="true"></iconify-icon> About Sukham Foods</p>
+          <h1>Premium Indian Spices for Domestic &amp; Global Markets</h1>
+          <p class="about-hero-lead">Manufacturer, supplier and exporter of pure spices and masalas — driven by quality, freshness and authentic taste from Deesa, Gujarat.</p>
+        </div>
+      </section>
+
+      <section class="about-story" aria-label="Our story">
+        <div class="about-story-wrap reveal">
+          <div class="about-story-visual">
+            <div class="about-story-photo">
+              <img class="about-story-photo-img" src="../assets/about2.png" alt="Sukham Foods team with premium spice products" />
+            </div>
+            <span class="about-established">&#127793; Established <strong>2026</strong></span>
+          </div>
+          <div class="about-story-copy">
+            <p class="section-kicker">Our Story</p>
+            <h2>Purity in Every Pinch, <span>Trust in Every Partnership</span></h2>
+            <p>SUKHAM Foods &amp; Spices is a trusted manufacturer, supplier and exporter of premium Indian spices and food products. We are driven by purity, quality and authentic taste in every pack we deliver.</p>
+            <p>Our range includes whole spices, ground spices, blended masalas, custom spice mixes and seasoning blends — crafted for consistent quality, hygienic processing and complete customer satisfaction.</p>
+            <p>From local distributors to international buyers, we support bulk supply, private label manufacturing and export-ready packaging with dependable service.</p>
+            <div class="about-pills">
+              <span class="about-pill"><iconify-icon icon="fa6-solid:certificate" aria-hidden="true"></iconify-icon> Quality Processing</span>
+              <span class="about-pill"><iconify-icon icon="fa6-solid:truck" aria-hidden="true"></iconify-icon> Bulk &amp; Export</span>
+              <span class="about-pill"><iconify-icon icon="fa6-solid:tags" aria-hidden="true"></iconify-icon> Private Label</span>
+              <span class="about-pill"><iconify-icon icon="mdi:map-marker" aria-hidden="true"></iconify-icon> Deesa, Gujarat</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-stats" aria-label="Company highlights">
+        <header class="about-stats-head reveal">
+          <p class="section-kicker">At a Glance</p>
+          <h2>Numbers That Speak For Us</h2>
+        </header>
+        <div class="about-stats-grid">
+          <div class="about-stat reveal reveal-delay-1">
+            <span class="about-stat-icon" aria-hidden="true"><iconify-icon icon="fa6-solid:box"></iconify-icon></span>
+            <strong>10+</strong><span>Premium Products</span>
+          </div>
+          <div class="about-stat reveal reveal-delay-2">
+            <span class="about-stat-icon" aria-hidden="true"><iconify-icon icon="fa6-solid:leaf"></iconify-icon></span>
+            <strong>100%</strong><span>Pure Ingredients</span>
+          </div>
+          <div class="about-stat reveal reveal-delay-3">
+            <span class="about-stat-icon" aria-hidden="true"><iconify-icon icon="fa6-regular:clock"></iconify-icon></span>
+            <strong>24hr</strong><span>Enquiry Response</span>
+          </div>
+          <div class="about-stat reveal reveal-delay-4">
+            <span class="about-stat-icon" aria-hidden="true"><iconify-icon icon="fa6-solid:globe"></iconify-icon></span>
+            <strong>Global</strong><span>Export Ready</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="global-export-showcase about-stand-section reveal" id="what-we-stand-for" aria-label="What we stand for">
+        <header class="about-stand-head">
+          <p class="section-kicker">What We Stand For</p>
+          <h2>Our Vision, Mission &amp; Commitment</h2>
+          <p>Committed to quality, consistency and reliable trade for domestic and international spice markets.</p>
+        </header>
+        <div class="export-values">
+          <article class="export-value-card">
+            <span class="export-value-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false"><path d="M24 40c8.8 0 16-7.2 16-16S32.8 8 24 8 8 15.2 8 24s7.2 16 16 16Z" /><path d="M8 24h32" /><path d="M24 8c4 4.4 6 9.7 6 16s-2 11.6-6 16c-4-4.4-6-9.7-6-16s2-11.6 6-16Z" /></svg>
+            </span>
+            <h3>Our Vision</h3>
+            <p>To become a trusted global spice brand known for purity, authentic taste, reliable supply and lasting customer trust.</p>
+          </article>
+          <article class="export-value-card">
+            <span class="export-value-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false"><circle cx="24" cy="24" r="14" /><circle cx="24" cy="24" r="7" /><path d="M24 10v4M24 34v4M10 24h4M34 24h4" /></svg>
+            </span>
+            <h3>Our Mission</h3>
+            <p>To deliver premium quality spices and food products with freshness, consistency and customer satisfaction.</p>
+          </article>
+          <article class="export-value-card">
+            <span class="export-value-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false"><path d="M14 28c0-6 4-10 10-10s10 4 10 10" /><path d="M12 28h24" /><path d="M16 28v6c0 2 2 4 4 4h8c2 0 4-2 4-4v-6" /><path d="M20 20c-2-3-1-7 3-9M28 20c2-3 1-7-3-9" /></svg>
+            </span>
+            <h3>Our Commitment</h3>
+            <p>We are committed to quality processing, transparent service and long-term business relationships.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="services-section about-page-services reveal" id="services" aria-label="Our services">
+        <div class="services-inner">
+          <header class="services-head">
+            <p class="services-kicker">Our Services</p>
+            <h2>Professional Spice Services<br />You Can Trust</h2>
+            <div class="services-head-divider" aria-hidden="true"><span>&#10047;</span></div>
+            <p class="services-intro">SUKHAM Foods &amp; Spices provides end-to-end spice manufacturing, packaging and supply services with consistent quality, hygienic processing and reliable delivery for every partner.</p>
+          </header>
+
+          <div class="services-panel">
+            <svg class="services-panel-leaf services-panel-leaf-tl" viewBox="0 0 120 120" aria-hidden="true"><path d="M18 92C34 58 58 34 92 18M14 72C38 54 54 38 72 14" /></svg>
+            <svg class="services-panel-leaf services-panel-leaf-br" viewBox="0 0 120 120" aria-hidden="true"><path d="M102 92C86 58 62 34 28 18M106 72C82 54 66 38 48 14" /></svg>
+
+            <div class="services-panel-head">
+              <span class="services-panel-line" aria-hidden="true"></span>
+              <p>End-to-End Spice Solutions</p>
+              <span class="services-panel-line" aria-hidden="true"></span>
+            </div>
+
+            <div class="services-grid">
+              <article class="service-item">
+                <div class="service-item-head">
+                  <span class="service-icon" aria-hidden="true">
+                    <svg viewBox="0 0 48 48" focusable="false"><path d="M24 8v32M16 16h16l-2 14H18l-2-14Z" /><path d="M14 38h20" /></svg>
+                  </span>
+                  <span class="service-item-num">01</span>
+                </div>
+                <div class="service-item-copy">
+                  <h3>Spice Processing &amp; Manufacturing</h3>
+                  <p>Premium grinding, blending and hygienic processing of ground spices and masalas with batch-to-batch consistency.</p>
+                </div>
+              </article>
+
+              <article class="service-item">
+                <div class="service-item-head">
+                  <span class="service-icon" aria-hidden="true">
+                    <svg viewBox="0 0 48 48" focusable="false"><path d="M24 37V16" /><path d="M24 24C16 23 11 18 10 10c8 1 13 6 14 14Z" /><path d="M24 29c8-1 13-6 14-14-8 1-13 6-14 14Z" /><path d="M16 38h16" /></svg>
+                  </span>
+                  <span class="service-item-num">02</span>
+                </div>
+                <div class="service-item-copy">
+                  <h3>Custom Masala Blending</h3>
+                  <p>Custom spice and masala blends developed to match your flavour profile, product range and market requirements.</p>
+                </div>
+              </article>
+
+              <article class="service-item">
+                <div class="service-item-head">
+                  <span class="service-icon" aria-hidden="true">
+                    <svg viewBox="0 0 48 48" focusable="false"><path d="M12 18h24v16H12V18Z" /><path d="M18 18V12h12v6" /><path d="M18 26h12" /></svg>
+                  </span>
+                  <span class="service-item-num">03</span>
+                </div>
+                <div class="service-item-copy">
+                  <h3>Private Label Services</h3>
+                  <p>Complete private label support from recipe development and packaging to labelling and brand-ready dispatch.</p>
+                </div>
+              </article>
+
+              <article class="service-item">
+                <div class="service-item-head">
+                  <span class="service-icon" aria-hidden="true">
+                    <svg viewBox="0 0 48 48" focusable="false"><path d="M10 17 24 9l14 8-14 8-14-8Z" /><path d="M10 17v16l14 8 14-8V17" /><path d="M24 25v16" /></svg>
+                  </span>
+                  <span class="service-item-num">04</span>
+                </div>
+                <div class="service-item-copy">
+                  <h3>Packaging &amp; Labelling</h3>
+                  <p>Flexible packaging from 50g retail packs to 25kg bulk — hygienically sealed, clearly labelled and market-ready.</p>
+                </div>
+              </article>
+
+              <article class="service-item">
+                <div class="service-item-head">
+                  <span class="service-icon" aria-hidden="true">
+                    <svg viewBox="0 0 48 48" focusable="false"><path d="M10 30h28l-3 10H13l-3-10Z" /><path d="M12 30l4-12h16l4 12" /><circle cx="16" cy="40" r="2" /><circle cx="32" cy="40" r="2" /></svg>
+                  </span>
+                  <span class="service-item-num">05</span>
+                </div>
+                <div class="service-item-copy">
+                  <h3>Wholesale &amp; Distribution</h3>
+                  <p>Dependable spice supply for wholesalers, distributors, retailers, supermarkets and HoReCa partners across India.</p>
+                </div>
+              </article>
+
+              <article class="service-item">
+                <div class="service-item-head">
+                  <span class="service-icon" aria-hidden="true">
+                    <svg viewBox="0 0 48 48" focusable="false"><path d="M24 40s14-9 14-23V9l-14-5L10 9v8c0 14 14 23 14 23Z" /><path d="m18 24 4 4 9-10" /></svg>
+                  </span>
+                  <span class="service-item-num">06</span>
+                </div>
+                <div class="service-item-copy">
+                  <h3>Quality Assurance</h3>
+                  <p>Every batch is checked for purity, aroma, colour and freshness — ensuring safe and trustworthy products.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="why-section about-page-why reveal" id="why-us" aria-label="Why choose us">
+        <div class="why-inner">
+          <header class="why-head">
+            <p class="section-kicker">Why Choose Us</p>
+            <h2>Purity You Can Trust,<br />Taste You Can Rely On</h2>
+            <p class="why-intro">We are committed to delivering premium spices with freshness, authentic flavour, hygienic processing, and dependable supply for every customer.</p>
+          </header>
+
+          <div class="why-cards">
+            <article class="why-card">
+              <div class="why-card-icon" aria-hidden="true">
+                <span class="why-card-icon-ring">
+                  <svg viewBox="0 0 48 48" focusable="false"><path d="M18 34h12l-2 8H20l-2-8Z" /><path d="M16 34l3-12h10l3 12" /><path d="M22 22V14" /><path d="M26 22V14" /><path d="M24 14c-3 0-5-2-5-5" /><path d="M24 14c3 0 5-2 5-5" /></svg>
+                </span>
+              </div>
+              <span class="why-card-star" aria-hidden="true">&#10022;</span>
+              <div class="why-card-copy">
+                <h3>Premium Quality Spices</h3>
+                <p>Carefully selected and processed to deliver rich aroma and consistent quality.</p>
+              </div>
+            </article>
+
+            <article class="why-card">
+              <div class="why-card-icon" aria-hidden="true">
+                <span class="why-card-icon-ring">
+                  <svg viewBox="0 0 48 48" focusable="false"><circle cx="24" cy="24" r="14" /><path d="M24 34V18" /><path d="M24 22c-5-1-8-4-8-9 5 1 8 4 8 9Z" /><path d="M24 26c5-1 8-4 8-9-5 1-8 4-8 9Z" /></svg>
+                </span>
+              </div>
+              <span class="why-card-star" aria-hidden="true">&#10022;</span>
+              <div class="why-card-copy">
+                <h3>100% Pure Ingredients</h3>
+                <p>Made with pure ingredients and no compromise on authenticity.</p>
+              </div>
+            </article>
+
+            <article class="why-card">
+              <div class="why-card-icon" aria-hidden="true">
+                <span class="why-card-icon-ring">
+                  <svg viewBox="0 0 48 48" focusable="false"><path d="M24 40s14-9 14-23V9l-14-5L10 9v8c0 14 14 23 14 23Z" /><path d="m18 24 4 4 9-10" /></svg>
+                </span>
+              </div>
+              <span class="why-card-star" aria-hidden="true">&#10022;</span>
+              <div class="why-card-copy">
+                <h3>Hygienic Processing</h3>
+                <p>Processed in clean, safe, and quality-controlled facilities.</p>
+              </div>
+            </article>
+
+            <article class="why-card">
+              <div class="why-card-icon" aria-hidden="true">
+                <span class="why-card-icon-ring">
+                  <svg viewBox="0 0 48 48" focusable="false"><path d="M8 30h22l3 10H11l-3-10Z" /><path d="M10 30l3-10h16l3 10" /><circle cx="14" cy="40" r="2" /><circle cx="28" cy="40" r="2" /><circle cx="36" cy="14" r="8" /><path d="M36 10v8M32 14h8" /></svg>
+                </span>
+              </div>
+              <span class="why-card-star" aria-hidden="true">&#10022;</span>
+              <div class="why-card-copy">
+                <h3>Timely Supply</h3>
+                <p>Reliable delivery for retail, wholesale, and bulk requirements.</p>
+              </div>
+            </article>
+
+            <article class="why-card">
+              <div class="why-card-icon" aria-hidden="true">
+                <span class="why-card-icon-ring">
+                  <svg viewBox="0 0 48 48" focusable="false"><path d="M12 36c0-6 4-10 8-10h8c4 0 8 4 8 10" /><circle cx="16" cy="20" r="4" /><circle cx="32" cy="20" r="4" /><circle cx="24" cy="16" r="4" /><path d="M24 8l1.5 3 3.5.5-2.5 2.5.5 3.5L24 15l-3 2.5.5-3.5L19 11.5l3.5-.5L24 8Z" /></svg>
+                </span>
+              </div>
+              <span class="why-card-star" aria-hidden="true">&#10022;</span>
+              <div class="why-card-copy">
+                <h3>Customer Satisfaction</h3>
+                <p>We value long-term relationships and dependable service.</p>
+              </div>
+            </article>
+
+            <article class="why-card">
+              <div class="why-card-icon" aria-hidden="true">
+                <span class="why-card-icon-ring">
+                  <svg viewBox="0 0 48 48" focusable="false"><circle cx="24" cy="24" r="14" /><path d="M8 24h32" /><path d="M24 10c4 4.5 6 9.8 6 14s-2 9.5-6 14" /><path d="M24 10c-4 4.5-6 9.8-6 14s2 9.5 6 14" /><path d="M30 30c3-2 5-5 5-8" /><path d="M30 30c-1 2-3 4-6 5" /></svg>
+                </span>
+              </div>
+              <span class="why-card-star" aria-hidden="true">&#10022;</span>
+              <div class="why-card-copy">
+                <h3>Export Ready Standards</h3>
+                <p>Our products meet quality and packaging standards for wider markets.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-partner-cta reveal" aria-label="Get in touch">
+        <div class="about-partner-cta-inner">
+          <div class="about-partner-cta-box">
+            <p class="about-partner-cta-kicker"><iconify-icon icon="fa6-solid:handshake" aria-hidden="true"></iconify-icon> Let's Work Together</p>
+            <h2>Ready to Partner With Us?</h2>
+            <p>Whether you need bulk spices, export supply or a custom private label range — our team is here to help you grow.</p>
+            <div class="about-partner-cta-actions">
+              <a class="about-partner-btn about-partner-btn-maroon" href="contact.html"><iconify-icon icon="fa6-solid:paper-plane" aria-hidden="true"></iconify-icon> Contact Us</a>
+              <a class="about-partner-btn about-partner-btn-green" href="../index.html#products"><iconify-icon icon="fa6-solid:box" aria-hidden="true"></iconify-icon> View Products</a>
+              <a class="about-partner-btn about-partner-btn-whatsapp" href="https://wa.me/918955754845"><iconify-icon icon="fa6-brands:whatsapp" aria-hidden="true"></iconify-icon> WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div class="footer-inner">
+          <div class="footer-grid">
+            <div class="footer-brand">
+              <a class="footer-brand-link" href="../index.html#home" aria-label="Sukham Foods and Spices home">
+                <img class="footer-logo" src="../assets/logo.png" alt="Sukham Foods &amp; Spices" />
+              </a>
+              <p class="footer-brand-desc">Manufacturer, supplier and exporter of premium Indian spices and masalas from Deesa, Gujarat.</p>
+              <div class="footer-actions">
+                <a class="btn btn-call" href="tel:+918955754845"><iconify-icon icon="fa6-solid:phone" aria-hidden="true"></iconify-icon> Call Now</a>
+                <a class="btn btn-whatsapp" href="https://wa.me/918955754845"><iconify-icon icon="fa6-brands:whatsapp" aria-hidden="true"></iconify-icon> WhatsApp</a>
+              </div>
+            </div>
+            <nav class="footer-col" aria-label="Quick links">
+              <h3><span class="footer-heading-icon footer-heading-icon-nav" aria-hidden="true">&#9670;</span> Quick Links</h3>
+              <ul class="footer-links">
+                <li><a href="../index.html#home"><span class="footer-link-icon" aria-hidden="true">&#9656;</span> Home</a></li>
+                <li><a href="about.html"><span class="footer-link-icon" aria-hidden="true">&#9656;</span> About Us</a></li>
+                <li><a href="../index.html#services"><span class="footer-link-icon" aria-hidden="true">&#9656;</span> Our Services</a></li>
+                <li><a href="../index.html#products"><span class="footer-link-icon" aria-hidden="true">&#9656;</span> Products</a></li>
+                <li><a href="contact.html"><span class="footer-link-icon" aria-hidden="true">&#9656;</span> Contact Us</a></li>
+              </ul>
+            </nav>
+            <nav class="footer-col" aria-label="Products">
+              <h3><span class="footer-heading-icon footer-heading-icon-products" aria-hidden="true">&#10047;</span> Products</h3>
+              <ul class="footer-links">
+                <li><a href="../prodcut/Turmeric Powder.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Turmeric Powder</a></li>
+                <li><a href="../prodcut/Red Chilli Powder.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Red Chilli Powder</a></li>
+                <li><a href="../prodcut/Coriander Powder.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Coriander Powder</a></li>
+                <li><a href="../prodcut/Cumin Powder.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Cumin Powder</a></li>
+                <li><a href="../prodcut/Black Pepper Powder.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Black Pepper Powder</a></li>
+                <li><a href="../prodcut/Garam Masala.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Garam Masala</a></li>
+                <li><a href="../prodcut/Kitchen King Masala.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Kitchen King Masala</a></li>
+                <li><a href="../prodcut/Pav Bhaji Masala.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Pav Bhaji Masala</a></li>
+                <li><a href="../prodcut/Chaat Masala.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Chaat Masala</a></li>
+                <li><a href="../prodcut/Sabzi Masala.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Sabzi Masala</a></li>
+              </ul>
+            </nav>
+            <div class="footer-col footer-contact">
+              <h3><span class="footer-heading-icon footer-heading-icon-contact" aria-hidden="true"><iconify-icon icon="fa6-solid:phone"></iconify-icon></span> Contact</h3>
+              <p class="footer-contact-name"><span class="footer-item-icon footer-icon-user" aria-hidden="true"><iconify-icon icon="fa6-solid:user"></iconify-icon></span> Kamlesh Choudhary</p>
+              <ul class="footer-contact-list">
+                <li><span class="footer-item-icon footer-icon-phone" aria-hidden="true"><iconify-icon icon="fa6-solid:phone"></iconify-icon></span><a href="tel:+918955754845">+91 89557 54845</a></li>
+                <li><span class="footer-item-icon footer-icon-email" aria-hidden="true"><iconify-icon icon="fa6-solid:envelope"></iconify-icon></span><a href="mailto:info@sukhamfoods.com">info@sukhamfoods.com</a></li>
+                <li><span class="footer-item-icon footer-icon-location" aria-hidden="true"><iconify-icon icon="mdi:map-marker"></iconify-icon></span><span>Deesa, Banaskantha, Gujarat - 385535, India</span></li>
+              </ul>
+              <p class="footer-contact-note"><span class="footer-note-icon" aria-hidden="true"><iconify-icon icon="fa6-regular:clock"></iconify-icon></span> We reply within <strong>24 hours</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-strip">
+        <p class="footer-strip-copy"><span class="footer-strip-icon footer-strip-icon-star" aria-hidden="true"><iconify-icon icon="fa6-solid:star"></iconify-icon></span> &copy; 2026 SUKHAM Foods &amp; Spices. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var menuButton = document.querySelector(".menu-button");
+        var mainNav = document.querySelector(".main-nav");
+        var navLinks = document.querySelectorAll(".nav-links a");
+        var productMenuToggle = document.querySelector(".product-menu-toggle");
+        var productMenu = document.querySelector(".nav-product-menu");
+
+        if (menuButton && mainNav) {
+          menuButton.addEventListener("click", function () {
+            var isOpen = mainNav.classList.toggle("menu-open");
+            menuButton.setAttribute("aria-expanded", String(isOpen));
+            menuButton.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+          });
+          navLinks.forEach(function (link) {
+            link.addEventListener("click", function () {
+              mainNav.classList.remove("menu-open");
+              menuButton.setAttribute("aria-expanded", "false");
+              menuButton.setAttribute("aria-label", "Open menu");
+            });
+          });
+        }
+
+        if (productMenuToggle && productMenu) {
+          productMenuToggle.addEventListener("click", function (event) {
+            event.stopPropagation();
+            var isOpen = productMenu.classList.toggle("open");
+            productMenuToggle.setAttribute("aria-expanded", String(isOpen));
+          });
+          document.addEventListener("click", function (event) {
+            if (!productMenu.contains(event.target)) {
+              productMenu.classList.remove("open");
+              productMenuToggle.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+
+        var revealEls = document.querySelectorAll(".reveal");
+        if (revealEls.length && "IntersectionObserver" in window) {
+          var revealObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                revealObserver.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+          revealEls.forEach(function (el) { revealObserver.observe(el); });
+        } else {
+          revealEls.forEach(function (el) { el.classList.add("is-visible"); });
+        }
+      })();
+    </script>
+  </body>
+</html>
