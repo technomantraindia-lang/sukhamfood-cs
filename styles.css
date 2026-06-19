@@ -21,7 +21,7 @@
   --icon-whatsapp-dark: #1b4d2e;
   --icon-user: #921c1c;
   --icon-clock: #2d6b45;
-  --nav-height: 92px;
+  --nav-height: 108px;
 }
 
 * {
@@ -78,6 +78,7 @@ a {
   display: flex;
   align-items: center;
   gap: 18px;
+  flex: 0 1 auto;
   min-width: 0;
 }
 
@@ -97,9 +98,11 @@ a {
 }
 
 .trust {
+  flex: 1 1 58%;
+  min-width: 0;
+  padding-left: 20px;
   color: #fff1d5;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  text-align: right;
 }
 
 .main-nav {
@@ -116,15 +119,17 @@ a {
   align-items: center;
   gap: 14px;
   flex: 0 0 auto;
-  margin-left: 20px;
+  min-width: clamp(290px, 26vw, 400px);
+  margin-left: 48px;
 }
 
 .brand-logo {
-  height: clamp(50px, 4.8vw, 62px);
-  width: auto;
-  max-width: clamp(128px, 10vw, 168px);
+  width: clamp(290px, 26vw, 400px);
+  height: auto;
+  max-height: clamp(80px, 9vw, 108px);
   display: block;
   object-fit: contain;
+  object-position: left center;
   filter: drop-shadow(0 2px 2px rgba(64, 20, 8, 0.12));
 }
 
@@ -3756,9 +3761,14 @@ h1 {
     justify-content: space-between;
   }
 
+  .brand {
+    min-width: 0;
+    margin-left: 18px;
+  }
+
   .brand-logo {
-    height: 50px;
-    max-width: 148px;
+    width: clamp(220px, 30vw, 290px);
+    max-height: 76px;
   }
 
   .brand-mark {
@@ -4159,8 +4169,8 @@ h1 {
   }
 
   .brand-logo {
-    height: 44px;
-    max-width: 128px;
+    width: clamp(175px, 52vw, 235px);
+    max-height: 64px;
   }
 
   .hero {
