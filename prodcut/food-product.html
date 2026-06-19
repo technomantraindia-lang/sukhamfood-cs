@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Food Products | SUKHAM Foods &amp; Spices</title>
+    <link rel="stylesheet" href="prodcut.css" />
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" defer></script>
+    <style>
+      .food-product-hero {
+        position: relative;
+        min-height: 280px;
+        padding: 72px 64px 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+        color: #fff8ef;
+        background:
+          linear-gradient(135deg, rgba(20, 61, 36, 0.92) 0%, rgba(110, 20, 20, 0.88) 100%),
+          url("../assets/spice-hero.png") center / cover no-repeat;
+      }
+
+      .food-product-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        opacity: 0.12;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cpath fill='none' stroke='%23fff' stroke-width='1' d='M0 200h400M200 0v400M50 50l300 300M350 50L50 350'/%3E%3C/svg%3E");
+        background-size: 80px 80px;
+        pointer-events: none;
+      }
+
+      .food-product-hero-inner {
+        position: relative;
+        z-index: 2;
+        width: min(760px, 100%);
+      }
+
+      .food-product-hero-kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 16px;
+        padding: 6px 16px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.12);
+        color: #f7c253;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .food-product-hero h1 {
+        margin: 0 0 16px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(34px, 5vw, 52px);
+        line-height: 1.12;
+        text-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+      }
+
+      .food-product-hero-lead {
+        margin: 0 auto;
+        max-width: 58ch;
+        color: rgba(255, 248, 239, 0.92);
+        font-size: clamp(15px, 2vw, 18px);
+        line-height: 1.65;
+      }
+
+      .food-product-page {
+        padding: 56px 64px 72px;
+        background: linear-gradient(180deg, #faf8f4 0%, #f3ebe0 100%);
+      }
+
+      .food-product-inner {
+        width: min(1180px, 100%);
+        margin: 0 auto;
+      }
+
+      .food-product-grid {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 28px 24px;
+      }
+
+      .food-product-item {
+        text-align: center;
+      }
+
+      .food-product-visual {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 220px;
+        padding: 18px 14px;
+        border-radius: 16px;
+        background: #fff;
+        box-shadow: 0 14px 32px rgba(79, 23, 24, 0.1);
+      }
+
+      .food-product-visual img {
+        width: 100%;
+        max-width: 170px;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .food-product-item h2 {
+        margin: 14px 0 0;
+        color: #6e1414;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(15px, 1.4vw, 18px);
+        font-weight: 700;
+        line-height: 1.35;
+      }
+
+      @media (max-width: 1100px) {
+        .food-product-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 760px) {
+        .food-product-hero {
+          min-height: 240px;
+          padding: 56px 24px 40px;
+        }
+
+        .food-product-page {
+          padding: 40px 24px 56px;
+        }
+
+        .food-product-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 20px 16px;
+        }
+
+        .food-product-visual {
+          min-height: 180px;
+          padding: 14px 10px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .food-product-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="top-strip">
+        <div class="top-group">
+          <span class="top-item top-item-loc"><iconify-icon icon="mdi:map-marker" aria-hidden="true"></iconify-icon> H1-52 RIICO Industrial Area, Sanchore (Raj.) – 343041</span>
+          <span class="divider"></span>
+          <span class="top-item top-item-phone"><iconify-icon icon="fa6-solid:phone" aria-hidden="true"></iconify-icon> +91 89557 54845</span>
+          <span class="divider"></span>
+          <span class="top-item top-item-email"><iconify-icon icon="fa6-solid:envelope" aria-hidden="true"></iconify-icon> info@sukhamfoods.com</span>
+        </div>
+        <div class="trust">&#9733; The Promise of Purity — Manufacturer, Supplier &amp; Exporter of Premium Food Products</div>
+      </div>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a class="brand" href="../index.html#home" aria-label="Sukham Foods and Spices home">
+          <img class="brand-logo" src="../assets/logo.png" alt="Sukham Foods &amp; Spices" />
+        </a>
+
+        <button class="menu-button" type="button" aria-label="Open menu" aria-controls="primary-menu" aria-expanded="false">&#9776;</button>
+
+        <div class="nav-links" id="primary-menu">
+          <a href="../index.html#home">Home</a>
+          <a href="../page/about.html">About Us</a>
+          <div class="nav-product-menu">
+            <button class="product-menu-toggle" type="button" aria-expanded="false" aria-controls="header-products-menu">Products <iconify-icon icon="fa6-solid:chevron-down" aria-hidden="true"></iconify-icon></button>
+            <div class="product-menu-panel" id="header-products-menu">
+              <a href="Turmeric Powder.html">Turmeric Powder</a>
+              <a href="Red Chilli Powder.html">Red Chilli Powder</a>
+              <a href="Coriander Powder.html">Coriander Powder</a>
+              <a href="Cumin Powder.html">Cumin Powder</a>
+              <a href="Black Pepper Powder.html">Black Pepper Powder</a>
+              <a href="Garam Masala.html">Garam Masala</a>
+              <a href="Kitchen King Masala.html">Kitchen King Masala</a>
+              <a href="Pav Bhaji Masala.html">Pav Bhaji Masala</a>
+              <a href="Chaat Masala.html">Chaat Masala</a>
+              <a href="Sabzi Masala.html">Sabzi Masala</a>
+            </div>
+          </div>
+          <a class="active" href="food-product.html">Food Products</a>
+          <a href="../page/contact.html">Contact Us</a>
+        </div>
+
+        <div class="nav-actions">
+          <a class="btn btn-call" href="tel:+918955754845"><iconify-icon icon="fa6-solid:phone" aria-hidden="true"></iconify-icon> Call Now</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/918955754845"><iconify-icon icon="fa6-brands:whatsapp" aria-hidden="true"></iconify-icon> WhatsApp</a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="food-product-hero" aria-label="Food products banner">
+      <div class="food-product-hero-inner">
+        <p class="food-product-hero-kicker">
+          <iconify-icon icon="fa6-solid:wheat-awn" aria-hidden="true"></iconify-icon>
+          Premium Food Range
+        </p>
+        <h1>Our Food Products</h1>
+        <p class="food-product-hero-lead">Quality staples for every kitchen — wheat flour, rice, pulses, sugar, salt, dry fruits and more, packed with purity and care from Sanchore, Rajasthan.</p>
+      </div>
+    </section>
+
+    <main class="food-product-page">
+      <div class="food-product-inner">
+        <div class="food-product-grid">
+          <article class="food-product-item">
+            <div class="food-product-visual">
+              <img src="../assets/food-prodcut/Wheat flour.png" alt="Wheat Flour" />
+            </div>
+            <h2>Wheat Flour</h2>
+          </article>
+
+          <article class="food-product-item">
+            <div class="food-product-visual">
+              <img src="../assets/food-prodcut/maida.png" alt="Maida" />
+            </div>
+            <h2>Maida</h2>
+          </article>
+
+          <article class="food-product-item">
+            <div class="food-product-visual">
+              <img src="../assets/food-prodcut/Besan.png" alt="Besan" />
+            </div>
+            <h2>Besan</h2>
+          </article>
+
+          <article class="food-product-item">
+            <div class="food-product-visual">
+              <img src="../assets/food-prodcut/suji.png" alt="Suji" />
+            </div>
+            <h2>Suji</h2>
+          </article>
+
+          <article class="food-product-item">
+            <div class="food-product-visual">
+              <img src="../assets/food-prodcut/rice.png" alt="Rice" />
+            </div>
+            <h2>Rice</h2>
+          </article>
+
+          <article class="food-product-item">
+            <div class="food-product-visual">
+              <img src="../assets/food-prodcut/poha.png" alt="Poha" />
+            </div>
+            <h2>Poha</h2>
+          </article>
+
+          <article class="food-product-item">
+            <div class="food-product-visual">
+              <img src="../assets/food-prodcut/pulases.png" alt="Pulses" />
+            </div>
+            <h2>Pulses</h2>
+          </article>
+
+          <article class="food-product-item">
+            <div class="food-product-visual">
+              <img src="../assets/food-prodcut/sugar.png" alt="Sugar" />
+            </div>
+            <h2>Sugar</h2>
+          </article>
+
+          <article class="food-product-item">
+            <div class="food-product-visual">
+              <img src="../assets/food-prodcut/salt.png" alt="Salt" />
+            </div>
+            <h2>Salt</h2>
+          </article>
+
+          <article class="food-product-item">
+            <div class="food-product-visual">
+              <img src="../assets/food-prodcut/Dry Fruits.png" alt="Dry Fruits" />
+            </div>
+            <h2>Dry Fruits</h2>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div class="footer-inner">
+          <div class="footer-grid">
+            <div class="footer-brand">
+              <a class="footer-brand-link" href="../index.html#home" aria-label="Sukham Foods and Spices home">
+                <img class="footer-logo" src="../assets/logo.png" alt="Sukham Foods &amp; Spices" />
+              </a>
+              <p class="footer-brand-desc">SUKHAM Foods &amp; Spices — The Promise of Purity. Leading manufacturer, supplier &amp; exporter from Sanchore, Rajasthan.</p>
+              <div class="footer-actions">
+                <a class="btn btn-call" href="tel:+918955754845"><iconify-icon icon="fa6-solid:phone" aria-hidden="true"></iconify-icon> Call Now</a>
+                <a class="btn btn-whatsapp" href="https://wa.me/918955754845"><iconify-icon icon="fa6-brands:whatsapp" aria-hidden="true"></iconify-icon> WhatsApp</a>
+              </div>
+            </div>
+
+            <nav class="footer-col" aria-label="Quick links">
+              <h3><span class="footer-heading-icon footer-heading-icon-nav" aria-hidden="true">&#9670;</span> Quick Links</h3>
+              <ul class="footer-links">
+                <li><a href="../index.html#home"><span class="footer-link-icon" aria-hidden="true">&#9656;</span> Home</a></li>
+                <li><a href="../page/about.html"><span class="footer-link-icon" aria-hidden="true">&#9656;</span> About Us</a></li>
+                <li><a href="../index.html#services"><span class="footer-link-icon" aria-hidden="true">&#9656;</span> Our Services</a></li>
+                <li><a href="../index.html#products"><span class="footer-link-icon" aria-hidden="true">&#9656;</span> Products</a></li>
+                <li><a href="../page/contact.html"><span class="footer-link-icon" aria-hidden="true">&#9656;</span> Contact Us</a></li>
+              </ul>
+            </nav>
+
+            <nav class="footer-col" aria-label="Products">
+              <h3><span class="footer-heading-icon footer-heading-icon-products" aria-hidden="true">&#10047;</span> Products</h3>
+              <ul class="footer-links">
+                <li><a class="active-product-link" href="food-product.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Food Products</a></li>
+                <li><a href="Turmeric Powder.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Turmeric Powder</a></li>
+                <li><a href="Red Chilli Powder.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Red Chilli Powder</a></li>
+                <li><a href="Coriander Powder.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Coriander Powder</a></li>
+                <li><a href="Cumin Powder.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Cumin Powder</a></li>
+                <li><a href="Black Pepper Powder.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Black Pepper Powder</a></li>
+                <li><a href="Garam Masala.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Garam Masala</a></li>
+                <li><a href="Kitchen King Masala.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Kitchen King Masala</a></li>
+                <li><a href="Pav Bhaji Masala.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Pav Bhaji Masala</a></li>
+                <li><a href="Chaat Masala.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Chaat Masala</a></li>
+                <li><a href="Sabzi Masala.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Sabzi Masala</a></li>
+              </ul>
+            </nav>
+
+            <div class="footer-col footer-contact">
+              <h3><span class="footer-heading-icon footer-heading-icon-contact" aria-hidden="true"><iconify-icon icon="fa6-solid:phone"></iconify-icon></span> Contact</h3>
+              <div class="footer-contact-people">
+                <div class="footer-person-card">
+                  <p class="footer-person-name">Kamlesh Choudhary <span>Proprietor</span></p>
+                  <a class="footer-person-phone" href="tel:+918955754845">+91 89557 54845</a>
+                </div>
+                <div class="footer-person-card">
+                  <p class="footer-person-name">Jagdish Chaudhary <span>Managing Partner</span></p>
+                  <a class="footer-person-phone" href="tel:+916376273734">+91 63762 73734</a>
+                </div>
+              </div>
+              <ul class="footer-contact-list footer-contact-meta">
+                <li>
+                  <span class="footer-item-icon footer-icon-email" aria-hidden="true"><iconify-icon icon="fa6-solid:envelope"></iconify-icon></span>
+                  <div class="footer-contact-stack">
+                    <a href="mailto:info@sukhamfoods.com">info@sukhamfoods.com</a>
+                    <a href="mailto:sales@sukhamfoods.com">sales@sukhamfoods.com</a>
+                  </div>
+                </li>
+                <li>
+                  <span class="footer-item-icon footer-icon-location" aria-hidden="true"><iconify-icon icon="mdi:map-marker"></iconify-icon></span>
+                  <span>H1-52 RIICO Industrial Area, Sanchore (Raj.) – 343041</span>
+                </li>
+              </ul>
+              <p class="footer-contact-note"><span class="footer-note-icon" aria-hidden="true"><iconify-icon icon="fa6-regular:clock"></iconify-icon></span> We reply within <strong>24 hours</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-strip">
+        <p class="footer-strip-copy"><span class="footer-strip-icon footer-strip-icon-star" aria-hidden="true"><iconify-icon icon="fa6-solid:star"></iconify-icon></span> &copy; 2026 SUKHAM Foods &amp; Spices. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      const menuButton = document.querySelector(".menu-button");
+      const mainNav = document.querySelector(".main-nav");
+      const navLinks = document.querySelectorAll(".nav-links a");
+      const productMenuToggle = document.querySelector(".product-menu-toggle");
+      const productMenu = document.querySelector(".nav-product-menu");
+
+      if (menuButton && mainNav) {
+        menuButton.addEventListener("click", () => {
+          const isOpen = mainNav.classList.toggle("menu-open");
+          menuButton.setAttribute("aria-expanded", String(isOpen));
+          menuButton.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+        });
+        navLinks.forEach((link) => link.addEventListener("click", () => {
+          mainNav.classList.remove("menu-open");
+          menuButton.setAttribute("aria-expanded", "false");
+          menuButton.setAttribute("aria-label", "Open menu");
+        }));
+      }
+
+      if (productMenuToggle && productMenu) {
+        productMenuToggle.addEventListener("click", (event) => {
+          event.stopPropagation();
+          const isOpen = productMenu.classList.toggle("open");
+          productMenuToggle.setAttribute("aria-expanded", String(isOpen));
+        });
+        document.addEventListener("click", (event) => {
+          if (!productMenu.contains(event.target)) {
+            productMenu.classList.remove("open");
+            productMenuToggle.setAttribute("aria-expanded", "false");
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

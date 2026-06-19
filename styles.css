@@ -407,41 +407,34 @@ a {
   inset: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .hero-slider::after {
   content: "";
   position: absolute;
-  inset: -20%;
+  inset: 0;
   z-index: 1;
   pointer-events: none;
-  background:
-    radial-gradient(circle at 72% 22%, rgba(245, 173, 47, 0.28), transparent 24%),
-    linear-gradient(112deg, transparent 0%, rgba(255, 186, 57, 0.12) 42%, transparent 57%);
-  mix-blend-mode: screen;
-  opacity: 0.72;
-  animation: heroGlow 7s infinite ease-in-out;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.18) 0%, transparent 42%, transparent 100%);
+  opacity: 0.55;
 }
 
 .hero:hover .hero-image {
   animation-play-state: paused;
 }
 
-.hero:hover .hero-slider::after {
-  animation-play-state: paused;
-}
-
 .hero-image {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  inset: -4%;
+  width: 108%;
+  height: 108%;
   object-fit: cover;
   opacity: 0;
-  filter: blur(8px) saturate(1.06);
-  transform: scale(1.1);
-  animation: heroCinematic 21s infinite linear;
-  will-change: opacity, transform, filter;
+  filter: none;
+  transform: translateX(2.5%) scale(1.05);
+  animation: heroPanFade 7s infinite ease-in-out;
+  will-change: transform, opacity;
 }
 
 .hero-image:nth-child(1) {
@@ -449,49 +442,38 @@ a {
 }
 
 .hero-image:nth-child(2) {
-  animation-delay: 7s;
+  animation-delay: -2.334s;
 }
 
 .hero-image:nth-child(3) {
-  animation-delay: 14s;
+  animation-delay: -4.668s;
 }
 
-@keyframes heroCinematic {
+@keyframes heroPanFade {
   0% {
     opacity: 0;
-    filter: blur(8px) saturate(1.06);
-    transform: scale(1.1);
+    transform: translateX(2.5%) scale(1.05);
   }
 
-  5% {
+  6% {
     opacity: 1;
-    filter: blur(0) saturate(1.08);
+    transform: translateX(1.2%) scale(1.04);
   }
 
   28% {
     opacity: 1;
-    filter: blur(0) saturate(1.08);
-    transform: scale(1.025);
+    transform: translateX(-1.2%) scale(1.03);
   }
 
-  36%,
+  34% {
+    opacity: 0;
+    transform: translateX(-2.5%) scale(1.02);
+  }
+
+  34.01%,
   100% {
     opacity: 0;
-    filter: blur(3px) saturate(1);
-    transform: scale(1);
-  }
-}
-
-@keyframes heroGlow {
-  0%,
-  100% {
-    transform: translateX(-4%) scale(1);
-    opacity: 0.42;
-  }
-
-  50% {
-    transform: translateX(4%) scale(1.03);
-    opacity: 0.82;
+    transform: translateX(-2.5%) scale(1.02);
   }
 }
 
