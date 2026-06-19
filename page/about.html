@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>About Us | Sukham Foods &amp; Spices</title>
-    <meta name="description" content="Learn about Sukham Foods &amp; Spices — a trusted manufacturer, supplier and exporter of premium Indian spices from Deesa, Gujarat." />
+    <meta name="description" content="Learn about SUKHAM Foods &amp; Spices — leading manufacturer, supplier &amp; exporter of premium food products and authentic Indian spices from Sanchore, Rajasthan." />
     <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" defer></script>
     <link rel="stylesheet" href="../styles.css" />
     <style>
@@ -422,6 +422,148 @@
         box-shadow: 0 0 0 4px #fdfaf3, 0 0 0 5px rgba(146, 28, 28, 0.25);
       }
 
+      /* Company details sections */
+      .about-section-head {
+        width: min(760px, 100%);
+        margin: 0 auto 36px;
+        text-align: center;
+      }
+      .about-section-head h2 {
+        margin: 0 0 12px;
+        color: #6e1414;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(26px, 2.8vw, 38px);
+        line-height: 1.14;
+      }
+      .about-section-head p {
+        margin: 0 auto;
+        max-width: 640px;
+        color: #5e4035;
+        font-size: clamp(15px, 1.1vw, 17px);
+        line-height: 1.65;
+      }
+
+      .about-range {
+        padding: 72px 64px 64px;
+        background: linear-gradient(180deg, #eef6f1 0%, #ffffff 100%);
+      }
+      .about-range-grid {
+        width: min(1140px, 100%);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+      }
+      .about-range-card {
+        padding: 24px 20px;
+        border-radius: 16px;
+        background: #fff;
+        border: 1px solid rgba(27, 77, 46, 0.14);
+        box-shadow: 0 12px 28px rgba(27, 77, 46, 0.08);
+      }
+      .about-range-card h3 {
+        margin: 0 0 14px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid rgba(146, 28, 28, 0.2);
+        color: #6e1414;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 18px;
+      }
+      .about-range-card ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .about-range-card li {
+        position: relative;
+        padding: 5px 0 5px 16px;
+        color: #5e4035;
+        font-size: 13px;
+        line-height: 1.45;
+      }
+      .about-range-card li::before {
+        content: "✦";
+        position: absolute;
+        left: 0;
+        color: var(--green);
+        font-size: 10px;
+      }
+      .about-range-card li a { color: inherit; }
+      .about-range-card li a:hover { color: var(--maroon); }
+
+      .about-details {
+        padding: 64px 64px 72px;
+        background: #fffdf8;
+        border-top: 1px solid rgba(201, 169, 110, 0.25);
+      }
+      .about-details-grid {
+        width: min(1140px, 100%);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+      }
+      .about-detail-card {
+        padding: 28px 24px;
+        border-radius: 18px;
+        background: #fff;
+        border: 1px solid rgba(146, 28, 28, 0.1);
+        box-shadow: 0 14px 32px rgba(79, 23, 24, 0.06);
+      }
+      .about-detail-card h3 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 14px;
+        color: #6e1414;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 20px;
+      }
+      .about-detail-card h3 iconify-icon { color: var(--green); font-size: 22px; }
+      .about-detail-card p, .about-detail-card li {
+        color: #5e4035;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      .about-detail-card p { margin: 0 0 12px; }
+      .about-detail-card ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .about-detail-card li {
+        position: relative;
+        padding: 4px 0 4px 18px;
+      }
+      .about-detail-card li::before {
+        content: "✔";
+        position: absolute;
+        left: 0;
+        color: var(--green);
+        font-size: 12px;
+      }
+      .about-pack-sizes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 10px 0 12px;
+      }
+      .about-pack-sizes span {
+        padding: 6px 12px;
+        border-radius: 8px;
+        background: rgba(45, 107, 69, 0.1);
+        color: var(--green-dark);
+        font-size: 12px;
+        font-weight: 800;
+      }
+      .footer-contact-role {
+        display: block;
+        margin-top: 2px;
+        color: #704324;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
       /* CTA — partner section (unique class avoids styles.css .about-cta conflict) */
       .about-partner-cta {
         padding: 80px 64px 96px;
@@ -613,10 +755,13 @@
         .brand-logo { width: clamp(175px, 52vw, 235px); max-height: 64px; }
         .footer-grid { grid-template-columns: 1fr; }
         .about-hero { min-height: 260px; padding-top: 56px; padding-bottom: 40px; }
-        .about-stats-grid { grid-template-columns: 1fr 1fr; }
+        .about-range-grid { grid-template-columns: 1fr; }
         .about-partner-cta { padding-top: 56px; padding-bottom: 64px; }
         .about-partner-cta-box { padding: 32px 22px; }
         .about-partner-cta-actions { grid-template-columns: 1fr; max-width: 320px; }
+        .about-range-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .about-details-grid { grid-template-columns: 1fr; }
+        .about-range, .about-details { padding-left: 28px; padding-right: 28px; }
       }
     </style>
   </head>
@@ -624,13 +769,13 @@
     <header class="site-header">
       <div class="top-strip">
         <div class="top-group">
-          <span class="top-item top-item-loc"><iconify-icon icon="mdi:map-marker" aria-hidden="true"></iconify-icon> Deesa, Banaskantha, Gujarat - 385535, India</span>
+          <span class="top-item top-item-loc"><iconify-icon icon="mdi:map-marker" aria-hidden="true"></iconify-icon> H1-52 RIICO Industrial Area, Sanchore (Raj.) – 343041</span>
           <span class="divider"></span>
           <span class="top-item top-item-phone"><iconify-icon icon="fa6-solid:phone" aria-hidden="true"></iconify-icon> +91 89557 54845</span>
           <span class="divider"></span>
           <span class="top-item top-item-email"><iconify-icon icon="fa6-solid:envelope" aria-hidden="true"></iconify-icon> info@sukhamfoods.com</span>
         </div>
-        <div class="trust">&#9733; &#9733; &#9733; &#9733; Trusted Manufacturer, Supplier &amp; Exporter of Premium Indian Spices</div>
+        <div class="trust">&#9733; The Promise of Purity — Manufacturer, Supplier &amp; Exporter of Premium Food Products</div>
       </div>
 
       <nav class="main-nav" aria-label="Primary navigation">
@@ -668,9 +813,9 @@
     <main>
       <section class="about-hero" aria-label="About Sukham Foods">
         <div class="about-hero-inner">
-          <p class="about-hero-kicker"><iconify-icon icon="fa6-solid:leaf" aria-hidden="true"></iconify-icon> About Sukham Foods</p>
-          <h1>Premium Indian Spices for Domestic &amp; Global Markets</h1>
-          <p class="about-hero-lead">Manufacturer, supplier and exporter of pure spices and masalas — driven by quality, freshness and authentic taste from Deesa, Gujarat.</p>
+          <p class="about-hero-kicker"><iconify-icon icon="fa6-solid:leaf" aria-hidden="true"></iconify-icon> The Promise of Purity</p>
+          <h1>SUKHAM Foods &amp; Spices — Premium Food Products &amp; Authentic Indian Spices</h1>
+          <p class="about-hero-lead">Leading manufacturer, supplier &amp; exporter of premium-quality food products and authentic Indian spices from our RIICO Industrial unit in Sanchore, Rajasthan.</p>
         </div>
       </section>
 
@@ -683,16 +828,16 @@
             <span class="about-established">&#127793; Established <strong>2026</strong></span>
           </div>
           <div class="about-story-copy">
-            <p class="section-kicker">Our Story</p>
-            <h2>Purity in Every Pinch, <span>Trust in Every Partnership</span></h2>
-            <p>SUKHAM Foods &amp; Spices is a trusted manufacturer, supplier and exporter of premium Indian spices and food products. We are driven by purity, quality and authentic taste in every pack we deliver.</p>
-            <p>Our range includes whole spices, ground spices, blended masalas, custom spice mixes and seasoning blends — crafted for consistent quality, hygienic processing and complete customer satisfaction.</p>
-            <p>From local distributors to international buyers, we support bulk supply, private label manufacturing and export-ready packaging with dependable service.</p>
+            <p class="section-kicker">Company Introduction</p>
+            <h2>The Promise of Purity, <span>Trust in Every Partnership</span></h2>
+            <p>SUKHAM Foods &amp; Spices is a leading manufacturer, supplier &amp; exporter of premium-quality food products and authentic Indian spices. Established with a vision to deliver purity, quality and trust, we specialize in processing and packaging a wide range of spices and food essentials under strict quality standards.</p>
+            <p>We focus on maintaining the natural aroma, freshness and nutritional value of every product through advanced manufacturing techniques and hygienic packaging systems. Our commitment to excellence has made us a reliable name in the food and spice industry.</p>
+            <p>At SUKHAM Foods &amp; Spices, we believe that purity is the foundation of great taste. With modern processing units and quality-driven systems, we ensure every product reaches customers in its finest form.</p>
             <div class="about-pills">
-              <span class="about-pill"><iconify-icon icon="fa6-solid:certificate" aria-hidden="true"></iconify-icon> Quality Processing</span>
-              <span class="about-pill"><iconify-icon icon="fa6-solid:truck" aria-hidden="true"></iconify-icon> Bulk &amp; Export</span>
-              <span class="about-pill"><iconify-icon icon="fa6-solid:tags" aria-hidden="true"></iconify-icon> Private Label</span>
-              <span class="about-pill"><iconify-icon icon="mdi:map-marker" aria-hidden="true"></iconify-icon> Deesa, Gujarat</span>
+              <span class="about-pill"><iconify-icon icon="fa6-solid:industry" aria-hidden="true"></iconify-icon> Manufacturer</span>
+              <span class="about-pill"><iconify-icon icon="fa6-solid:truck" aria-hidden="true"></iconify-icon> Bulk Distributor</span>
+              <span class="about-pill"><iconify-icon icon="fa6-solid:globe" aria-hidden="true"></iconify-icon> Exporter</span>
+              <span class="about-pill"><iconify-icon icon="mdi:map-marker" aria-hidden="true"></iconify-icon> Sanchore, Rajasthan</span>
             </div>
           </div>
         </div>
@@ -706,20 +851,130 @@
         <div class="about-stats-grid">
           <div class="about-stat reveal reveal-delay-1">
             <span class="about-stat-icon" aria-hidden="true"><iconify-icon icon="fa6-solid:box"></iconify-icon></span>
-            <strong>10+</strong><span>Premium Products</span>
+            <strong>40+</strong><span>Product Range</span>
           </div>
           <div class="about-stat reveal reveal-delay-2">
             <span class="about-stat-icon" aria-hidden="true"><iconify-icon icon="fa6-solid:leaf"></iconify-icon></span>
-            <strong>100%</strong><span>Pure Ingredients</span>
+            <strong>100%</strong><span>Quality Assured</span>
           </div>
           <div class="about-stat reveal reveal-delay-3">
-            <span class="about-stat-icon" aria-hidden="true"><iconify-icon icon="fa6-regular:clock"></iconify-icon></span>
-            <strong>24hr</strong><span>Enquiry Response</span>
+            <span class="about-stat-icon" aria-hidden="true"><iconify-icon icon="fa6-solid:industry"></iconify-icon></span>
+            <strong>5-in-1</strong><span>Business Model</span>
           </div>
           <div class="about-stat reveal reveal-delay-4">
             <span class="about-stat-icon" aria-hidden="true"><iconify-icon icon="fa6-solid:globe"></iconify-icon></span>
-            <strong>Global</strong><span>Export Ready</span>
+            <strong>Export</strong><span>Quality Standards</span>
           </div>
+        </div>
+      </section>
+
+      <section class="about-range reveal" id="product-range" aria-label="Our product range">
+        <header class="about-section-head">
+          <p class="section-kicker">Our Product Range</p>
+          <h2>Spices, Food Products &amp; More</h2>
+          <p>A comprehensive catalogue of ground spices, whole spices, food essentials and instant mixes for every market need.</p>
+        </header>
+        <div class="about-range-grid">
+          <article class="about-range-card">
+            <h3>Ground Spices</h3>
+            <ul>
+              <li><a href="../prodcut/Red Chilli Powder.html">Red Chilli Powder</a></li>
+              <li><a href="../prodcut/Turmeric Powder.html">Turmeric Powder</a></li>
+              <li><a href="../prodcut/Coriander Powder.html">Coriander Powder</a></li>
+              <li><a href="../prodcut/Cumin Powder.html">Cumin Powder</a></li>
+              <li><a href="../prodcut/Black Pepper Powder.html">Black Pepper Powder</a></li>
+              <li><a href="../prodcut/Garam Masala.html">Garam Masala</a></li>
+              <li><a href="../prodcut/Kitchen King Masala.html">Kitchen King Masala</a></li>
+              <li><a href="../prodcut/Chaat Masala.html">Chaat Masala</a></li>
+              <li>Dry Mango Powder</li>
+              <li><a href="../prodcut/Sabzi Masala.html">Sabji Masala</a></li>
+              <li><a href="../prodcut/Pav Bhaji Masala.html">Pav Bhaji Masala</a></li>
+              <li>Tea Masala</li>
+            </ul>
+          </article>
+          <article class="about-range-card">
+            <h3>Whole Spices</h3>
+            <ul>
+              <li>Coriander Seeds</li>
+              <li>Cumin Seeds</li>
+              <li>Fennel Seeds</li>
+              <li>Black Pepper</li>
+              <li>Cloves</li>
+              <li>Cardamom</li>
+              <li>Bay Leaves</li>
+              <li>Dry Red Chilli</li>
+              <li>Fenugreek Seeds</li>
+              <li>Mustard Seeds</li>
+            </ul>
+          </article>
+          <article class="about-range-card">
+            <h3>Food Products</h3>
+            <ul>
+              <li>Wheat Flour</li>
+              <li>Besan</li>
+              <li>Rice</li>
+              <li>Pulses</li>
+              <li>Dry Fruits</li>
+              <li>Salt</li>
+              <li>Sugar</li>
+              <li>Suji</li>
+              <li>Maida</li>
+              <li>Poha</li>
+            </ul>
+          </article>
+          <article class="about-range-card">
+            <h3>Food Grains &amp; Mixes</h3>
+            <ul>
+              <li>Food Grains</li>
+              <li>Instant Food Mixes</li>
+              <li>Custom Masala Blends</li>
+              <li>Private Label Products</li>
+              <li>Export-Ready Packs</li>
+              <li>Bulk Supply Orders</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="about-details reveal" aria-label="Packaging, infrastructure and quality">
+        <header class="about-section-head">
+          <p class="section-kicker">Our Capabilities</p>
+          <h2>Packaging, Infrastructure &amp; Quality</h2>
+        </header>
+        <div class="about-details-grid">
+          <article class="about-detail-card">
+            <h3><iconify-icon icon="fa6-solid:box"></iconify-icon> Packaging Solutions</h3>
+            <p>Premium packaging in various sizes with customized private label options available.</p>
+            <p><strong>Retail Packs:</strong></p>
+            <div class="about-pack-sizes">
+              <span>10g</span><span>50g</span><span>100g</span><span>200g</span><span>500g</span><span>1kg</span>
+            </div>
+            <p><strong>Bulk Packs:</strong></p>
+            <div class="about-pack-sizes">
+              <span>5kg</span><span>10kg</span><span>25kg</span><span>50kg</span>
+            </div>
+          </article>
+          <article class="about-detail-card">
+            <h3><iconify-icon icon="fa6-solid:industry"></iconify-icon> Infrastructure</h3>
+            <p>Our production unit at RIICO Industrial Area, Sanchore is equipped with:</p>
+            <ul>
+              <li>Advanced grinding machines</li>
+              <li>Automatic sealing machines</li>
+              <li>Hygienic processing systems</li>
+              <li>Quality testing equipment</li>
+              <li>Storage facilities</li>
+            </ul>
+          </article>
+          <article class="about-detail-card">
+            <h3><iconify-icon icon="fa6-solid:shield-halved"></iconify-icon> Quality Assurance</h3>
+            <p>Quality is the backbone of our company. Every product goes through multiple quality checks to ensure:</p>
+            <ul>
+              <li>Purity &amp; Freshness</li>
+              <li>Rich Aroma &amp; Natural Color</li>
+              <li>Authentic Taste</li>
+              <li>Safe &amp; Hygienic Packaging</li>
+            </ul>
+          </article>
         </div>
       </section>
 
@@ -735,21 +990,21 @@
               <svg viewBox="0 0 48 48" focusable="false"><path d="M24 40c8.8 0 16-7.2 16-16S32.8 8 24 8 8 15.2 8 24s7.2 16 16 16Z" /><path d="M8 24h32" /><path d="M24 8c4 4.4 6 9.7 6 16s-2 11.6-6 16c-4-4.4-6-9.7-6-16s2-11.6 6-16Z" /></svg>
             </span>
             <h3>Our Vision</h3>
-            <p>To become a trusted global spice brand known for purity, authentic taste, reliable supply and lasting customer trust.</p>
+            <p>To become one of India's most trusted and globally recognized food and spice brands.</p>
           </article>
           <article class="export-value-card">
             <span class="export-value-icon" aria-hidden="true">
               <svg viewBox="0 0 48 48" focusable="false"><circle cx="24" cy="24" r="14" /><circle cx="24" cy="24" r="7" /><path d="M24 10v4M24 34v4M10 24h4M34 24h4" /></svg>
             </span>
             <h3>Our Mission</h3>
-            <p>To deliver premium quality spices and food products with freshness, consistency and customer satisfaction.</p>
+            <p>To deliver premium-quality food and spice products while maintaining purity, customer trust and excellence in every pack.</p>
           </article>
           <article class="export-value-card">
             <span class="export-value-icon" aria-hidden="true">
               <svg viewBox="0 0 48 48" focusable="false"><path d="M14 28c0-6 4-10 10-10s10 4 10 10" /><path d="M12 28h24" /><path d="M16 28v6c0 2 2 4 4 4h8c2 0 4-2 4-4v-6" /><path d="M20 20c-2-3-1-7 3-9M28 20c2-3 1-7-3-9" /></svg>
             </span>
             <h3>Our Commitment</h3>
-            <p>We are committed to quality processing, transparent service and long-term business relationships.</p>
+            <p>Strict hygiene standards, transparent service and long-term partnerships with every customer we serve.</p>
           </article>
         </div>
       </section>
@@ -861,7 +1116,7 @@
           <header class="why-head">
             <p class="section-kicker">Why Choose Us</p>
             <h2>Purity You Can Trust,<br />Taste You Can Rely On</h2>
-            <p class="why-intro">We are committed to delivering premium spices with freshness, authentic flavour, hygienic processing, and dependable supply for every customer.</p>
+            <p class="why-intro">Premium quality products, direct manufacturer pricing, bulk order supply, timely delivery, export quality standards and customized packaging — everything you need from one trusted partner.</p>
           </header>
 
           <div class="why-cards">
@@ -873,8 +1128,8 @@
               </div>
               <span class="why-card-star" aria-hidden="true">&#10022;</span>
               <div class="why-card-copy">
-                <h3>Premium Quality Spices</h3>
-                <p>Carefully selected and processed to deliver rich aroma and consistent quality.</p>
+                <h3>Premium Quality Products</h3>
+                <p>Carefully processed spices and food products with consistent quality in every pack.</p>
               </div>
             </article>
 
@@ -886,8 +1141,8 @@
               </div>
               <span class="why-card-star" aria-hidden="true">&#10022;</span>
               <div class="why-card-copy">
-                <h3>100% Pure Ingredients</h3>
-                <p>Made with pure ingredients and no compromise on authenticity.</p>
+                <h3>Direct Manufacturer Pricing</h3>
+                <p>Competitive rates with no middlemen — buy directly from the manufacturer.</p>
               </div>
             </article>
 
@@ -899,8 +1154,8 @@
               </div>
               <span class="why-card-star" aria-hidden="true">&#10022;</span>
               <div class="why-card-copy">
-                <h3>Hygienic Processing</h3>
-                <p>Processed in clean, safe, and quality-controlled facilities.</p>
+                <h3>Bulk Order Supply</h3>
+                <p>Reliable wholesale and bulk supply for distributors and export partners.</p>
               </div>
             </article>
 
@@ -912,8 +1167,8 @@
               </div>
               <span class="why-card-star" aria-hidden="true">&#10022;</span>
               <div class="why-card-copy">
-                <h3>Timely Supply</h3>
-                <p>Reliable delivery for retail, wholesale, and bulk requirements.</p>
+                <h3>Timely Delivery</h3>
+                <p>On-time dispatch for retail, wholesale and export requirements.</p>
               </div>
             </article>
 
@@ -925,8 +1180,8 @@
               </div>
               <span class="why-card-star" aria-hidden="true">&#10022;</span>
               <div class="why-card-copy">
-                <h3>Customer Satisfaction</h3>
-                <p>We value long-term relationships and dependable service.</p>
+                <h3>Export Quality Standards</h3>
+                <p>Products meet quality and packaging standards for global markets.</p>
               </div>
             </article>
 
@@ -938,8 +1193,8 @@
               </div>
               <span class="why-card-star" aria-hidden="true">&#10022;</span>
               <div class="why-card-copy">
-                <h3>Export Ready Standards</h3>
-                <p>Our products meet quality and packaging standards for wider markets.</p>
+                <h3>Customized Packaging</h3>
+                <p>Private label and custom pack sizes from 10g retail to 50kg bulk.</p>
               </div>
             </article>
           </div>
@@ -970,7 +1225,7 @@
               <a class="footer-brand-link" href="../index.html#home" aria-label="Sukham Foods and Spices home">
                 <img class="footer-logo" src="../assets/logo.png" alt="Sukham Foods &amp; Spices" />
               </a>
-              <p class="footer-brand-desc">Manufacturer, supplier and exporter of premium Indian spices and masalas from Deesa, Gujarat.</p>
+              <p class="footer-brand-desc">SUKHAM Foods &amp; Spices — The Promise of Purity. Leading manufacturer, supplier &amp; exporter from Sanchore, Rajasthan.</p>
               <div class="footer-actions">
                 <a class="btn btn-call" href="tel:+918955754845"><iconify-icon icon="fa6-solid:phone" aria-hidden="true"></iconify-icon> Call Now</a>
                 <a class="btn btn-whatsapp" href="https://wa.me/918955754845"><iconify-icon icon="fa6-brands:whatsapp" aria-hidden="true"></iconify-icon> WhatsApp</a>
@@ -1003,11 +1258,28 @@
             </nav>
             <div class="footer-col footer-contact">
               <h3><span class="footer-heading-icon footer-heading-icon-contact" aria-hidden="true"><iconify-icon icon="fa6-solid:phone"></iconify-icon></span> Contact</h3>
-              <p class="footer-contact-name"><span class="footer-item-icon footer-icon-user" aria-hidden="true"><iconify-icon icon="fa6-solid:user"></iconify-icon></span> Kamlesh Choudhary</p>
-              <ul class="footer-contact-list">
-                <li><span class="footer-item-icon footer-icon-phone" aria-hidden="true"><iconify-icon icon="fa6-solid:phone"></iconify-icon></span><a href="tel:+918955754845">+91 89557 54845</a></li>
-                <li><span class="footer-item-icon footer-icon-email" aria-hidden="true"><iconify-icon icon="fa6-solid:envelope"></iconify-icon></span><a href="mailto:info@sukhamfoods.com">info@sukhamfoods.com</a></li>
-                <li><span class="footer-item-icon footer-icon-location" aria-hidden="true"><iconify-icon icon="mdi:map-marker"></iconify-icon></span><span>Deesa, Banaskantha, Gujarat - 385535, India</span></li>
+              <div class="footer-contact-people">
+                <div class="footer-person-card">
+                  <p class="footer-person-name">Kamlesh Choudhary <span>Proprietor</span></p>
+                  <a class="footer-person-phone" href="tel:+918955754845">+91 89557 54845</a>
+                </div>
+                <div class="footer-person-card">
+                  <p class="footer-person-name">Jagdish Chaudhary <span>Managing Partner</span></p>
+                  <a class="footer-person-phone" href="tel:+916376273734">+91 63762 73734</a>
+                </div>
+              </div>
+              <ul class="footer-contact-list footer-contact-meta">
+                <li>
+                  <span class="footer-item-icon footer-icon-email" aria-hidden="true"><iconify-icon icon="fa6-solid:envelope"></iconify-icon></span>
+                  <div class="footer-contact-stack">
+                    <a href="mailto:info@sukhamfoods.com">info@sukhamfoods.com</a>
+                    <a href="mailto:sales@sukhamfoods.com">sales@sukhamfoods.com</a>
+                  </div>
+                </li>
+                <li>
+                  <span class="footer-item-icon footer-icon-location" aria-hidden="true"><iconify-icon icon="mdi:map-marker"></iconify-icon></span>
+                  <span>H1-52 RIICO Industrial Area, Sanchore (Raj.) – 343041</span>
+                </li>
               </ul>
               <p class="footer-contact-note"><span class="footer-note-icon" aria-hidden="true"><iconify-icon icon="fa6-regular:clock"></iconify-icon></span> We reply within <strong>24 hours</strong></p>
             </div>

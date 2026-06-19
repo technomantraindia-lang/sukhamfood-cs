@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Contact Us | Sukham Foods &amp; Spices</title>
-    <meta name="description" content="Contact Sukham Foods &amp; Spices for bulk spice orders, export enquiries, and private label manufacturing from Deesa, Gujarat." />
+    <meta name="description" content="Contact SUKHAM Foods &amp; Spices — bulk orders, export enquiries and private label manufacturing. RIICO Industrial Area, Sanchore, Rajasthan." />
     <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" defer></script>
     <style>
       :root {
@@ -382,7 +382,7 @@
         position: relative;
         z-index: 1;
         margin-top: 0;
-        padding: 0 64px 88px;
+        padding: 48px 64px 88px;
         background: #f8efe5;
         border-top: none;
         overflow: visible;
@@ -420,8 +420,25 @@
         pointer-events: none;
       }
 
-      .contact-card-leaf-tl { top: 12px; left: 8px; }
-      .contact-card-leaf-br { right: 8px; bottom: 12px; transform: rotate(180deg); }
+      .contact-info-card::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 160px;
+        height: 160px;
+        opacity: 0.07;
+        pointer-events: none;
+        background: repeating-linear-gradient(
+          -45deg,
+          rgba(255, 255, 255, 0.9) 0,
+          rgba(255, 255, 255, 0.9) 1px,
+          transparent 1px,
+          transparent 14px
+        );
+      }
+
+      .contact-card-leaf { display: none; }
 
       .contact-brand { position: relative; z-index: 1; margin-bottom: 36px; }
 
@@ -435,12 +452,11 @@
 
       .contact-info-block { position: relative; z-index: 1; margin-bottom: 28px; }
 
-      .contact-info-block h3 {
-        display: flex;
-        align-items: center;
-        gap: 8px;
+      .contact-info-block h3,
+      .contact-info-label {
+        display: block;
         margin: 0 0 16px;
-        color: #3d7a52;
+        color: #4a8f62;
         font-size: 12px;
         font-weight: 800;
         letter-spacing: 0.14em;
@@ -451,6 +467,55 @@
 
       .contact-info-row,
       .contact-quick-list li { display: flex; align-items: flex-start; gap: 14px; }
+
+      .contact-info-row p,
+      .contact-person-block { margin: 0; }
+
+      .contact-person-block {
+        display: grid;
+        gap: 2px;
+      }
+
+      .contact-person-name {
+        margin: 0;
+        color: rgba(255, 248, 239, 0.95);
+        font-size: 15px;
+        line-height: 1.5;
+      }
+
+      .contact-person-name strong { color: #4a8f62; font-weight: 800; }
+
+      .contact-person-phone {
+        color: #fff;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1.5;
+      }
+
+      .contact-person-phone:hover { color: #9fd4b0; }
+
+      .contact-email-stack {
+        display: grid;
+        gap: 4px;
+      }
+
+      .contact-email-stack a {
+        color: #fff;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1.5;
+      }
+
+      .contact-email-stack a:hover { color: #9fd4b0; }
+
+      .contact-website-link {
+        color: #fff;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1.5;
+      }
+
+      .contact-website-link:hover { color: #9fd4b0; }
 
       .contact-info-badge {
         width: 44px;
@@ -471,8 +536,14 @@
         box-shadow: 0 4px 12px rgba(146, 28, 28, 0.35);
       }
 
-      .contact-info-badge-clock {
-        background: linear-gradient(180deg, #3d8f58, var(--green-dark));
+      .contact-info-badge-phone {
+        background: linear-gradient(180deg, var(--green-light), var(--green));
+        box-shadow: 0 4px 12px rgba(27, 77, 46, 0.35);
+      }
+
+      .contact-info-badge-globe {
+        background: linear-gradient(180deg, var(--green-light), var(--green));
+        box-shadow: 0 4px 12px rgba(27, 77, 46, 0.35);
       }
 
       .contact-info-badge iconify-icon { font-size: 20px; color: #fff; }
@@ -510,12 +581,20 @@
         font-weight: 800 !important;
       }
 
-      .contact-form-panel { padding: 44px 40px 40px; background: #fff; }
+      .contact-wa-link { display: none; }
+
+      .contact-form-panel {
+        padding: 44px 40px 40px;
+        background: #fff;
+        text-align: center;
+      }
 
       .contact-form-kicker {
-        display: inline-flex;
+        display: flex;
         align-items: center;
-        gap: 8px;
+        justify-content: center;
+        gap: 14px;
+        width: 100%;
         margin: 0 0 12px;
         color: var(--green-light);
         font-family: Georgia, "Times New Roman", serif;
@@ -524,21 +603,36 @@
         font-weight: 700;
       }
 
+      .contact-form-kicker::before,
+      .contact-form-kicker::after {
+        content: "";
+        flex: 1;
+        max-width: 72px;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(45, 107, 69, 0.55));
+      }
+
+      .contact-form-kicker::after {
+        background: linear-gradient(90deg, rgba(45, 107, 69, 0.55), transparent);
+      }
+
       .contact-form-kicker iconify-icon { color: var(--green-light); font-size: 18px; }
 
       .contact-form-panel h2 {
-        margin: 0 0 12px;
+        margin: 0 auto 12px;
         color: #6e1414;
         font-family: Georgia, "Times New Roman", serif;
         font-size: clamp(30px, 2.8vw, 40px);
         line-height: 1.12;
+        text-align: center;
       }
 
       .contact-form-divider {
         display: flex;
         align-items: center;
+        justify-content: center;
         gap: 12px;
-        margin-bottom: 14px;
+        margin: 0 auto 14px;
         color: var(--green-light);
         font-size: 14px;
       }
@@ -546,19 +640,26 @@
       .contact-form-divider::before,
       .contact-form-divider::after {
         content: "";
-        flex: 1;
+        width: 48px;
         height: 1px;
         background: linear-gradient(90deg, transparent, rgba(45, 107, 69, 0.55), transparent);
       }
 
       .contact-form-intro {
-        margin: 0 0 24px;
+        margin: 0 auto 24px;
+        max-width: 52ch;
         color: #5e4035;
         font-size: 15px;
         line-height: 1.62;
+        text-align: center;
       }
 
-      .contact-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+      .contact-form {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        text-align: left;
+      }
       .contact-field { position: relative; display: block; }
       .contact-field-full { grid-column: 1 / -1; }
 
@@ -833,6 +934,60 @@
       .footer-link-icon { color: var(--green); font-size: 12px; }
       .footer-link-icon-spice { color: var(--maroon); font-size: 8px; }
 
+      .footer-contact-people {
+        display: grid;
+        gap: 10px;
+        margin-bottom: 14px;
+      }
+
+      .footer-person-card {
+        padding: 12px 14px 11px;
+        border-radius: 10px;
+        border-left: 3px solid var(--maroon);
+        background: rgba(146, 28, 28, 0.05);
+      }
+
+      .footer-person-name {
+        margin: 0 0 5px;
+        color: #921c1c;
+        font-size: 15px;
+        font-weight: 800;
+        line-height: 1.35;
+      }
+
+      .footer-person-name span {
+        display: block;
+        margin-top: 1px;
+        color: #704324;
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      .footer-person-phone {
+        color: var(--green);
+        font-size: 14px;
+        font-weight: 800;
+        line-height: 1.4;
+      }
+
+      .footer-person-phone:hover { color: var(--maroon); }
+
+      .footer-contact-meta { margin-top: 4px; }
+
+      .footer-contact-stack {
+        display: grid;
+        gap: 3px;
+      }
+
+      .footer-contact-stack a {
+        color: #2c3e30;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.45;
+      }
+
+      .footer-contact-stack a:hover { color: var(--maroon); }
+
       .footer-contact-name {
         display: flex;
         align-items: center;
@@ -995,13 +1150,13 @@
     <header class="site-header">
       <div class="top-strip">
         <div class="top-group">
-          <span class="top-item top-item-loc"><iconify-icon icon="mdi:map-marker" aria-hidden="true"></iconify-icon> Deesa, Banaskantha, Gujarat - 385535, India</span>
+          <span class="top-item top-item-loc"><iconify-icon icon="mdi:map-marker" aria-hidden="true"></iconify-icon> H1-52 RIICO Industrial Area, Sanchore (Raj.) – 343041</span>
           <span class="divider"></span>
           <span class="top-item top-item-phone"><iconify-icon icon="fa6-solid:phone" aria-hidden="true"></iconify-icon> +91 89557 54845</span>
           <span class="divider"></span>
           <span class="top-item top-item-email"><iconify-icon icon="fa6-solid:envelope" aria-hidden="true"></iconify-icon> info@sukhamfoods.com</span>
         </div>
-        <div class="trust">&#9733; &#9733; &#9733; &#9733; Trusted Manufacturer, Supplier &amp; Exporter of Premium Indian Spices</div>
+        <div class="trust">&#9733; The Promise of Purity — Manufacturer, Supplier &amp; Exporter of Premium Food Products</div>
       </div>
 
       <nav class="main-nav" aria-label="Primary navigation">
@@ -1056,60 +1211,49 @@
       </section>
 
       <section class="contact-section" id="inquiry" aria-label="Contact and inquiry">
-        <div class="contact-trust-grid" aria-label="Why contact us">
-          <article class="contact-trust-card">
-            <span class="contact-trust-icon" aria-hidden="true"><iconify-icon icon="fa6-regular:clock"></iconify-icon></span>
-            <h3>24 Hour Response</h3>
-            <p>We reply to all business enquiries within one working day.</p>
-          </article>
-          <article class="contact-trust-card">
-            <span class="contact-trust-icon" aria-hidden="true"><iconify-icon icon="fa6-solid:globe"></iconify-icon></span>
-            <h3>Export &amp; Bulk Orders</h3>
-            <p>Trusted supplier for domestic distributors and international buyers.</p>
-          </article>
-          <article class="contact-trust-card">
-            <span class="contact-trust-icon" aria-hidden="true"><iconify-icon icon="fa6-solid:flask"></iconify-icon></span>
-            <h3>Custom Blends</h3>
-            <p>Private label packaging and tailored masala formulations available.</p>
-          </article>
-        </div>
-
         <div class="contact-wrap">
           <aside class="contact-info-card">
-            <svg class="contact-card-leaf contact-card-leaf-tl" viewBox="0 0 120 120" aria-hidden="true"><path d="M18 92C34 58 58 34 92 18M14 72C38 54 54 38 72 14" /></svg>
-            <svg class="contact-card-leaf contact-card-leaf-br" viewBox="0 0 120 120" aria-hidden="true"><path d="M102 92C86 58 62 34 28 18M106 72C82 54 66 38 48 14" /></svg>
-
             <div class="contact-brand">
               <img class="contact-logo" src="../assets/logo.png" alt="Sukham Foods &amp; Spices" />
             </div>
 
             <div class="contact-info-block">
-              <h3><span class="contact-info-icon" aria-hidden="true"><iconify-icon icon="mdi:map-marker"></iconify-icon></span> Our Location</h3>
+              <p class="contact-info-label">Head Office / Manufacturing Unit</p>
               <div class="contact-info-row">
                 <span class="contact-info-badge" aria-hidden="true"><iconify-icon icon="mdi:map-marker"></iconify-icon></span>
-                <p>Deesa, Banaskantha, Gujarat - 385535, India</p>
+                <p>H1-52 RIICO Industrial Area, Sanchore (Raj.) – 343041</p>
               </div>
             </div>
 
             <div class="contact-info-divider" aria-hidden="true"></div>
 
             <div class="contact-info-block">
-              <h3><span class="contact-info-icon" aria-hidden="true"><iconify-icon icon="fa6-solid:phone"></iconify-icon></span> Quick Contact</h3>
+              <p class="contact-info-label">Contact Us</p>
               <ul class="contact-quick-list">
                 <li>
                   <span class="contact-info-badge contact-info-badge-phone" aria-hidden="true"><iconify-icon icon="fa6-solid:phone"></iconify-icon></span>
-                  <div>
-                    <a href="tel:+918955754845">+91 89557 54845</a>
-                    <a class="contact-wa-link" href="https://wa.me/918955754845">WhatsApp</a>
+                  <div class="contact-person-block">
+                    <p class="contact-person-name"><strong>Kamlesh Choudhary</strong> (Proprietor)</p>
+                    <a class="contact-person-phone" href="tel:+918955754845">+91 89557 54845</a>
+                  </div>
+                </li>
+                <li>
+                  <span class="contact-info-badge contact-info-badge-phone" aria-hidden="true"><iconify-icon icon="fa6-solid:phone"></iconify-icon></span>
+                  <div class="contact-person-block">
+                    <p class="contact-person-name"><strong>Jagdish Chaudhary</strong> (Managing Partner)</p>
+                    <a class="contact-person-phone" href="tel:+916376273734">+91 63762 73734</a>
                   </div>
                 </li>
                 <li>
                   <span class="contact-info-badge contact-info-badge-email" aria-hidden="true"><iconify-icon icon="fa6-solid:envelope"></iconify-icon></span>
-                  <a href="mailto:info@sukhamfoods.com">info@sukhamfoods.com</a>
+                  <div class="contact-email-stack">
+                    <a href="mailto:info@sukhamfoods.com">info@sukhamfoods.com</a>
+                    <a href="mailto:sales@sukhamfoods.com">sales@sukhamfoods.com</a>
+                  </div>
                 </li>
                 <li>
-                  <span class="contact-info-badge contact-info-badge-clock" aria-hidden="true"><iconify-icon icon="fa6-regular:clock"></iconify-icon></span>
-                  <p>We will get back to you within <strong>24 hours</strong></p>
+                  <span class="contact-info-badge contact-info-badge-globe" aria-hidden="true"><iconify-icon icon="fa6-solid:globe"></iconify-icon></span>
+                  <a class="contact-website-link" href="https://www.sukhamfoods.com" target="_blank" rel="noopener noreferrer">www.sukhamfoods.com</a>
                 </li>
               </ul>
             </div>
@@ -1157,7 +1301,7 @@
               </label>
               <label class="contact-field contact-field-full">
                 <span class="contact-field-icon" aria-hidden="true"><iconify-icon icon="fa6-solid:message"></iconify-icon></span>
-                <textarea name="message" placeholder="Your Message *" rows="4" required></textarea>
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
               </label>
 
               <div class="form-success" id="form-success" role="status">
@@ -1179,7 +1323,7 @@
         <div class="contact-map-wrap">
           <div class="contact-map-head">
             <h2><iconify-icon icon="mdi:map-marker" aria-hidden="true"></iconify-icon> Visit Our Facility</h2>
-            <a href="https://maps.google.com/?q=Deesa,Banaskantha,Gujarat,385535" target="_blank" rel="noopener noreferrer">
+            <a href="https://maps.google.com/?q=H1-52+RIICO+Industrial+Area+Sanchore+Rajasthan+343041" target="_blank" rel="noopener noreferrer">
               Open in Google Maps
               <iconify-icon icon="fa6-solid:arrow-up-right-from-square" aria-hidden="true"></iconify-icon>
             </a>
@@ -1189,7 +1333,7 @@
             title="Sukham Foods location on map"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            src="https://maps.google.com/maps?q=Deesa%2C%20Banaskantha%2C%20Gujarat%20385535&t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+            src="https://maps.google.com/maps?q=H1-52%20RIICO%20Industrial%20Area%20Sanchore%20Rajasthan%20343041&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
           ></iframe>
         </div>
       </section>
@@ -1203,7 +1347,7 @@
               <a class="footer-brand-link" href="../index.html#home" aria-label="Sukham Foods and Spices home">
                 <img class="footer-logo" src="../assets/logo.png" alt="Sukham Foods &amp; Spices" />
               </a>
-              <p class="footer-brand-desc">Manufacturer, supplier and exporter of premium Indian spices and masalas from Deesa, Gujarat.</p>
+              <p class="footer-brand-desc">SUKHAM Foods &amp; Spices — The Promise of Purity. Leading manufacturer, supplier &amp; exporter from Sanchore, Rajasthan.</p>
               <div class="footer-actions">
                 <a class="btn btn-call" href="tel:+918955754845"><iconify-icon icon="fa6-solid:phone" aria-hidden="true"></iconify-icon> Call Now</a>
                 <a class="btn btn-whatsapp" href="https://wa.me/918955754845"><iconify-icon icon="fa6-brands:whatsapp" aria-hidden="true"></iconify-icon> WhatsApp</a>
@@ -1239,19 +1383,27 @@
 
             <div class="footer-col footer-contact">
               <h3><span class="footer-heading-icon footer-heading-icon-contact" aria-hidden="true"><iconify-icon icon="fa6-solid:phone"></iconify-icon></span> Contact</h3>
-              <p class="footer-contact-name"><span class="footer-item-icon footer-icon-user" aria-hidden="true"><iconify-icon icon="fa6-solid:user"></iconify-icon></span> Kamlesh Choudhary</p>
-              <ul class="footer-contact-list">
-                <li>
-                  <span class="footer-item-icon footer-icon-phone" aria-hidden="true"><iconify-icon icon="fa6-solid:phone"></iconify-icon></span>
-                  <a href="tel:+918955754845">+91 89557 54845</a>
-                </li>
+              <div class="footer-contact-people">
+                <div class="footer-person-card">
+                  <p class="footer-person-name">Kamlesh Choudhary <span>Proprietor</span></p>
+                  <a class="footer-person-phone" href="tel:+918955754845">+91 89557 54845</a>
+                </div>
+                <div class="footer-person-card">
+                  <p class="footer-person-name">Jagdish Chaudhary <span>Managing Partner</span></p>
+                  <a class="footer-person-phone" href="tel:+916376273734">+91 63762 73734</a>
+                </div>
+              </div>
+              <ul class="footer-contact-list footer-contact-meta">
                 <li>
                   <span class="footer-item-icon footer-icon-email" aria-hidden="true"><iconify-icon icon="fa6-solid:envelope"></iconify-icon></span>
-                  <a href="mailto:info@sukhamfoods.com">info@sukhamfoods.com</a>
+                  <div class="footer-contact-stack">
+                    <a href="mailto:info@sukhamfoods.com">info@sukhamfoods.com</a>
+                    <a href="mailto:sales@sukhamfoods.com">sales@sukhamfoods.com</a>
+                  </div>
                 </li>
                 <li>
                   <span class="footer-item-icon footer-icon-location" aria-hidden="true"><iconify-icon icon="mdi:map-marker"></iconify-icon></span>
-                  <span>Deesa, Banaskantha, Gujarat - 385535, India</span>
+                  <span>H1-52 RIICO Industrial Area, Sanchore (Raj.) – 343041</span>
                 </li>
               </ul>
               <p class="footer-contact-note"><span class="footer-note-icon" aria-hidden="true"><iconify-icon icon="fa6-regular:clock"></iconify-icon></span> We reply within <strong>24 hours</strong></p>

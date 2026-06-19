@@ -1215,6 +1215,66 @@ p {
   box-shadow: 0 6px 14px rgba(27, 77, 46, 0.22);
 }
 
+.footer-contact-people {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.footer-person-card {
+  padding: 12px 14px 11px;
+  border-radius: 10px;
+  border-left: 3px solid var(--maroon);
+  background: rgba(146, 28, 28, 0.05);
+}
+
+.footer-person-name {
+  margin: 0 0 5px;
+  color: var(--maroon);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.footer-person-name span {
+  display: block;
+  margin-top: 1px;
+  color: #704324;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.footer-person-phone {
+  color: var(--green);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.footer-person-phone:hover {
+  color: var(--maroon);
+}
+
+.footer-contact-meta {
+  margin-top: 4px;
+}
+
+.footer-contact-stack {
+  display: grid;
+  gap: 3px;
+}
+
+.footer-contact-stack a {
+  color: #2c3e30;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.footer-contact-stack a:hover {
+  color: var(--maroon);
+}
+
 .footer-contact-name {
   display: flex;
   align-items: center;
