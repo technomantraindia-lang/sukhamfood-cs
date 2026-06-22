@@ -2324,27 +2324,8 @@ h1 {
   padding: 20px 20px 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 12px;
-}
-
-.testimonial-badge {
-  padding: 5px 12px;
-  border-radius: 999px;
-  color: #fff4df;
-  background: linear-gradient(180deg, #9e1a1f, #7b1114);
-  border: 1px solid rgba(45, 107, 69, 0.28);
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  line-height: 1;
-}
-
-.testimonial-badge-gold {
-  color: #faf8f4;
-  background: linear-gradient(180deg, var(--green-light), var(--green));
-  border-color: rgba(45, 107, 69, 0.35);
 }
 
 .testimonial-stars {
@@ -2425,7 +2406,7 @@ h1 {
   line-height: 1.2;
 }
 
-.testimonial-author span {
+.testimonial-author > div span {
   color: #7a5a4e;
   font-size: 12px;
   font-weight: 700;
