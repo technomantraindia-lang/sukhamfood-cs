@@ -1035,6 +1035,40 @@ p {
   font-size: 14px;
 }
 
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(146, 28, 28, 0.12);
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 8px 18px rgba(82, 38, 10, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.footer-social a:hover,
+.footer-social a:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(110, 20, 20, 0.28);
+}
+
+.footer-social iconify-icon {
+  font-size: 23px;
+}
+
+.footer-social-youtube iconify-icon {
+  font-size: 24px;
+}
+
 .footer-col h3 {
   display: flex;
   align-items: center;

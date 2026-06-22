@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>About Us | Sukham Foods &amp; Spices</title>
-    <meta name="description" content="Learn about SUKHAM Foods &amp; Spices — leading manufacturer, supplier &amp; exporter of premium food products and authentic Indian spices from Sanchore, Rajasthan." />
+    <title>About Us | Sukham Foods and  Spices</title>
+    <meta name="description" content="Learn about SUKHAM Foods and  Spices — leading manufacturer, Supplier and  exporter of premium food products and authentic Indian spices from Sanchore, Rajasthan." />
     <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" defer></script>
     <link rel="stylesheet" href="../styles.css" />
     <style>
@@ -258,27 +258,16 @@
       }
       .about-pill iconify-icon { color: var(--maroon); font-size: 16px; flex-shrink: 0; }
 
-      /* Stats */
-      .about-stats {
-        padding: 64px 64px 72px;
+
+      /* Experience */
+      .about-experience {
+        padding: 72px 64px 80px;
         background:
-          linear-gradient(90deg, rgba(27, 77, 46, 0.06), transparent 22%, transparent 78%, rgba(146, 28, 28, 0.05)),
-          linear-gradient(180deg, #b8d4c4 0%, #d0e8da 40%, #e4f2ea 100%);
-        border-bottom: 1px solid rgba(27, 77, 46, 0.16);
+          linear-gradient(90deg, rgba(27, 77, 46, 0.05), transparent 24%, transparent 76%, rgba(146, 28, 28, 0.04)),
+          linear-gradient(180deg, #eef6f1 0%, #f8faf6 55%, #ffffff 100%);
+        border-bottom: 1px solid rgba(27, 77, 46, 0.12);
       }
-      .about-stats-head {
-        width: min(640px, 100%);
-        margin: 0 auto 36px;
-        text-align: center;
-      }
-      .about-stats-head h2 {
-        margin: 0;
-        color: #6e1414;
-        font-family: Georgia, "Times New Roman", serif;
-        font-size: clamp(24px, 2.6vw, 34px);
-        line-height: 1.15;
-      }
-      .about-stats-head h2::after {
+      .about-experience .about-section-head h2::after {
         content: "";
         display: block;
         width: 56px;
@@ -287,14 +276,14 @@
         border-radius: 999px;
         background: linear-gradient(90deg, var(--maroon), var(--green));
       }
-      .about-stats-grid {
+      .about-exp-stats {
         width: min(1140px, 100%);
-        margin: 0 auto;
+        margin: 0 auto 36px;
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 18px;
       }
-      .about-stat {
+      .about-exp-stat-card {
         padding: 28px 18px 24px;
         border-radius: 18px;
         text-align: center;
@@ -303,7 +292,15 @@
         box-shadow: 0 14px 32px rgba(30, 15, 8, 0.14);
         transition: transform 0.25s ease, box-shadow 0.25s ease;
       }
-      .about-stat-icon {
+      .about-exp-stat-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 40px rgba(30, 15, 8, 0.18);
+      }
+      .about-exp-stat-card:nth-child(1) { background: linear-gradient(165deg, var(--maroon-light), var(--maroon-dark)); }
+      .about-exp-stat-card:nth-child(2) { background: linear-gradient(165deg, var(--green-light), var(--green-dark)); }
+      .about-exp-stat-card:nth-child(3) { background: linear-gradient(165deg, #8a5a20, #5c3a12); }
+      .about-exp-stat-card:nth-child(4) { background: linear-gradient(165deg, #2d6b45, #1b4d2e); }
+      .about-exp-stat-icon {
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -314,13 +311,88 @@
         background: rgba(255, 255, 255, 0.18);
         font-size: 20px;
       }
-      .about-stat:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(30, 15, 8, 0.18); }
-      .about-stat:nth-child(1) { background: linear-gradient(165deg, var(--maroon-light) 0%, var(--maroon-dark) 100%); }
-      .about-stat:nth-child(2) { background: linear-gradient(165deg, var(--green-light) 0%, var(--green-dark) 100%); }
-      .about-stat:nth-child(3) { background: linear-gradient(165deg, #8a5a20 0%, #5c3a12 100%); }
-      .about-stat:nth-child(4) { background: linear-gradient(165deg, #2d6b45 0%, #1b4d2e 100%); }
-      .about-stat strong { display: block; margin-bottom: 6px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(28px, 3vw, 36px); line-height: 1; }
-      .about-stat span { font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; opacity: 0.92; }
+      .about-exp-stat-card strong {
+        display: block;
+        margin-bottom: 6px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(28px, 3vw, 36px);
+        line-height: 1;
+      }
+      .about-exp-stat-card span {
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        opacity: 0.92;
+      }
+      .about-exp-panel {
+        width: min(1140px, 100%);
+        margin: 0 auto;
+        padding: clamp(28px, 4vw, 40px);
+        border-radius: 24px;
+        background: #fff;
+        border: 1px solid rgba(146, 28, 28, 0.1);
+        box-shadow:
+          0 32px 64px rgba(79, 23, 24, 0.08),
+          0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+      }
+      .about-exp-panel-lead {
+        max-width: 720px;
+        margin: 0 auto 32px;
+        text-align: center;
+        color: #5e4035;
+        font-size: clamp(15px, 1.1vw, 17px);
+        line-height: 1.7;
+      }
+      .about-exp-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+      .about-exp-card {
+        display: flex;
+        gap: 16px;
+        padding: 22px 20px;
+        border-radius: 16px;
+        background: linear-gradient(135deg, rgba(248, 239, 229, 0.45), rgba(255, 255, 255, 0.95));
+        border: 1px solid rgba(45, 107, 69, 0.14);
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      }
+      .about-exp-card:hover {
+        transform: translateY(-3px);
+        border-color: rgba(146, 28, 28, 0.22);
+        box-shadow: 0 14px 28px rgba(79, 23, 24, 0.08);
+      }
+      .about-exp-card-icon {
+        flex-shrink: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+        color: #fff8ef;
+        background: linear-gradient(165deg, var(--green-light), var(--green-dark));
+        box-shadow: 0 8px 18px rgba(27, 77, 46, 0.22);
+        font-size: 22px;
+      }
+      .about-exp-card:nth-child(even) .about-exp-card-icon {
+        background: linear-gradient(165deg, var(--maroon-light), var(--maroon-dark));
+        box-shadow: 0 8px 18px rgba(146, 28, 28, 0.22);
+      }
+      .about-exp-card-copy h3 {
+        margin: 0 0 8px;
+        color: #6e1414;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 18px;
+        line-height: 1.2;
+      }
+      .about-exp-card-copy p {
+        margin: 0;
+        color: #5e4035;
+        font-size: 14px;
+        line-height: 1.6;
+      }
 
       /* What We Stand For */
       .about-stand-section.global-export-showcase {
@@ -402,6 +474,8 @@
 
       /* Why Choose Us */
       main .about-page-why.why-section {
+        padding-top: 78px;
+        padding-bottom: 82px;
         background:
           radial-gradient(circle at 15% 85%, rgba(201, 169, 110, 0.15), transparent 42%),
           radial-gradient(circle at 85% 15%, rgba(146, 28, 28, 0.06), transparent 40%),
@@ -409,8 +483,46 @@
         border-top: 1px solid rgba(201, 169, 110, 0.35);
         border-bottom: 1px solid rgba(201, 169, 110, 0.2);
       }
+      main .about-page-why .why-head {
+        width: min(1080px, 100%);
+        margin-bottom: 38px;
+      }
+      main .about-page-why .why-intro {
+        max-width: 920px;
+        white-space: normal;
+        text-align: center;
+        text-wrap: balance;
+      }
+      main .about-page-why .why-cards {
+        width: min(1480px, 100%);
+        margin-left: auto;
+        margin-right: auto;
+        gap: 16px;
+      }
       main .about-page-why .why-card {
+        min-height: 210px;
+        padding-left: 10px;
+        padding-right: 10px;
         transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      }
+      main .about-page-why .why-card-copy h3 {
+        min-height: 44px;
+        width: min(200px, 100%);
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: clamp(14px, 0.84vw, 16px);
+        line-height: 1.18;
+        text-align: center;
+        white-space: normal;
+        text-wrap: balance;
+      }
+      main .about-page-why .why-card-copy p {
+        width: min(188px, 100%);
+        min-height: calc(13px * 1.62 * 3);
+        margin-left: auto;
+        margin-right: auto;
       }
       main .about-page-why .why-card:hover {
         transform: translateY(-5px);
@@ -694,6 +806,11 @@
       .footer-brand-desc { margin: 0 0 20px; max-width: 36ch; color: #704324; font-size: 15px; line-height: 1.65; }
       .footer-actions { display: flex; flex-wrap: wrap; gap: 10px; }
       .footer-actions .btn { min-height: 48px; padding: 0 18px; font-size: 14px; }
+      .footer-social { display: flex; align-items: center; gap: 10px; margin-top: 18px; }
+      .footer-social a { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border: 1px solid rgba(146, 28, 28, 0.12); border-radius: 50%; background: #ffffff; box-shadow: 0 8px 18px rgba(82, 38, 10, 0.12); transition: transform 0.25s ease, box-shadow 0.25s ease; }
+      .footer-social a:hover, .footer-social a:focus-visible { transform: translateY(-3px); box-shadow: 0 12px 24px rgba(110, 20, 20, 0.28); }
+      .footer-social iconify-icon { font-size: 23px; }
+      .footer-social-youtube iconify-icon { font-size: 24px; }
       .footer-col h3 { display: flex; align-items: center; gap: 10px; margin: 0 0 16px; padding-bottom: 10px; border-bottom: 2px solid var(--maroon); color: #921c1c; font-family: Georgia, "Times New Roman", serif; font-size: 18px; font-weight: 700; }
       .footer-heading-icon { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; color: #fff8ef; font-size: 13px; }
       .footer-heading-icon-nav { background: linear-gradient(180deg, var(--maroon), var(--maroon-dark)); }
@@ -720,14 +837,22 @@
       .footer-strip-icon-star { color: var(--highlight); }
 
       @media (max-width: 980px) {
-        .top-strip, .main-nav, .about-hero, .about-story, .about-stats, .about-partner-cta { padding-left: 28px; padding-right: 28px; }
+        main .about-page-why .why-intro,
+        main .about-page-why .why-card-copy h3 {
+          white-space: normal;
+        }
+        main .about-page-why .why-card-copy p {
+          width: 100%;
+        }
+        .top-strip, .main-nav, .about-hero, .about-story, .about-experience, .about-partner-cta { padding-left: 28px; padding-right: 28px; }
         .footer-inner { padding: 40px 28px 36px; }
         .footer-strip { padding: 14px 28px; }
         .footer-grid { grid-template-columns: 1fr 1fr; }
         .about-story-wrap { grid-template-columns: 1fr; gap: 36px; padding: 28px; }
         .about-pills { grid-template-columns: 1fr; }
         .about-established { right: 8px; bottom: -12px; }
-        .about-stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .about-exp-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .about-exp-grid { grid-template-columns: 1fr; }
         .about-partner-cta-actions { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 480px; }
         .about-partner-cta-actions .about-partner-btn:last-child { grid-column: 1 / -1; }
         .top-strip { flex-direction: column; align-items: flex-start; gap: 6px; white-space: normal; min-height: auto; padding-top: 10px; padding-bottom: 10px; }
@@ -761,7 +886,9 @@
         .about-partner-cta-actions { grid-template-columns: 1fr; max-width: 320px; }
         .about-range-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
         .about-details-grid { grid-template-columns: 1fr; }
-        .about-range, .about-details { padding-left: 28px; padding-right: 28px; }
+        .about-range, .about-details, .about-experience { padding-left: 28px; padding-right: 28px; }
+        .about-experience { padding-top: 56px; padding-bottom: 64px; }
+        .about-exp-panel { padding: 24px 18px; }
       }
     </style>
   </head>
@@ -775,12 +902,12 @@
           <span class="divider"></span>
           <span class="top-item top-item-email"><iconify-icon icon="fa6-solid:envelope" aria-hidden="true"></iconify-icon> info@sukhamfoods.com</span>
         </div>
-        <div class="trust">&#9733; The Promise of Purity — Manufacturer, Supplier &amp; Exporter of Premium Food Products</div>
+        <div class="trust">&#9733; The Promise of Purity — Manufacturer, Supplier and Exporter of Premium Food Products</div>
       </div>
 
       <nav class="main-nav" aria-label="Primary navigation">
         <a class="brand" href="../index.html#home" aria-label="Sukham Foods and Spices home">
-          <img class="brand-logo" src="../assets/logo.png" alt="Sukham Foods &amp; Spices" />
+          <img class="brand-logo" src="../assets/logo.png" alt="Sukham Foods and  Spices" />
         </a>
         <button class="menu-button" type="button" aria-label="Open menu" aria-controls="primary-menu" aria-expanded="false">&#9776;</button>
         <div class="nav-links" id="primary-menu">
@@ -815,8 +942,8 @@
       <section class="about-hero" aria-label="About Sukham Foods">
         <div class="about-hero-inner">
           <p class="about-hero-kicker"><iconify-icon icon="fa6-solid:leaf" aria-hidden="true"></iconify-icon> The Promise of Purity</p>
-          <h1>SUKHAM Foods &amp; Spices — Premium Food Products &amp; Authentic Indian Spices</h1>
-          <p class="about-hero-lead">Leading manufacturer, supplier &amp; exporter of premium-quality food products and authentic Indian spices from our RIICO Industrial unit in Sanchore, Rajasthan.</p>
+          <h1>SUKHAM Foods and  Spices — Premium Food Products &amp; Authentic Indian Spices</h1>
+          <p class="about-hero-lead">Leading manufacturer, Supplier and exporter of premium-quality food products and authentic Indian spices from our RIICO Industrial unit in Sanchore, Rajasthan.</p>
         </div>
       </section>
 
@@ -831,9 +958,9 @@
           <div class="about-story-copy">
             <p class="section-kicker">Company Introduction</p>
             <h2>The Promise of Purity, <span>Trust in Every Partnership</span></h2>
-            <p>SUKHAM Foods &amp; Spices is a leading manufacturer, supplier &amp; exporter of premium-quality food products and authentic Indian spices. Established with a vision to deliver purity, quality and trust, we specialize in processing and packaging a wide range of spices and food essentials under strict quality standards.</p>
+            <p>SUKHAM Foods and  Spices is a leading manufacturer, Supplier and exporter of premium-quality food products and authentic Indian spices. Established with a vision to deliver purity, quality and trust, we specialize in processing and packaging a wide range of spices and food essentials under strict quality standards.</p>
             <p>We focus on maintaining the natural aroma, freshness and nutritional value of every product through advanced manufacturing techniques and hygienic packaging systems. Our commitment to excellence has made us a reliable name in the food and spice industry.</p>
-            <p>At SUKHAM Foods &amp; Spices, we believe that purity is the foundation of great taste. With modern processing units and quality-driven systems, we ensure every product reaches customers in its finest form.</p>
+            <p>At SUKHAM Foods and  Spices, we believe that purity is the foundation of great taste. With modern processing units and quality-driven systems, we ensure every product reaches customers in its finest form.</p>
             <div class="about-pills">
               <span class="about-pill"><iconify-icon icon="fa6-solid:industry" aria-hidden="true"></iconify-icon> Manufacturer</span>
               <span class="about-pill"><iconify-icon icon="fa6-solid:truck" aria-hidden="true"></iconify-icon> Bulk Distributor</span>
@@ -844,27 +971,68 @@
         </div>
       </section>
 
-      <section class="about-stats" aria-label="Company highlights">
-        <header class="about-stats-head reveal">
-          <p class="section-kicker">At a Glance</p>
-          <h2>Numbers That Speak For Us</h2>
+      <section class="about-experience reveal" id="experience" aria-label="Our experience">
+        <header class="about-section-head reveal">
+          <p class="section-kicker">Our Experience</p>
+          <h2>7+ Years of Trusted Industry Expertise</h2>
+          <p>Premium spices and food products backed by proven experience, modern manufacturing and dependable supply across India.</p>
         </header>
-        <div class="about-stats-grid">
-          <div class="about-stat reveal reveal-delay-1">
-            <span class="about-stat-icon" aria-hidden="true"><iconify-icon icon="fa6-solid:box"></iconify-icon></span>
-            <strong>40+</strong><span>Product Range</span>
+
+        <div class="about-exp-stats reveal reveal-delay-1">
+          <div class="about-exp-stat-card">
+            <span class="about-exp-stat-icon" aria-hidden="true"><iconify-icon icon="fa6-solid:calendar-check"></iconify-icon></span>
+            <strong>7+</strong>
+            <span>Years Experience</span>
           </div>
-          <div class="about-stat reveal reveal-delay-2">
-            <span class="about-stat-icon" aria-hidden="true"><iconify-icon icon="fa6-solid:leaf"></iconify-icon></span>
-            <strong>100%</strong><span>Quality Assured</span>
+          <div class="about-exp-stat-card">
+            <span class="about-exp-stat-icon" aria-hidden="true"><iconify-icon icon="fa6-solid:box"></iconify-icon></span>
+            <strong>40+</strong>
+            <span>Product Range</span>
           </div>
-          <div class="about-stat reveal reveal-delay-3">
-            <span class="about-stat-icon" aria-hidden="true"><iconify-icon icon="fa6-solid:industry"></iconify-icon></span>
-            <strong>5-in-1</strong><span>Business Model</span>
+          <div class="about-exp-stat-card">
+            <span class="about-exp-stat-icon" aria-hidden="true"><iconify-icon icon="fa6-solid:users"></iconify-icon></span>
+            <strong>500+</strong>
+            <span>Happy Clients</span>
           </div>
-          <div class="about-stat reveal reveal-delay-4">
-            <span class="about-stat-icon" aria-hidden="true"><iconify-icon icon="fa6-solid:globe"></iconify-icon></span>
-            <strong>Export</strong><span>Quality Standards</span>
+          <div class="about-exp-stat-card">
+            <span class="about-exp-stat-icon" aria-hidden="true"><iconify-icon icon="fa6-solid:globe"></iconify-icon></span>
+            <strong>Export</strong>
+            <span>Quality Standards</span>
+          </div>
+        </div>
+
+        <div class="about-exp-panel reveal reveal-delay-2">
+          <p class="about-exp-panel-lead">With over 7 years in the spice and food industry, SUKHAM Foods and Spices combines advanced processing at our RIICO Industrial unit with strict quality control to serve retail, wholesale, HoReCa and export partners with consistency and trust.</p>
+
+          <div class="about-exp-grid">
+            <article class="about-exp-card">
+              <span class="about-exp-card-icon" aria-hidden="true"><iconify-icon icon="fa6-solid:industry"></iconify-icon></span>
+              <div class="about-exp-card-copy">
+                <h3>Modern Manufacturing</h3>
+                <p>Advanced grinding, blending and hygienic processing systems at our Sanchore production unit for consistent results in every batch.</p>
+              </div>
+            </article>
+            <article class="about-exp-card">
+              <span class="about-exp-card-icon" aria-hidden="true"><iconify-icon icon="fa6-solid:flask"></iconify-icon></span>
+              <div class="about-exp-card-copy">
+                <h3>Quality Assurance</h3>
+                <p>Multi-stage quality checks for purity, aroma, natural colour and freshness — ensuring safe and authentic products every time.</p>
+              </div>
+            </article>
+            <article class="about-exp-card">
+              <span class="about-exp-card-icon" aria-hidden="true"><iconify-icon icon="fa6-solid:box-open"></iconify-icon></span>
+              <div class="about-exp-card-copy">
+                <h3>Flexible Packaging</h3>
+                <p>Retail packs from 10g to bulk packs up to 50kg, with private label and customized packaging options for every business need.</p>
+              </div>
+            </article>
+            <article class="about-exp-card">
+              <span class="about-exp-card-icon" aria-hidden="true"><iconify-icon icon="fa6-solid:truck-fast"></iconify-icon></span>
+              <div class="about-exp-card-copy">
+                <h3>Reliable Supply</h3>
+                <p>Timely delivery for retailers, wholesalers, distributors and export buyers — built on long-term partnerships across India.</p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -970,10 +1138,10 @@
             <h3><iconify-icon icon="fa6-solid:shield-halved"></iconify-icon> Quality Assurance</h3>
             <p>Quality is the backbone of our company. Every product goes through multiple quality checks to ensure:</p>
             <ul>
-              <li>Purity &amp; Freshness</li>
-              <li>Rich Aroma &amp; Natural Color</li>
+              <li>Purity and Freshness</li>
+              <li>Rich Aroma and Natural Color</li>
               <li>Authentic Taste</li>
-              <li>Safe &amp; Hygienic Packaging</li>
+              <li>Safe and Hygienic Packaging</li>
             </ul>
           </article>
         </div>
@@ -1016,7 +1184,7 @@
             <p class="services-kicker">Our Services</p>
             <h2>Professional Spice Services<br />You Can Trust</h2>
             <div class="services-head-divider" aria-hidden="true"><span>&#10047;</span></div>
-            <p class="services-intro">SUKHAM Foods &amp; Spices provides end-to-end spice manufacturing, packaging and supply services with consistent quality, hygienic processing and reliable delivery for every partner.</p>
+            <p class="services-intro">SUKHAM Foods and Spices provides end-to-end spice manufacturing, packaging and supply services with consistent quality, hygienic processing and reliable delivery for every partner.</p>
           </header>
 
           <div class="services-panel">
@@ -1224,24 +1392,32 @@
           <div class="footer-grid">
             <div class="footer-brand">
               <a class="footer-brand-link" href="../index.html#home" aria-label="Sukham Foods and Spices home">
-                <img class="footer-logo" src="../assets/logo.png" alt="Sukham Foods &amp; Spices" />
+                <img class="footer-logo" src="../assets/logo.png" alt="Sukham Foods and Spices" />
               </a>
-              <p class="footer-brand-desc">SUKHAM Foods &amp; Spices — The Promise of Purity. Leading manufacturer, supplier &amp; exporter from Sanchore, Rajasthan.</p>
+              <p class="footer-brand-desc">SUKHAM Foods and Spices - The Promise of Purity. Leading manufacturer, Supplier and  exporter from Sanchore, Rajasthan.</p>
               <div class="footer-actions">
                 <a class="btn btn-call" href="tel:+918955754845"><iconify-icon icon="fa6-solid:phone" aria-hidden="true"></iconify-icon> Call Now</a>
                 <a class="btn btn-whatsapp" href="https://wa.me/918955754845"><iconify-icon icon="fa6-brands:whatsapp" aria-hidden="true"></iconify-icon> WhatsApp</a>
               </div>
+              <div class="footer-social" aria-label="Social media links">
+                <a class="footer-social-facebook" href="#" aria-label="Facebook"><iconify-icon icon="logos:facebook" aria-hidden="true"></iconify-icon></a>
+                <a class="footer-social-instagram" href="#" aria-label="Instagram"><iconify-icon icon="skill-icons:instagram" aria-hidden="true"></iconify-icon></a>
+                <a class="footer-social-linkedin" href="#" aria-label="LinkedIn"><iconify-icon icon="devicon:linkedin" aria-hidden="true"></iconify-icon></a>
+                <a class="footer-social-youtube" href="#" aria-label="YouTube"><iconify-icon icon="logos:youtube-icon" aria-hidden="true"></iconify-icon></a>
+              </div>
             </div>
+
             <nav class="footer-col" aria-label="Quick links">
               <h3><span class="footer-heading-icon footer-heading-icon-nav" aria-hidden="true">&#9670;</span> Quick Links</h3>
               <ul class="footer-links">
                 <li><a href="../index.html#home"><span class="footer-link-icon" aria-hidden="true">&#9656;</span> Home</a></li>
-                <li><a href="about.html"><span class="footer-link-icon" aria-hidden="true">&#9656;</span> About Us</a></li>
+                <li><a href="../page/about.html"><span class="footer-link-icon" aria-hidden="true">&#9656;</span> About Us</a></li>
                 <li><a href="../index.html#services"><span class="footer-link-icon" aria-hidden="true">&#9656;</span> Our Services</a></li>
                 <li><a href="../index.html#products"><span class="footer-link-icon" aria-hidden="true">&#9656;</span> Products</a></li>
-                <li><a href="contact.html"><span class="footer-link-icon" aria-hidden="true">&#9656;</span> Contact Us</a></li>
+                <li><a href="../page/contact.html"><span class="footer-link-icon" aria-hidden="true">&#9656;</span> Contact Us</a></li>
               </ul>
             </nav>
+
             <nav class="footer-col" aria-label="Products">
               <h3><span class="footer-heading-icon footer-heading-icon-products" aria-hidden="true">&#10047;</span> Products</h3>
               <ul class="footer-links">
@@ -1257,15 +1433,16 @@
                 <li><a href="../prodcut/Sabzi Masala.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Sabzi Masala</a></li>
               </ul>
             </nav>
+
             <div class="footer-col footer-contact">
               <h3><span class="footer-heading-icon footer-heading-icon-contact" aria-hidden="true"><iconify-icon icon="fa6-solid:phone"></iconify-icon></span> Contact</h3>
               <div class="footer-contact-people">
                 <div class="footer-person-card">
-                  <p class="footer-person-name">Co-Founder <span>Proprietor</span></p>
+                  <p class="footer-person-name">Co-Founder and Director </p>
                   <a class="footer-person-phone" href="tel:+918955754845">+91 89557 54845</a>
                 </div>
                 <div class="footer-person-card">
-                  <p class="footer-person-name">Director <span>Managing Partner</span></p>
+                  <p class="footer-person-name">Director</p>
                   <a class="footer-person-phone" href="tel:+916376273734">+91 63762 73734</a>
                 </div>
               </div>
@@ -1287,8 +1464,9 @@
           </div>
         </div>
       </div>
+
       <div class="footer-strip">
-        <p class="footer-strip-copy"><span class="footer-strip-icon footer-strip-icon-star" aria-hidden="true"><iconify-icon icon="fa6-solid:star"></iconify-icon></span> &copy; 2026 SUKHAM Foods &amp; Spices. All Rights Reserved.</p>
+        <p class="footer-strip-copy"><span class="footer-strip-icon footer-strip-icon-star" aria-hidden="true"><iconify-icon icon="fa6-solid:star"></iconify-icon></span> &copy; 2026 SUKHAM Foods and Spices. All Rights Reserved.</p>
       </div>
     </footer>
 
