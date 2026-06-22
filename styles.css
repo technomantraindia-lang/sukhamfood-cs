@@ -3126,6 +3126,31 @@ h1 {
 .contact-person-name strong {
   color: #4a8f62;
   font-weight: 800;
+  font-feature-settings: "liga" 0, "dlig" 0;
+  font-variant-ligatures: none;
+}
+
+.simple-amp {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, "Segoe UI", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: inherit;
+  color: inherit;
+  font-feature-settings: normal;
+  font-variant-ligatures: none;
+  letter-spacing: 0;
+}
+
+.footer-person-name .simple-amp,
+.contact-person-name .simple-amp {
+  display: inline;
+  margin: 0;
+  color: inherit;
+  font-size: inherit;
+  font-weight: 400;
 }
 
 .contact-person-phone {
@@ -3686,6 +3711,8 @@ h1 {
   font-size: 15px;
   font-weight: 800;
   line-height: 1.35;
+  font-feature-settings: "liga" 0, "dlig" 0;
+  font-variant-ligatures: none;
 }
 
 .footer-person-name span {
@@ -5328,7 +5355,7 @@ h1 {
     width: 100%;
     max-width: 100%;
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 16px;
     justify-items: stretch;
   }
 
@@ -5336,16 +5363,20 @@ h1 {
     grid-column: auto;
     width: 100%;
     min-width: 0;
-    padding: 0 0 4px;
+    padding: 22px 18px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(146, 28, 28, 0.12);
+    box-shadow: 0 10px 24px rgba(79, 23, 24, 0.06);
   }
 
   .footer-brand-link {
     justify-content: center;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
   }
 
   .footer-logo {
-    width: min(245px, 100%);
+    width: min(230px, 100%);
     margin: 0 auto;
     padding: 12px 16px;
     border-radius: 10px;
@@ -5354,7 +5385,7 @@ h1 {
 
   .footer-brand-desc {
     max-width: none;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     color: #643827;
     font-size: 14px;
     line-height: 1.65;
@@ -5364,13 +5395,22 @@ h1 {
   .footer-col {
     width: 100%;
     min-width: 0;
-    padding-top: 4px;
+    padding: 18px 16px 16px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.65);
+    border: 1px solid rgba(27, 77, 46, 0.1);
+    box-shadow: 0 8px 18px rgba(27, 77, 46, 0.05);
+  }
+
+  .footer-col.footer-contact {
+    background: rgba(255, 255, 255, 0.78);
+    border-color: rgba(146, 28, 28, 0.1);
   }
 
   .footer-col h3 {
     margin-bottom: 12px;
     padding-bottom: 10px;
-    font-size: 18px;
+    font-size: 17px;
     width: 100%;
   }
 
@@ -5393,10 +5433,26 @@ h1 {
     box-shadow: 0 8px 16px rgba(44, 11, 5, 0.18);
   }
 
+  .footer-social {
+    justify-content: center;
+    margin-top: 14px;
+  }
+
   .footer-links {
     display: grid;
     gap: 2px;
     width: 100%;
+  }
+
+  .footer-col[aria-label="Products"] .footer-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 8px;
+    row-gap: 2px;
+  }
+
+  .footer-col[aria-label="Products"] .footer-links a {
+    padding: 7px 4px;
+    font-size: 13px;
   }
 
   .footer-links a {
@@ -5413,6 +5469,28 @@ h1 {
     margin-top: 0;
   }
 
+  .footer-contact-people {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .footer-person-card {
+    padding: 12px 10px;
+    min-width: 0;
+  }
+
+  .footer-person-name {
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
+  .footer-person-phone {
+    font-size: 13px;
+    line-height: 1.4;
+    word-break: break-word;
+  }
+
   .footer-contact-name {
     font-size: 15px;
   }
@@ -5426,6 +5504,7 @@ h1 {
   .footer-contact-list li {
     min-width: 0;
     gap: 10px;
+    align-items: flex-start;
   }
 
   .footer-contact-list li,
@@ -5436,16 +5515,22 @@ h1 {
     overflow-wrap: anywhere;
   }
 
+  .footer-contact-stack a {
+    font-size: 13px;
+  }
+
   .footer-item-icon {
     width: 30px;
     height: 30px;
     font-size: 13px;
+    flex-shrink: 0;
   }
 
   .footer-contact-note {
     align-items: flex-start;
-    margin-top: 14px;
+    margin-top: 12px;
     font-size: 13px;
+    line-height: 1.45;
   }
 
   .footer-strip {
@@ -5457,11 +5542,19 @@ h1 {
     justify-content: center;
     text-align: center;
     font-size: 12px;
-    line-height: 1.4;
+    line-height: 1.45;
   }
 }
 
 @media (max-width: 420px) {
+  .footer-col[aria-label="Products"] .footer-links {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-contact-people {
+    grid-template-columns: 1fr;
+  }
+
   .about-section {
     padding: 28px 12px 24px;
     background-size: cover;

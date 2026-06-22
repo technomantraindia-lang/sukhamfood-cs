@@ -794,47 +794,7 @@
         box-shadow: 0 10px 24px rgba(27, 77, 46, 0.28);
       }
 
-      /* Footer */
-      .site-footer { position: relative; z-index: 5; display: block; width: 100%; }
-      .footer-main { background: linear-gradient(180deg, #f5f0e8 0%, var(--cream-warm) 100%); border-top: 3px solid var(--maroon); box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.06); }
-      .footer-inner { padding: 48px 64px 44px; }
-      .footer-grid { display: grid; grid-template-columns: 1.35fr 0.85fr 0.9fr 1fr; gap: clamp(28px, 4vw, 48px); align-items: start; }
-      .footer-brand-link { display: flex; margin-bottom: 16px; transition: transform 0.25s ease; }
-      .footer-brand-link:hover { transform: translateY(-2px); }
-      .footer-logo { width: min(260px, 100%); padding: 10px 14px; border-radius: 12px; background: #fff8ec; box-shadow: 0 12px 24px rgba(0, 0, 0, 0.22); transition: transform 0.25s ease; }
-      .footer-brand-link:hover .footer-logo { transform: scale(1.03); }
-      .footer-brand-desc { margin: 0 0 20px; max-width: 36ch; color: #704324; font-size: 15px; line-height: 1.65; }
-      .footer-actions { display: flex; flex-wrap: wrap; gap: 10px; }
-      .footer-actions .btn { min-height: 48px; padding: 0 18px; font-size: 14px; }
-      .footer-social { display: flex; align-items: center; gap: 10px; margin-top: 18px; }
-      .footer-social a { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border: 1px solid rgba(146, 28, 28, 0.12); border-radius: 50%; background: #ffffff; box-shadow: 0 8px 18px rgba(82, 38, 10, 0.12); transition: transform 0.25s ease, box-shadow 0.25s ease; }
-      .footer-social a:hover, .footer-social a:focus-visible { transform: translateY(-3px); box-shadow: 0 12px 24px rgba(110, 20, 20, 0.28); }
-      .footer-social iconify-icon { font-size: 23px; }
-      .footer-social-youtube iconify-icon { font-size: 24px; }
-      .footer-col h3 { display: flex; align-items: center; gap: 10px; margin: 0 0 16px; padding-bottom: 10px; border-bottom: 2px solid var(--maroon); color: #921c1c; font-family: Georgia, "Times New Roman", serif; font-size: 18px; font-weight: 700; }
-      .footer-heading-icon { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; color: #fff8ef; font-size: 13px; }
-      .footer-heading-icon-nav { background: linear-gradient(180deg, var(--maroon), var(--maroon-dark)); }
-      .footer-heading-icon-products { background: linear-gradient(180deg, var(--green-light), var(--green)); }
-      .footer-heading-icon-contact { background: linear-gradient(180deg, var(--maroon-light), var(--maroon-dark)); }
-      .footer-links, .footer-contact-list { margin: 0; padding: 0; list-style: none; }
-      .footer-links li + li, .footer-contact-list li + li { margin-top: 10px; }
-      .footer-links a { display: inline-flex; align-items: center; gap: 8px; padding: 7px 12px; border-radius: 8px; color: #2c3e30; font-size: 15px; font-weight: 800; transition: color 0.25s ease, background 0.25s ease, transform 0.25s ease; }
-      .footer-links a:hover { color: var(--maroon); background: rgba(146, 28, 28, 0.1); transform: translateX(6px); }
-      .footer-link-icon { color: var(--green); font-size: 12px; }
-      .footer-link-icon-spice { color: var(--maroon); font-size: 8px; }
-      .footer-contact-name { display: flex; align-items: center; gap: 10px; margin: 0 0 12px; color: #921c1c; font-size: 16px; font-weight: 900; }
-      .footer-item-icon { width: 32px; height: 32px; flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; color: #fff; font-size: 14px; }
-      .footer-icon-user { background: linear-gradient(180deg, #921c1c, #6e1414); }
-      .footer-icon-phone { background: linear-gradient(180deg, var(--green-light), var(--green)); }
-      .footer-icon-email { background: linear-gradient(180deg, var(--maroon-light), var(--maroon)); }
-      .footer-icon-location { background: linear-gradient(180deg, var(--green-light), var(--green)); }
-      .footer-contact-list li { display: flex; align-items: flex-start; gap: 12px; padding: 4px 0; }
-      .footer-contact-list a { color: #2c3e30; font-weight: 800; }
-      .footer-contact-note { display: flex; align-items: center; gap: 8px; margin: 16px 0 0; color: #704324; font-size: 14px; }
-      .footer-contact-note strong { color: var(--maroon); }
-      .footer-strip { min-height: 46px; padding: 12px 64px; display: flex; align-items: center; justify-content: center; color: #fff8ea; background: linear-gradient(90deg, var(--maroon-dark), var(--maroon) 52%, var(--maroon-dark)); border-top: 1px solid rgba(255, 255, 255, 0.14); font-size: 14px; font-weight: 700; }
-      .footer-strip-copy { display: inline-flex; align-items: center; gap: 8px; margin: 0; color: #fff1d5; }
-      .footer-strip-icon-star { color: var(--highlight); }
+      /* Footer — uses styles.css */
 
       @media (max-width: 980px) {
         main .about-page-why .why-intro,
@@ -845,9 +805,6 @@
           width: 100%;
         }
         .top-strip, .main-nav, .about-hero, .about-story, .about-experience, .about-partner-cta { padding-left: 28px; padding-right: 28px; }
-        .footer-inner { padding: 40px 28px 36px; }
-        .footer-strip { padding: 14px 28px; }
-        .footer-grid { grid-template-columns: 1fr 1fr; }
         .about-story-wrap { grid-template-columns: 1fr; gap: 36px; padding: 28px; }
         .about-pills { grid-template-columns: 1fr; }
         .about-established { right: 8px; bottom: -12px; }
@@ -878,7 +835,6 @@
         .top-strip { display: none; }
         .brand { margin-left: 0; }
         .brand-logo { width: clamp(175px, 52vw, 235px); max-height: 64px; }
-        .footer-grid { grid-template-columns: 1fr; }
         .about-hero { min-height: 260px; padding-top: 56px; padding-bottom: 40px; }
         .about-range-grid { grid-template-columns: 1fr; }
         .about-partner-cta { padding-top: 56px; padding-bottom: 64px; }
@@ -1438,7 +1394,7 @@
               <h3><span class="footer-heading-icon footer-heading-icon-contact" aria-hidden="true"><iconify-icon icon="fa6-solid:phone"></iconify-icon></span> Contact</h3>
               <div class="footer-contact-people">
                 <div class="footer-person-card">
-                  <p class="footer-person-name">Co-Founder and Director </p>
+                  <p class="footer-person-name">Co-Founder <span class="simple-amp">&amp;</span> Director </p>
                   <a class="footer-person-phone" href="tel:+918955754845">+91 89557 54845</a>
                 </div>
                 <div class="footer-person-card">
