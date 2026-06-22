@@ -396,13 +396,15 @@ a {
 
 .hero {
   position: relative;
-  min-height: 650px;
-  max-height: 740px;
+  width: 100%;
+  min-height: clamp(520px, 56vw, 760px);
+  max-height: none;
   overflow: hidden;
   border-top: 1px solid rgba(56, 26, 8, 0.28);
 }
 
 .hero-carousel {
+  width: 100%;
   height: 100%;
   min-height: inherit;
   overflow: hidden;
@@ -425,17 +427,20 @@ a {
   position: relative;
   flex: 0 0 25%;
   width: 25%;
-  min-height: 650px;
-  max-height: 740px;
+  min-height: clamp(520px, 56vw, 760px);
+  max-height: none;
   overflow: hidden;
 }
 
 .hero-slide-image {
   position: absolute;
   inset: 0;
+  display: block;
   width: 100%;
+  min-width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
 }
 
 @keyframes heroTrackMove {
@@ -2628,7 +2633,7 @@ h1 {
 
 .packaging-size-row {
   display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-template-columns: repeat(8, minmax(0, 1fr));
   align-items: end;
   gap: clamp(10px, 1.4vw, 24px);
   padding: 0 0 12px;
@@ -2692,7 +2697,8 @@ h1 {
 .pack-size-item:nth-child(4) { --pouch-h: 152px; }
 .pack-size-item:nth-child(5) { --pouch-h: 170px; }
 .pack-size-item:nth-child(6) { --pouch-h: 188px; }
-.pack-size-item:nth-child(7) { --pouch-h: 208px; }
+.pack-size-item:nth-child(7) { --pouch-h: 198px; }
+.pack-size-item:nth-child(8) { --pouch-h: 208px; }
 
 .pack-size-label {
   min-width: 72px;
@@ -4309,12 +4315,12 @@ h1 {
   }
 
   .hero {
-    min-height: 650px;
+    min-height: clamp(440px, 62vw, 680px);
     max-height: none;
   }
 
-  .hero-slide-image {
-    object-position: 67% center;
+  .hero-slide {
+    min-height: clamp(440px, 62vw, 680px);
   }
 
   .hero-shade {
@@ -4579,7 +4585,7 @@ h1 {
   }
 
   .packaging-size-row {
-    grid-template-columns: repeat(7, minmax(108px, 1fr));
+    grid-template-columns: repeat(8, minmax(108px, 1fr));
     overflow-x: auto;
     padding-bottom: 12px;
     scrollbar-width: thin;
@@ -4605,7 +4611,8 @@ h1 {
   .pack-size-item:nth-child(4) { --pouch-h: 112px; }
   .pack-size-item:nth-child(5) { --pouch-h: 126px; }
   .pack-size-item:nth-child(6) { --pouch-h: 140px; }
-  .pack-size-item:nth-child(7) { --pouch-h: 154px; }
+  .pack-size-item:nth-child(7) { --pouch-h: 148px; }
+  .pack-size-item:nth-child(8) { --pouch-h: 154px; }
 
   .raw-material-section {
     padding: 64px 28px 52px;
@@ -4724,11 +4731,11 @@ h1 {
   }
 
   .hero {
-    min-height: 600px;
+    min-height: clamp(400px, 68vw, 580px);
   }
 
-  .hero-slide-image {
-    object-position: 72% center;
+  .hero-slide {
+    min-height: clamp(400px, 68vw, 580px);
   }
 
   .hero-shade {
@@ -5248,12 +5255,13 @@ h1 {
   .pack-size-item:nth-child(4) { --pouch-h: 108px; }
   .pack-size-item:nth-child(5) { --pouch-h: 120px; }
   .pack-size-item:nth-child(6) { --pouch-h: 132px; }
-  .pack-size-item:nth-child(7) { --pouch-h: 144px; }
+  .pack-size-item:nth-child(7) { --pouch-h: 138px; }
+  .pack-size-item:nth-child(8) { --pouch-h: 144px; }
 
   .pack-size-item:last-child {
-    grid-column: 1 / -1;
-    max-width: 220px;
-    margin: 0 auto;
+    grid-column: auto;
+    max-width: none;
+    margin: 0;
   }
 
   .pack-size-desc {
