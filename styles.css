@@ -750,6 +750,10 @@ h1 {
   background-size: cover;
 }
 
+.about-mobile-visual {
+  display: none;
+}
+
 .about-content {
   width: min(780px, 48vw);
   margin-left: auto;
@@ -4898,12 +4902,34 @@ h1 {
     height: auto;
     min-height: 0;
     overflow: visible;
+    display: grid;
+    gap: 18px;
     padding: 34px 14px 28px;
-    background-size: cover;
-    background-position: center center;
+    background:
+      linear-gradient(180deg, #faf6f0 0%, #fff8ef 54%, #ffffff 100%);
+    background-image: none;
+  }
+
+  .about-mobile-visual {
+    display: block;
+    order: 1;
+    overflow: hidden;
+    border: 1px solid rgba(146, 28, 28, 0.12);
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 18px 36px rgba(79, 23, 24, 0.12);
+  }
+
+  .about-mobile-visual img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    display: block;
+    object-fit: cover;
+    object-position: center top;
   }
 
   .about-content {
+    order: 2;
     width: 100%;
     margin: 0;
     padding: 12px;
@@ -4917,6 +4943,7 @@ h1 {
   }
 
   .established-badge {
+    order: 3;
     position: relative;
     left: auto;
     bottom: auto;
