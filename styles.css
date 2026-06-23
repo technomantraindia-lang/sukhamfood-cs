@@ -2246,6 +2246,136 @@ h1 {
   box-shadow: 0 10px 20px rgba(27, 77, 46, 0.22);
 }
 
+.home-cta-section {
+  position: relative;
+  padding: 72px 48px 20px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 10% 18%, rgba(159, 212, 176, 0.18), transparent 34%),
+    radial-gradient(circle at 92% 76%, rgba(146, 28, 28, 0.12), transparent 32%),
+    linear-gradient(180deg, #fff8ef 0%, #f8efe5 100%);
+}
+
+.home-cta-wrap {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: clamp(28px, 4vw, 58px);
+  padding: 34px;
+  border: 1px solid rgba(146, 28, 28, 0.14);
+  border-radius: 20px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(250, 248, 244, 0.86)),
+    #fff;
+  box-shadow: 0 24px 60px rgba(79, 23, 24, 0.1);
+}
+
+.home-cta-media {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(45, 107, 69, 0.14);
+  background: #f7efe4;
+  box-shadow: 0 18px 38px rgba(79, 23, 24, 0.12);
+}
+
+.home-cta-media img {
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.home-cta-copy {
+  min-width: 0;
+}
+
+.home-cta-kicker {
+  display: inline-flex;
+  margin: 0 0 12px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  color: var(--green-dark);
+  background: rgba(45, 107, 69, 0.1);
+  border: 1px solid rgba(45, 107, 69, 0.18);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.home-cta-copy h2 {
+  margin: 0 0 16px;
+  color: var(--maroon-dark);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 3.2vw, 48px);
+  line-height: 1.12;
+}
+
+.home-cta-copy p {
+  margin: 0;
+  max-width: 62ch;
+  color: #5e4035;
+  font-size: clamp(15px, 1.2vw, 18px);
+  line-height: 1.65;
+}
+
+.home-cta-points {
+  margin: 22px 0 26px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.home-cta-points span {
+  padding: 9px 13px;
+  border-radius: 999px;
+  color: var(--green-dark);
+  background: rgba(45, 107, 69, 0.08);
+  border: 1px solid rgba(45, 107, 69, 0.14);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.home-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.home-cta-btn {
+  min-height: 48px;
+  padding: 0 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 900;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.home-cta-btn:hover {
+  transform: translateY(-2px);
+}
+
+.home-cta-btn-primary {
+  color: #fff8ef;
+  background: linear-gradient(180deg, var(--maroon-light), var(--maroon-dark));
+  box-shadow: 0 12px 26px rgba(146, 28, 28, 0.24);
+}
+
+.home-cta-btn-secondary {
+  color: var(--green-dark);
+  background: #fff;
+  border: 1px solid rgba(45, 107, 69, 0.24);
+}
+
 .testimonial-section {
   padding: 84px 64px 88px;
   background:
@@ -3141,7 +3271,7 @@ h1 {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, "Segoe UI", sans-serif;
-  font-weight: 400;
+  font-weight: 900;
   font-size: 1em;
   line-height: inherit;
   color: inherit;
@@ -3156,8 +3286,10 @@ h1 {
   margin: 0;
   color: inherit;
   font-size: inherit;
-  font-weight: 400;
+  font-weight: 900;
 }
+
+.footer-person-name .simple-amp { color: inherit; }
 
 .contact-person-phone {
   color: #fff;
@@ -4590,6 +4722,19 @@ h1 {
     padding: 14px 12px 10px;
   }
 
+  .home-cta-section {
+    padding: 56px 28px 16px;
+  }
+
+  .home-cta-wrap {
+    grid-template-columns: 1fr;
+    padding: 26px;
+  }
+
+  .home-cta-media img {
+    aspect-ratio: 16 / 9;
+  }
+
   .testimonial-section {
     padding: 64px 28px 68px;
   }
@@ -5233,6 +5378,37 @@ h1 {
 
   .product-cta {
     margin-top: 28px;
+  }
+
+  .home-cta-section {
+    padding: 42px 14px 12px;
+  }
+
+  .home-cta-wrap {
+    gap: 20px;
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .home-cta-media {
+    border-radius: 13px;
+  }
+
+  .home-cta-media img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .home-cta-copy h2 {
+    font-size: clamp(24px, 7vw, 32px);
+  }
+
+  .home-cta-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .home-cta-btn {
+    width: 100%;
   }
 
   .testimonial-section {

@@ -1323,7 +1323,8 @@ p {
 
 .simple-amp {
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: 400;
+  font-weight: 900;
+  color: inherit;
   font-feature-settings: "liga" off;
   letter-spacing: 0;
 }
