@@ -3020,7 +3020,7 @@ h1 {
 .contact-info-label {
   display: block;
   margin: 0 0 16px;
-  color: #4a8f62;
+  color: #f1c98a;
   font-family: inherit;
   font-size: 12px;
   font-weight: 800;
@@ -3130,7 +3130,7 @@ h1 {
 }
 
 .contact-person-name strong {
-  color: #4a8f62;
+  color: #f1c98a;
   font-weight: 800;
   font-feature-settings: "liga" 0, "dlig" 0;
   font-variant-ligatures: none;
@@ -3220,7 +3220,7 @@ h1 {
 }
 
 .contact-quick-list a:hover {
-  color: #4a8f62;
+  color: #f6ddb4;
 }
 
 .contact-wa-link {
@@ -3713,7 +3713,7 @@ h1 {
 
 .footer-person-name {
   margin: 0 0 5px;
-  color: #921c1c;
+  color: #6e1414;
   font-size: 15px;
   font-weight: 800;
   line-height: 1.35;
@@ -3724,7 +3724,7 @@ h1 {
 .footer-person-name span {
   display: block;
   margin-top: 1px;
-  color: #704324;
+  color: #9a6a2f;
   font-size: 12px;
   font-weight: 600;
 }
