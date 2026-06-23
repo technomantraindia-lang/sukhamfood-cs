@@ -3,27 +3,214 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Black Pepper Powder | SUKHAM Foods & Spices</title>
+    <title>Whole Spices | SUKHAM Foods and Spices</title>
     <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="prodcut.css" />
     <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" defer></script>
+    <style>
+      .food-product-hero {
+        position: relative;
+        min-height: 280px;
+        padding: 72px 64px 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+        color: #fff8ef;
+        background:
+          linear-gradient(135deg, rgba(20, 61, 36, 0.92) 0%, rgba(110, 20, 20, 0.88) 100%),
+          url("../assets/spice-hero.png") center / cover no-repeat;
+      }
+
+      .food-product-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        opacity: 0.12;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cpath fill='none' stroke='%23fff' stroke-width='1' d='M0 200h400M200 0v400M50 50l300 300M350 50L50 350'/%3E%3C/svg%3E");
+        background-size: 80px 80px;
+        pointer-events: none;
+      }
+
+      .food-product-hero-inner {
+        position: relative;
+        z-index: 2;
+        width: min(760px, 100%);
+      }
+
+      .food-product-hero-kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 16px;
+        padding: 6px 16px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.12);
+        color: #f7c253;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .food-product-hero h1 {
+        margin: 0 0 16px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(34px, 5vw, 52px);
+        line-height: 1.12;
+        text-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+      }
+
+      .food-product-hero-lead {
+        margin: 0 auto;
+        max-width: 58ch;
+        color: rgba(255, 248, 239, 0.92);
+        font-size: clamp(15px, 2vw, 18px);
+        line-height: 1.65;
+      }
+
+      .food-product-page {
+        padding: 56px 64px 72px;
+        background: linear-gradient(180deg, #faf8f4 0%, #f3ebe0 100%);
+      }
+
+      .food-product-inner {
+        width: min(1180px, 100%);
+        margin: 0 auto;
+      }
+
+      .food-product-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 28px 24px;
+      }
+
+      .food-product-item {
+        text-align: center;
+      }
+
+      .food-product-visual {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 220px;
+        padding: 18px 14px;
+        overflow: hidden;
+        border: 1px solid rgba(184, 117, 6, 0.12);
+        border-radius: 16px;
+        background: #fff;
+        box-shadow: 0 14px 32px rgba(79, 23, 24, 0.1);
+        transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+      }
+
+      .food-product-visual::before {
+        content: "";
+        position: absolute;
+        inset: 10px;
+        border-radius: 12px;
+        background: radial-gradient(circle at 50% 50%, rgba(247, 194, 83, 0.22), transparent 64%);
+        opacity: 0;
+        transform: scale(0.88);
+        transition: opacity 220ms ease, transform 220ms ease;
+        pointer-events: none;
+      }
+
+      .food-product-visual img {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        max-width: 220px;
+        height: auto;
+        object-fit: contain;
+        transform-origin: center;
+        transition: transform 240ms ease, filter 240ms ease;
+      }
+
+      .food-product-item:hover .food-product-visual {
+        transform: translateY(-8px);
+        border-color: rgba(184, 117, 6, 0.34);
+        box-shadow: 0 22px 42px rgba(79, 23, 24, 0.16);
+      }
+
+      .food-product-item:hover .food-product-visual::before {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      .food-product-item:hover .food-product-visual img {
+        transform: scale(1.08) rotate(-1deg);
+        filter: drop-shadow(0 12px 16px rgba(79, 23, 24, 0.16));
+      }
+
+      .food-product-item h2 {
+        margin: 14px 0 0;
+        color: #6e1414;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(15px, 1.4vw, 18px);
+        font-weight: 700;
+        line-height: 1.35;
+      }
+
+      @media (max-width: 1100px) {
+        .food-product-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 760px) {
+        .food-product-hero {
+          min-height: 240px;
+          padding: 56px 24px 40px;
+        }
+
+        .food-product-page {
+          padding: 40px 24px 56px;
+        }
+
+        .food-product-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 20px 16px;
+        }
+
+        .food-product-visual {
+          min-height: 180px;
+          padding: 14px 10px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .food-product-visual,
+        .food-product-visual::before,
+        .food-product-visual img {
+          transition: none;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .food-product-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
   <body>
     <header class="site-header">
       <div class="top-strip">
         <div class="top-group">
-          <span class="top-item top-item-loc"><iconify-icon icon="mdi:map-marker" aria-hidden="true"></iconify-icon> H1-52 RIICO Industrial Area, Sanchore (Raj.) – 343041</span>
+          <span class="top-item top-item-loc"><iconify-icon icon="mdi:map-marker" aria-hidden="true"></iconify-icon> H1-52 RIICO Industrial Area, Sanchore (Raj.) - 343041</span>
           <span class="divider"></span>
           <span class="top-item top-item-phone"><iconify-icon icon="fa6-solid:phone" aria-hidden="true"></iconify-icon> +91 89557 54845</span>
           <span class="divider"></span>
           <span class="top-item top-item-email"><iconify-icon icon="fa6-solid:envelope" aria-hidden="true"></iconify-icon> info@sukhamfoods.com</span>
         </div>
-        <div class="trust">&#9733; The Promise of Purity — Manufacturers, Suppliers&nbsp;<span class="trust-amp">&amp;</span>&nbsp;Exporters of Premium Spices&nbsp;<span class="trust-amp">&amp;</span>&nbsp;Food Products.</div>
+        <div class="trust">&#9733; The Promise of Purity - Manufacturers, Suppliers&nbsp;<span class="trust-amp">&amp;</span>&nbsp;Exporters of Premium Spices&nbsp;<span class="trust-amp">&amp;</span>&nbsp;Food Products.</div>
       </div>
 
       <nav class="main-nav" aria-label="Primary navigation">
-        <a class="brand" href="../index.html" aria-label="Sukham Foods and Spices home">
-          <img class="brand-logo" src="../assets/logo.png" alt="Sukham Foods and  Spices" />
+        <a class="brand" href="../index.html#home" aria-label="Sukham Foods and Spices home">
+          <img class="brand-logo" src="../assets/logo.png" alt="Sukham Foods and Spices" />
         </a>
 
         <button class="menu-button" type="button" aria-label="Open menu" aria-controls="primary-menu" aria-expanded="false">&#9776;</button>
@@ -44,10 +231,11 @@
               <a href="Pav Bhaji Masala.html">Pav Bhaji Masala</a>
               <a href="Chaat Masala.html">Chaat Masala</a>
               <a href="Sabzi Masala.html">Sabzi Masala</a>
+              <a href="Whole spices.html">Whole Spices</a>
             </div>
           </div>
           <a href="food-product.html">Food Products</a>
-          <a href="Whole spices.html">Whole Spices</a>
+          <a class="active" href="Whole spices.html">Whole Spices</a>
           <a href="../page/contact.html">Contact Us</a>
         </div>
 
@@ -58,103 +246,77 @@
       </nav>
     </header>
 
-    <main>
-      <section class="hero-section">
-        <div class="hero-art">
-          <span class="leaf-outline leaf-left" aria-hidden="true"></span>
-          <div class="product-image-card">
-            <img id="main-product-image" src="../assets/prodcut 5.png" alt="SUKHAM Black Pepper Powder pouch" />
-          </div>
-          <div class="product-gallery" aria-label="Product image gallery">
-            <button class="gallery-arrow" type="button" aria-label="Previous product image" data-gallery-prev>
-              <iconify-icon icon="fa6-solid:chevron-left" aria-hidden="true"></iconify-icon>
-            </button>
-            <div class="gallery-thumbs">
-              <button class="gallery-thumb" type="button" data-gallery-image="../assets/raw-material/black-pepper.png" data-gallery-alt="Black Pepper Powder raw ingredient" aria-label="Show raw ingredient">
-                <img src="../assets/prodcut 5.png" alt="" />
-              </button>
-              <button class="gallery-thumb active" type="button" data-gallery-image="../assets/sub-product/Black Pepper Powder.png" data-gallery-alt="SUKHAM Black Pepper Powder pouch" aria-label="Show Black Pepper Powder pouch">
-                <img src="../assets/sub-product/Black Pepper Powder.png" alt="" />
-              </button>
-             
-              <button class="gallery-thumb" type="button" data-gallery-image="../assets/sub-product/Black Pepper Powder2.png" data-gallery-alt="Black Pepper Powder close up" aria-label="Show product close up">
-                <img src="../assets/sub-product/Black Pepper Powder2.png" alt="" />
-              </button>
+    <section class="food-product-hero" aria-label="Whole spices banner">
+      <div class="food-product-hero-inner">
+        <p class="food-product-hero-kicker">
+          <iconify-icon icon="fa6-solid:mortar-pestle" aria-hidden="true"></iconify-icon>
+          Premium Whole Spices
+        </p>
+        <h1>Whole Spices</h1>
+        <p class="food-product-hero-lead">Pure whole spices selected for natural aroma, rich taste and authentic Indian cooking - packed with SUKHAM's promise of purity and care.</p>
+      </div>
+    </section>
+
+    <main class="food-product-page">
+      <div class="food-product-inner">
+        <div class="food-product-grid">
+          <article class="food-product-item">
+            <div class="food-product-visual">
+              <img src="../assets/Whole spices/Black Pepper.png" alt="Black Pepper" />
             </div>
-            <button class="gallery-arrow" type="button" aria-label="Next product image" data-gallery-next>
-              <iconify-icon icon="fa6-solid:chevron-right" aria-hidden="true"></iconify-icon>
-            </button>
-          </div>
+            <h2>Black Pepper</h2>
+          </article>
+
+          <article class="food-product-item">
+            <div class="food-product-visual">
+              <img src="../assets/Whole spices/White Pepper.png" alt="White Pepper" />
+            </div>
+            <h2>White Pepper</h2>
+          </article>
+
+          <article class="food-product-item">
+            <div class="food-product-visual">
+              <img src="../assets/Whole spices/Red Chilli Whole.png" alt="Red Chilli Whole" />
+            </div>
+            <h2>Red Chilli Whole</h2>
+          </article>
+
+          <article class="food-product-item">
+            <div class="food-product-visual">
+              <img src="../assets/Whole spices/Turmeric Finger.png" alt="Turmeric Finger" />
+            </div>
+            <h2>Turmeric Finger</h2>
+          </article>
+
+          <article class="food-product-item">
+            <div class="food-product-visual">
+              <img src="../assets/Whole spices/Cinnamon.png" alt="Cinnamon" />
+            </div>
+            <h2>Cinnamon</h2>
+          </article>
+
+          <article class="food-product-item">
+            <div class="food-product-visual">
+              <img src="../assets/Whole spices/clove.png" alt="Clove" />
+            </div>
+            <h2>Clove</h2>
+          </article>
+
+          <article class="food-product-item">
+            <div class="food-product-visual">
+              <img src="../assets/Whole spices/Dry Ginger.png" alt="Dry Ginger" />
+            </div>
+            <h2>Dry Ginger</h2>
+          </article>
+
+          <article class="food-product-item">
+            <div class="food-product-visual">
+              <img src="../assets/Whole spices/Nutmeg.png" alt="Nutmeg" />
+            </div>
+            <h2>Nutmeg</h2>
+          </article>
         </div>
-
-        <div class="hero-copy">
-          <p class="quality-pill">Pure <span></span> Authentic <span></span> Natural</p>
-          <h1>Black Pepper Powder</h1>
-          <p class="tagline">Pure &bull; Authentic &bull; Natural</p>
-          <div class="ornament" aria-hidden="true"><span></span></div>
-          <p class="intro">
-            SUKHAM Black Pepper Powder is prepared from carefully selected ingredients and finely processed to preserve its sharp heat, bold aroma and premium flavour. Ideal for daily cooking, wholesale supply and food service use.
-          </p>
-
-          <div class="benefit-icons" aria-label="Product highlights">
-            <article><span class="benefit-icon"><iconify-icon icon="ph:leaf-bold" aria-hidden="true"></iconify-icon></span><strong>Premium Quality</strong></article>
-            <article><span class="benefit-icon"><iconify-icon icon="fa6-solid:flask" aria-hidden="true"></iconify-icon></span><strong>No Additives</strong></article>
-            <article><span class="benefit-icon"><iconify-icon icon="ph:plant-bold" aria-hidden="true"></iconify-icon></span><strong>Rich Aroma</strong></article>
-            <article><span class="benefit-icon"><iconify-icon icon="fa6-solid:shield-halved" aria-hidden="true"></iconify-icon></span><strong>Hygienically<br />Processed</strong></article>
-          </div>
-
-          <ul class="check-list">
-            <li>Adds sharp peppery heat and rich aroma to recipes</li>
-            <li>Known for consistent quality, purity and authentic taste</li>
-            <li>Perfect for home kitchens, restaurants and bulk supply</li>
-            <li>Sourced from trusted farms and processed with care</li>
-            <li>Ideal for daily use in food and wellness routines</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="why-section" id="why">
-        <div class="section-heading">
-          <span aria-hidden="true"></span>
-          <h2>Why Choose SUKHAM Black Pepper Powder?</h2>
-          <span aria-hidden="true"></span>
-        </div>
-
-        <div class="why-grid">
-          <article><iconify-icon icon="ph:leaf-bold" aria-hidden="true"></iconify-icon><h3>Selected Ingredients</h3><p>Sourced from trusted farms for reliable quality.</p></article>
-          <article><iconify-icon icon="fa6-solid:mortar-pestle" aria-hidden="true"></iconify-icon><h3>Natural Goodness</h3><p>Prepared to retain its aroma, colour and taste.</p></article>
-          <article><iconify-icon icon="fa6-solid:shield-halved" aria-hidden="true"></iconify-icon><h3>Hygienically Processed</h3><p>Cleaned and processed in hygienic conditions.</p></article>
-          <article><iconify-icon icon="fa6-solid:bowl-food" aria-hidden="true"></iconify-icon><h3>Fresh & Aromatic</h3><p>Finely processed for fresh flavour in every pack.</p></article>
-          <article><iconify-icon icon="fa6-solid:flask" aria-hidden="true"></iconify-icon><h3>No Chemicals</h3><p>Free from additives, preservatives and artificial colors.</p></article>
-        </div>
-      </section>
-
-      <section class="info-grid">
-        <article class="info-card about-product">
-          <h2>About the Product</h2>
-          <div class="mini-ornament" aria-hidden="true"></div>
-          <p>Black Pepper Powder brings authentic Indian flavour to everyday cooking. It is processed for consistent aroma, colour and taste, making it suitable for retail packs, food service and bulk supply.</p>
-          <ul>
-            <li>Rich aroma and reliable flavour</li>
-            <li>Finely processed for easy use</li>
-            <li>Perfect for cooking, seasoning and food service</li>
-            <li>Packed with natural piperine</li>
-          </ul>
-        </article>
-
-        <article class="info-card nutrition-card">
-          <h2>Nutritional Information <span>(Per 100g)</span></h2>
-          <div class="mini-ornament" aria-hidden="true"></div>
-          <dl>
-            <div><dt>Energy</dt><dd>251 kcal</dd></div>
-            <div><dt>Protein</dt><dd>10.4 g</dd></div>
-            <div><dt>Carbohydrate</dt><dd>63.9 g</dd></div>
-            <div><dt>Total Fat</dt><dd>3.3 g</dd></div>
-            <div><dt>Dietary Fiber</dt><dd>25.3 g</dd></div>
-            <div><dt>Piperine</dt><dd>Naturally present</dd></div>
-          </dl>
-        </article>
-      </section>
+      </div>
     </main>
 
     <footer class="site-footer">
@@ -165,7 +327,7 @@
               <a class="footer-brand-link" href="../index.html#home" aria-label="Sukham Foods and Spices home">
                 <img class="footer-logo" src="../assets/logo.png" alt="Sukham Foods and Spices" />
               </a>
-              <p class="footer-brand-desc">SUKHAM Foods and Spices - The Promise of Purity. Leading manufacturer, Supplier and  exporter from Sanchore, Rajasthan.</p>
+              <p class="footer-brand-desc">SUKHAM Foods and Spices - The Promise of Purity. Leading manufacturer, Supplier and exporter from Sanchore, Rajasthan.</p>
               <div class="footer-actions">
                 <a class="btn btn-call" href="tel:+918955754845"><iconify-icon icon="fa6-solid:phone" aria-hidden="true"></iconify-icon> Call Now</a>
                 <a class="btn btn-whatsapp" href="https://wa.me/918955754845"><iconify-icon icon="fa6-brands:whatsapp" aria-hidden="true"></iconify-icon> WhatsApp</a>
@@ -202,6 +364,7 @@
                 <li><a href="../prodcut/Pav Bhaji Masala.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Pav Bhaji Masala</a></li>
                 <li><a href="../prodcut/Chaat Masala.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Chaat Masala</a></li>
                 <li><a href="../prodcut/Sabzi Masala.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Sabzi Masala</a></li>
+                <li><a href="../prodcut/Whole spices.html"><span class="footer-link-icon footer-link-icon-spice" aria-hidden="true">&#9679;</span> Whole Spices</a></li>
               </ul>
             </nav>
 
@@ -227,7 +390,7 @@
                 </li>
                 <li>
                   <span class="footer-item-icon footer-icon-location" aria-hidden="true"><iconify-icon icon="mdi:map-marker"></iconify-icon></span>
-                  <span>H1-52 RIICO Industrial Area, Sanchore (Raj.) – 343041</span>
+                  <span>H1-52 RIICO Industrial Area, Sanchore (Raj.) - 343041</span>
                 </li>
               </ul>
               <p class="footer-contact-note"><span class="footer-note-icon" aria-hidden="true"><iconify-icon icon="fa6-regular:clock"></iconify-icon></span> We reply within <strong>24 hours</strong></p>
@@ -247,6 +410,7 @@
       const navLinks = document.querySelectorAll(".nav-links a");
       const productMenuToggle = document.querySelector(".product-menu-toggle");
       const productMenu = document.querySelector(".nav-product-menu");
+
       if (menuButton && mainNav) {
         menuButton.addEventListener("click", () => {
           const isOpen = mainNav.classList.toggle("menu-open");
@@ -259,6 +423,7 @@
           menuButton.setAttribute("aria-label", "Open menu");
         }));
       }
+
       if (productMenuToggle && productMenu) {
         productMenuToggle.addEventListener("click", (event) => {
           event.stopPropagation();
@@ -272,24 +437,6 @@
           }
         });
       }
-      const mainProductImage = document.querySelector("#main-product-image");
-      const galleryThumbs = Array.from(document.querySelectorAll(".gallery-thumb"));
-      const galleryPrev = document.querySelector("[data-gallery-prev]");
-      const galleryNext = document.querySelector("[data-gallery-next]");
-      let activeGalleryIndex = 0;
-      function setGalleryImage(index) {
-        if (!mainProductImage || !galleryThumbs.length) return;
-        activeGalleryIndex = (index + galleryThumbs.length) % galleryThumbs.length;
-        const activeThumb = galleryThumbs[activeGalleryIndex];
-        mainProductImage.src = activeThumb.dataset.galleryImage;
-        mainProductImage.alt = activeThumb.dataset.galleryAlt;
-        galleryThumbs.forEach((thumb, thumbIndex) => thumb.classList.toggle("active", thumbIndex === activeGalleryIndex));
-      }
-      galleryThumbs.forEach((thumb, index) => thumb.addEventListener("click", () => setGalleryImage(index)));
-      galleryPrev?.addEventListener("click", () => setGalleryImage(activeGalleryIndex - 1));
-      galleryNext?.addEventListener("click", () => setGalleryImage(activeGalleryIndex + 1));
     </script>
   </body>
 </html>
-
-
