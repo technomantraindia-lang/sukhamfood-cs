@@ -744,18 +744,27 @@ p {
   border-bottom: 1px solid rgba(255, 255, 255, 0.14);
   font-size: 14px;
   font-weight: 700;
-  white-space: nowrap;
+  line-height: 1.35;
+  white-space: normal;
+  flex-wrap: wrap;
 }
 
 .top-group {
   display: flex;
   align-items: center;
   gap: 18px;
+  flex: 1 1 640px;
+  flex-wrap: wrap;
   min-width: 0;
 }
 
 .top-item {
   color: #fff2df;
+  white-space: nowrap;
+}
+
+.top-item-loc {
+  white-space: normal;
 }
 
 .top-item iconify-icon {
@@ -773,11 +782,45 @@ p {
 }
 
 .trust {
-  flex: 1 1 58%;
+  flex: 1 1 420px;
   min-width: 0;
   padding-left: 20px;
   color: #fff1d5;
+  line-height: 1.35;
+  overflow-wrap: normal;
   text-align: right;
+}
+
+.trust-amp {
+  display: inline-block;
+  padding: 0 1px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.12em;
+  font-weight: 900;
+  line-height: 1;
+}
+
+@media (max-width: 1280px) {
+  .top-strip {
+    min-height: auto;
+    padding: 8px 28px;
+    align-items: flex-start;
+    gap: 6px 16px;
+  }
+
+  .top-group {
+    gap: 8px 14px;
+  }
+
+  .trust {
+    flex-basis: 100%;
+    padding-left: 0;
+    text-align: left;
+  }
+
+  .divider {
+    display: none;
+  }
 }
 
 .main-nav {
@@ -799,9 +842,9 @@ p {
 }
 
 .brand-logo {
-  width: clamp(210px, 15vw, 280px);
+  width: clamp(240px, 17vw, 320px);
   height: auto;
-  max-height: clamp(68px, 6.5vw, 84px);
+  max-height: clamp(76px, 7.2vw, 96px);
   object-fit: contain;
   object-position: left center;
   filter: drop-shadow(0 2px 2px rgba(64, 20, 8, 0.12));
@@ -2052,13 +2095,20 @@ main {
   }
 
   .top-group {
+    width: 100%;
+    flex: 0 1 auto;
     flex-wrap: wrap;
     gap: 8px 14px;
   }
 
   .top-item,
   .trust {
-    overflow-wrap: anywhere;
+    flex: 0 1 auto;
+    overflow-wrap: normal;
+  }
+
+  .trust {
+    width: 100%;
   }
 
   .divider {
@@ -2079,8 +2129,8 @@ main {
   }
 
   .brand-logo {
-    width: clamp(220px, 30vw, 290px);
-    max-height: 76px;
+    width: clamp(235px, 34vw, 315px);
+    max-height: 84px;
   }
 
   .menu-button {
@@ -2502,8 +2552,8 @@ main {
   }
 
   .brand-logo {
-    width: clamp(175px, 52vw, 235px);
-    max-height: 64px;
+    width: clamp(195px, 58vw, 255px);
+    max-height: 72px;
   }
 
   .menu-button {
